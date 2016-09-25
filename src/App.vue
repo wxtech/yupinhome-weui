@@ -5,10 +5,27 @@
 </template>
 <style>
   img {
-    max-width: 100%;
     max-height: 100%;
+    max-width: 100%;
+  }
+
+  body {
+    font-size: 12px;
+    font-family: normal;
+  }
+
+  i, em, a, strong, span {
+    display: inline-block;
+  }
+
+  .ad img {
+    width: 100%;
   }
 </style>
 <style lang="less">
   @import '~vux/src/styles/reset';
+
+  body {
+    line-height: normal;
+  }
 </style>
