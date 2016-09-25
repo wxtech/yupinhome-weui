@@ -4,7 +4,6 @@
 <style scope>
 </style>
 <script>
-
   export default {
     components: {},
     data: function () {

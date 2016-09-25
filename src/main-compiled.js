@@ -8,7 +8,7 @@ var _App = require('./App');
 
 var _App2 = _interopRequireDefault(_App);
 
-var _home = require('./components/home/home.vue');
+var _home = require('./page/home.vue');
 
 var _home2 = _interopRequireDefault(_home);
 
@@ -19,6 +19,10 @@ var _vueRouter2 = _interopRequireDefault(_vueRouter);
 var _numbershipcenter = require('./page/numbershipcenter');
 
 var _numbershipcenter2 = _interopRequireDefault(_numbershipcenter);
+
+var _methodslist = require('./page/methodslist.vue');
+
+var _methodslist2 = _interopRequireDefault(_methodslist);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -35,6 +39,9 @@ router.map({
   },
   '/numbershipcenter': {
     component: _numbershipcenter2.default
+  },
+  '/deliver-methodslist': {
+    component: _methodslist2.default
   }
 });
 router.start(_App2.default, '#app');
