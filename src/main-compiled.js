@@ -16,6 +16,10 @@ var _vueRouter = require('vue-router');
 
 var _vueRouter2 = _interopRequireDefault(_vueRouter);
 
+var _numbershipcenter = require('./page/numbershipcenter');
+
+var _numbershipcenter2 = _interopRequireDefault(_numbershipcenter);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var FastClick = require('fastclick');
@@ -28,9 +32,11 @@ var router = new _vueRouter2.default();
 router.map({
   '/': {
     component: _home2.default
+  },
+  '/numbershipcenter': {
+    component: _numbershipcenter2.default
   }
 });
-
 router.start(_App2.default, '#app');
 
 //# sourceMappingURL=main-compiled.js.map
