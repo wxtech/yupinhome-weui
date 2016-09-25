@@ -8,7 +8,7 @@ var _App = require('./App');
 
 var _App2 = _interopRequireDefault(_App);
 
-var _home = require('./components/home/home');
+var _home = require('./components/home/home.vue');
 
 var _home2 = _interopRequireDefault(_home);
 

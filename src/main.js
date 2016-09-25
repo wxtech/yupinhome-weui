@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App'
-import Home from './components/home/home'
+import Home from './components/home/home.vue'
 import VueRouter from 'vue-router'
 
 const FastClick = require('fastclick')
