@@ -1,16 +1,46 @@
 <template>
-  <swiper :list="list" auto>
+
+  <div class="vux-flexbox vux-flex-row">
+    <div class="vux-flexbox-item" style="flex: 0 0 20%;">
+      <img src="~assets/logo.jpg">
+    </div>
+    <div class="vux-flexbox-item">
+
+    </div>
+  </div>
+  <swiper auto>
     <swiper-item>
-       <img src="../" />
+      <img src="~assets/home/banner1.png"/>
+    </swiper-item>
+    <swiper-item>
+      <img src="~assets/home/banner1.png"/>
     </swiper-item>
   </swiper>
 </template>
+<style scope>
+  .vux-swiper img {
+    max-height: 100%;
+    width: 100%;
+  }
+
+  .search-input {
+    border: blue solid 1px;
+  }
+</style>
 <script>
   import swiper from 'vux/src/components/swiper'
+  import swiperItem from 'vux/src/components/swiper-item'
+  import flexbox from 'vux/src/components/flexbox'
+  import flexboxItem from 'vux/src/components/flexbox/flexbox-item.vue'
+  import xInput from 'vux/src/components/x-input'
 
   export default {
     components: {
-      swiper
+      flexbox,
+      flexboxItem,
+      xInput,
+      swiper,
+      swiperItem
     },
     data: function () {
       return {
