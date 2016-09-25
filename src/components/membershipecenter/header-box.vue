@@ -1,5 +1,5 @@
 <template>
-  <div class="memberCenter">
+  <section class="memberCenter">
     <div class="content">
       <div class="head-top">
         <img slot="icon" src="~assets/usercenter/img-220x220.jpg">
@@ -18,7 +18,7 @@
           <img src="~assets/usercenter/top-xiaoxi-88x88.png">
            <p>消息</p>
           </span>
-        <span>
+          <span>
            <img src="~assets/usercenter/top-erweima-88x88.png">
            <p>推荐朋友</p>
           </span>
@@ -26,22 +26,42 @@
         <p>签到赢积分</p>
       </div>
     </div>
-    <ul class="h_bottom">
-
-    </ul>
-  </div>
+    <div class="h_bottom">
+      <header-tabbar>
+        <header-tabbar-item>
+          <img slot="icon" src="~assets/usercenter/shoucang-icon-140x140.png">
+          <span slot="label">首页</span>
+        </header-tabbar-item>
+        <header-tabbar-item>
+          <img slot="icon" src="~assets/usercenter/yuyue-icon-140x140.png">
+          <span slot="label">全部商品</span>
+        </header-tabbar-item>
+        <header-tabbar-item>
+          <img slot="icon" src="~assets/usercenter/kefu-icon-140x140.png">
+          <span slot="label">在线咨询</span>
+        </header-tabbar-item>
+      </header-tabbar>
+    </div>
+  </section>
 </template>
 <style>
   /* body {
      background-color: #ff0000;
    }*/
   .memberCenter {
-    height: 3.78rem;
     background-size: 100% 100%;
-
+    padding-bottom: 10px;
     padding-top: .21rem;
     position: relative;
     background: #ffffff;
+  }
+
+  .memberCenter .weui_tabbar {
+    background: none;
+  }
+
+  .memberCenter .weui_tabbar:before {
+    border-top: none;
   }
 
   .content {
@@ -66,6 +86,7 @@
   .content .head-top > span {
     color: #424954;
     font-size: 15px;
+    padding-top: 10px;
 
   }
 
@@ -102,46 +123,89 @@
     padding-left: .2rem;
     padding-top: .25rem;
   }
-  .area,.msg-box{
+
+  .area, .msg-box {
     position: relative;
   }
-  .area span{
+
+  .area span {
     display: inline-block;
-    float:left;
-    color:#265baa;
+    float: left;
+    color: #265baa;
     font-size: 15px;
     text-align: center;
   }
-  .area span:nth-of-type(1){
-    float:left;
+
+  .area span:nth-of-type(1) {
+    float: left;
   }
-  .area span:nth-of-type(2){
-    float:right;
+
+  .area span:nth-of-type(2) {
+    float: right;
   }
-  .area img{
+
+  .area img {
     width: 0.8rem;
     height: 0.8rem;
   }
-  .area>p{
+
+  .area > p {
     line-height: 38px;
     background: #265baa;
     display: inline-block;
-    color:#ffffff;
-    padding:0 34px;
-    margin-top:10px;
+    color: #ffffff;
+    padding: 0 34px;
+    margin-top: 10px;
   }
-  .area-right{
+
+  .area-right {
     display: block;
   }
-  .h_bottom{
+
+  .h_bottom {
     margin: 0;
     border-top: 1px solid #DDD8CE;
     overflow: hidden;
     font-size: inherit;
     font-weight: 400;
     position: relative;
+    left: 0;
+    bottom: 0;
+    height: 1.8rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    font-size: .24rem;
+  }
+
+  .h_bottom .weui_tabbar_icon {
+    background: #6fa4d8;
+    border-radius: 50%;
+    width: 1.2rem;
+    height: 1.2rem;
+    top: 0px;
+  }
+ .weui_tabbar_item span{
+    font-size: 15px;
+    color: #265baa;
   }
 </style>
 <script>
-  export default{}
+  import headerTabbar from 'vux/src/components/tabbar/tabbar.vue'
+  import headerTabbarItem from 'vux/src/components/tabbar/tabbar-item.vue'
+  export default{
+    components: {
+      headerTabbar,
+      headerTabbarItem
+    }
+  }
 </script>

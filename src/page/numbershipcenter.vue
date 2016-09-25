@@ -1,5 +1,8 @@
 <template>
   <header-box></header-box>
+  <my-order></my-order>
+  <my-power></my-power>
+  <my-activity></my-activity>
   <tabbar>
     <tabbar-item>
       <img slot="icon" src="~assets/usercenter/bottombar-icon01-80x80.png">
@@ -39,17 +42,35 @@
     /*line-height: 1;*/
     color: #333;
     background-color: #f0efed;
+
+  }
+  #app{
+    position: relative;
+  }
+  section{
+    margin-bottom:10px;
+    background: #ffffff;
+  }
+  #app .weui_tabbar{
+    background: none;
+    background: #ffffff;
   }
 </style>
 <script>
   import tabbar from 'vux/src/components/tabbar/tabbar.vue'
   import tabbarItem from 'vux/src/components/tabbar/tabbar-item.vue'
   import headerBox from 'components/membershipecenter/header-box.vue'
+  import myOrder from 'components/membershipecenter/my-order.vue'
+  import myActivity from 'components/membershipecenter/my-activity.vue'
+  import myPower from 'components/membershipecenter/my-power.vue'
   export default {
     components: {
       tabbar,
       tabbarItem,
-      headerBox
+      headerBox,
+      myOrder,
+      myPower,
+      myActivity
     },
     data: function () {
       return {}
