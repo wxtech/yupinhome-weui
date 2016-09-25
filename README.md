@@ -1,5 +1,19 @@
 # yupinhome-weui
 
+完成:
+```
+H5首页final.psd
+```
+正在进行的
+
+```
+H5会员中心.psd
+
+H5配送方式.psd
+
+```
+
+
 > A Vue.js project
 
 ## Build Setup
