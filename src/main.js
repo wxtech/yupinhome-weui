@@ -4,6 +4,7 @@ import Home from './page/home.vue'
 import VueRouter from 'vue-router'
 import numbershipcenter from './page/numbershipcenter'
 import deliverMethodslist from './page/methodslist.vue'
+import userRegister from './page/user-registration.vue'
 
 const FastClick = require('fastclick')
 FastClick.attach(document.body)
@@ -21,7 +22,11 @@ router.map({
   },
   '/deliver-methodslist': {
     component: deliverMethodslist
+  },
+  '/userRegister': {
+    component: userRegister
   }
+
 })
 router.start(App, '#app')
 
