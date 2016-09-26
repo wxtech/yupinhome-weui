@@ -4,7 +4,7 @@
   <nav-box :header-title="headerTitle">
   </nav-box>
   </header>
-  <user-login>dd</user-login>
+  <user-login></user-login>
 </template>
 <style>
 </style>
