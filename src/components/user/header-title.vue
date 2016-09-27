@@ -7,19 +7,18 @@
   .navbar {
     border-bottom: 1px solid #d9d9d9;
   }
-
   .navbar .vux-header {
     background: #ffffff;
+    box-shadow: 0px -32px 67px #265baa;
+    box-shadow: 0px -32px 67px #265baa;
+    z-index: 9;
   }
-
   .navbar .vux-header .vux-header-left .vux-header-back {
     color: #ffffff;
   }
-
   .title {
     color: #265baa;
   }
-
   .navbar .vux-header .vux-header-left .vux-header-back:before {
     border: none;
     border: 1px solid #265baa;
