@@ -27,9 +27,11 @@
       </tabbar-item>
     </tabbar>
   </section>
-
+  <!--弹层-->
+  <layer-box class="layer_box"></layer-box>
 </template>
 <style>
+  @import "~assets/font-awesome/css/font-awesome.min.css";
   html {
     font-size: 50px;
     font-family: Arial, "Microsoft YaHei UI";
@@ -79,6 +81,7 @@
   import myOrder from 'components/membershipecenter/my-order.vue'
   import myActivity from 'components/membershipecenter/my-activity.vue'
   import myPower from 'components/membershipecenter/my-power.vue'
+  import layerBox from 'components/membershipecenter/member-layer.vue'
   export default {
     components: {
       tabbar,
@@ -86,7 +89,8 @@
       headerBox,
       myOrder,
       myPower,
-      myActivity
+      myActivity,
+      layerBox
     },
     data: function () {
       return {}
