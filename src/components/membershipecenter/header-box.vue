@@ -16,7 +16,7 @@
         <div class="area-right">
           <div class="msg-box">
             <a href="javascript:;"><img src="~assets/usercenter/top-xiaoxi-88x88.png">
-            <i class="msg-num">5</i>
+              <i class="msg-num">5</i>
             </a>
             <p>消息</p>
           </div>
@@ -86,18 +86,20 @@
     border-radius: 50%;
     border: .04rem solid #f9b5b6;
   }
-.msg-num{
-  position: absolute;
-  border-radius: 50%;
-  width: 0.42rem;
-  line-height: 0.42rem;
-  border:1px solid #e83939;
-  color:#e83939;
-  position: absolute;
-  top:0;
-  background: #fff;
-  right: -7px;
-}
+
+  .msg-num {
+    position: absolute;
+    border-radius: 50%;
+    width: 0.42rem;
+    line-height: 0.42rem;
+    border: 1px solid #e83939;
+    color: #e83939;
+    position: absolute;
+    top: 0;
+    background: #fff;
+    right: -7px;
+  }
+
   .membername .p1 {
     color: #414a55;
   }
@@ -126,6 +128,10 @@
     position: relative;
   }
 
+  .msg-box:nth-child(2) {
+    margin-left: 10px;
+  }
+
   .area {
     text-align: center;
   }
@@ -144,7 +150,7 @@
 
   .area a {
     display: block;
-    width: 50px;
+    width: 35px;
     margin: 0 auto;
     position: relative;
   }

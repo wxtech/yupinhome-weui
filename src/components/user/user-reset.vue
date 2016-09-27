@@ -3,10 +3,17 @@
     <p class="p1">
       <i class="weui_icon_msg weui_icon_success"></i>
     </p>
-    <h4>恭喜您注册成功!</h4>
-    <p class="p1">您填写了微信号，获得了<i>1000</i>积分奖励</p>
-    <p class="p1">登录后即可使用</p>
-    <p class="p1">请到会员中心查看</p>
+    <h4>您的验证已通过</h4>
+   <form>
+     <label>
+       <span>请输入新密码<i>*</i></span>
+       <input type="text" size="20" value="" class="inp" maxlength="20" name="mobile">
+     </label>
+     <label>
+       <span>请再次输入新密码<i>*</i></span>
+       <input type="text" size="20" value="" class="inp" maxlength="20" name="mobile">
+     </label>
+   </form>
     <a href="javascript:;" class="btn_login_success" id="">登录</a>
   </section>
 </template>
@@ -41,7 +48,7 @@
     font-size: 32px;
     font-weight: normal;
     font-family: sans-serif;
-    padding: 5% 0;
+    padding:5% 0;
 
   }
 </style>
