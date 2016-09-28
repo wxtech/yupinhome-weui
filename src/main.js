@@ -4,6 +4,11 @@ import Home from './page/home.vue'
 import VueRouter from 'vue-router'
 import numbershipcenter from './page/numbershipcenter'
 import deliverMethodslist from './page/methodslist.vue'
+import userregister from './page/user-registration.vue'
+import userregistersuccess from './page/user-registration-success.vue'
+import userforgotpass from './page/user-forgot-password.vue'
+import userresetpass from './page/user-reset-password.vue'
+import userresetsuccess from './page/user-reset-success.vue'
 
 const FastClick = require('fastclick')
 FastClick.attach(document.body)
@@ -21,6 +26,21 @@ router.map({
   },
   '/deliver-methodslist': {
     component: deliverMethodslist
+  },
+  '/userregister': {
+    component: userregister
+  },
+  '/userregistersuccess': {
+    component: userregistersuccess
+  },
+  '/userforgotpass': {
+    component: userforgotpass
+  },
+  '/userresetpass': {
+    component: userresetpass
+  },
+  '/userresetsuccess': {
+    component: userresetsuccess
   }
 })
 router.start(App, '#app')

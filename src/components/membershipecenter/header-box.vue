@@ -1,8 +1,8 @@
 <template>
-  <div class="memberCenter">
+  <section class="memberCenter">
     <div class="content">
       <div class="head-top">
-        <img slot="icon" src="~assets/usercenter/img-220x220.jpg">
+        <img src="~assets/usercenter/img-220x220.jpg">
         <span>账号管理</span>
       </div>
       <div class="person_i">
@@ -14,31 +14,39 @@
       </div>
       <div class="area">
         <div class="area-right">
-         <span class="msg-box">
-          <img src="~assets/usercenter/top-xiaoxi-88x88.png">
-           <p>消息</p>
-          </span>
-        <span>
-           <img src="~assets/usercenter/top-erweima-88x88.png">
-           <p>推荐朋友</p>
-          </span>
+          <div class="msg-box">
+            <a href="javascript:;"><img src="~assets/usercenter/top-xiaoxi-88x88.png">
+              <i class="msg-num">5</i>
+            </a>
+            <p>消息</p>
+          </div>
+          <div class="msg-box">
+            <a href="javascript:;"><img src="~assets/usercenter/top-erweima-88x88.png"></a>
+            <p>推荐朋友</p>
+          </div>
         </div>
         <p>签到赢积分</p>
       </div>
     </div>
-    <ul class="h_bottom">
-
-    </ul>
-  </div>
+    <div class="h_bottom">
+      <div class="mytabs">
+        <div class="mytab-item"><a class=""><img src="~assets/usercenter/shoucang-icon-140x140.png"></a><span>首页</span>
+        </div>
+        <div class="mytab-item"><a class=""><img src="~assets/usercenter/yuyue-icon-140x140.png"></a><span>全部商品</span>
+        </div>
+        <div class="mytab-item"><a class=""><img src="~assets/usercenter/kefu-icon-140x140.png"></a><span>在线咨询</span>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 <style>
   /* body {
      background-color: #ff0000;
    }*/
   .memberCenter {
-    height: 3.78rem;
     background-size: 100% 100%;
-
+    padding-bottom: 10px;
     padding-top: .21rem;
     position: relative;
     background: #ffffff;
@@ -66,6 +74,7 @@
   .content .head-top > span {
     color: #424954;
     font-size: 15px;
+    padding-top: 10px;
 
   }
 
@@ -78,19 +87,31 @@
     border: .04rem solid #f9b5b6;
   }
 
+  .msg-num {
+    position: absolute;
+    border-radius: 50%;
+    width: 0.42rem;
+    line-height: 0.42rem;
+    border: 1px solid #e83939;
+    color: #e83939;
+    position: absolute;
+    top: 0;
+    background: #fff;
+    right: -7px;
+  }
+
   .membername .p1 {
     color: #414a55;
   }
 
   .p2 {
     color: #414a55;
-    font-size: 17px;
+
   }
 
   .p-text {
     color: #7c858d;
-    font-size: 17px;
-    line-height: 23px;
+
   }
 
   .content .person_i {
@@ -102,44 +123,90 @@
     padding-left: .2rem;
     padding-top: .25rem;
   }
-  .area,.msg-box{
+
+  .area, .msg-box {
     position: relative;
   }
-  .area span{
-    display: inline-block;
-    float:left;
-    color:#265baa;
-    font-size: 15px;
+
+  .msg-box:nth-child(2) {
+    margin-left: 10px;
+  }
+
+  .area {
     text-align: center;
   }
-  .area span:nth-of-type(1){
-    float:left;
+
+  .area span {
+
+    color: #265baa;
+    font-size: 15px;
+
   }
-  .area span:nth-of-type(2){
-    float:right;
+
+  .msg-box {
+    float: left;
+
   }
-  .area img{
-    width: 0.8rem;
-    height: 0.8rem;
+
+  .area a {
+    display: block;
+    width: 35px;
+    margin: 0 auto;
+    position: relative;
   }
-  .area>p{
-    line-height: 38px;
+
+  .area-right p {
+    display: inline-block;
+    text-align: center;
+    color: #265baa;
+  }
+
+  /*.area img {*/
+  /*width: 0.8rem;*/
+  /*height: 0.8rem;*/
+  /*}*/
+
+  .area > p {
+    line-height: 0.68rem;
     background: #265baa;
     display: inline-block;
-    color:#ffffff;
-    padding:0 34px;
-    margin-top:10px;
+    color: #ffffff;
+    padding: 0 15%;
+    margin-top: 10px;
   }
-  .area-right{
+
+  .area-right {
     display: block;
   }
-  .h_bottom{
+
+  .h_bottom {
     margin: 0;
     border-top: 1px solid #DDD8CE;
     overflow: hidden;
     font-size: inherit;
-    font-weight: 400;
+    /* font-weight: 400; */
     position: relative;
+    left: 0;
+    bottom: 0;
+    /* height: 1.8rem; */
+    /* display: -webkit-box; */
+    display: -ms-flexbox;
+    /* display: flex; */
+    /* -webkit-box-align: center; */
+    -ms-flex-align: center;
+    /* align-items: center; */
+    width: 100%;
+    text-align: center;
+    font-size: .24rem;
+    padding-top: 10px;
+  }
+
+  .h_bottom .mytabs .mytab-item {
+    width: 33%;
+  }
+
+  .h_bottom .mytabs .mytab-item a {
+    height: 24vw;
   }
 </style>
 <script>

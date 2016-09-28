@@ -2,7 +2,7 @@
   <div class="webside-top">
     <div class="lf">
       <div class="logo">
-        <img src="~assets/home/homelogo-142x108.jpg">
+        <img src="~assets/logo.png">
       </div>
     </div>
     <div class="fr">

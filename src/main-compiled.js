@@ -24,6 +24,26 @@ var _methodslist = require('./page/methodslist.vue');
 
 var _methodslist2 = _interopRequireDefault(_methodslist);
 
+var _userRegistration = require('./page/user-registration.vue');
+
+var _userRegistration2 = _interopRequireDefault(_userRegistration);
+
+var _userRegistrationSuccess = require('./page/user-registration-success.vue');
+
+var _userRegistrationSuccess2 = _interopRequireDefault(_userRegistrationSuccess);
+
+var _userForgotPassword = require('./page/user-forgot-password.vue');
+
+var _userForgotPassword2 = _interopRequireDefault(_userForgotPassword);
+
+var _userResetPassword = require('./page/user-reset-password.vue');
+
+var _userResetPassword2 = _interopRequireDefault(_userResetPassword);
+
+var _userResetSuccess = require('./page/user-reset-success.vue');
+
+var _userResetSuccess2 = _interopRequireDefault(_userResetSuccess);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var FastClick = require('fastclick');
@@ -42,6 +62,21 @@ router.map({
   },
   '/deliver-methodslist': {
     component: _methodslist2.default
+  },
+  '/userregister': {
+    component: _userRegistration2.default
+  },
+  '/userregistersuccess': {
+    component: _userRegistrationSuccess2.default
+  },
+  '/userforgotpass': {
+    component: _userForgotPassword2.default
+  },
+  '/userresetpass': {
+    component: _userResetPassword2.default
+  },
+  '/userresetsuccess': {
+    component: _userResetSuccess2.default
   }
 });
 router.start(_App2.default, '#app');
