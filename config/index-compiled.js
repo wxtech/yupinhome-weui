@@ -1,5 +1,7 @@
+'use strict';
+
 // see http://vuejs-templates.github.io/webpack for documentation.
-var path = require('path')
+var path = require('path');
 
 module.exports = {
   build: {
@@ -21,4 +23,6 @@ module.exports = {
     port: 8080,
     proxyTable: {}
   }
-}
+};
+
+//# sourceMappingURL=index-compiled.js.map

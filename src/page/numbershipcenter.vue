@@ -80,8 +80,7 @@
   import headerBox from 'components/membershipecenter/header-box.vue'
   import myOrder from 'components/membershipecenter/my-order.vue'
   import myActivity from 'components/membershipecenter/my-activity.vue'
-  import myPower from 'components/membershipecenter/my-power.vue'
-  import layerBox from 'components/membershipecenter/member-layer.vue'
+  import myPower from 'components/membershipecenter/my-power.vueimport layerBox from 'components/membershipecenter/member-layer.vue'
   export default {
     components: {
       tabbar,
