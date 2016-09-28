@@ -54,27 +54,35 @@ _vue2.default.use(_vueRouter2.default);
 var router = new _vueRouter2.default();
 
 router.map({
+  // 首页
   '/': {
     component: _home2.default
   },
+  // 用户中心
   '/numbershipcenter': {
     component: _numbershipcenter2.default
   },
+  // H5配送方式
   '/deliver-methodslist': {
     component: _methodslist2.default
   },
+  // h5用户注册
   '/userregister': {
     component: _userRegistration2.default
   },
+  // h5用户注册成功
   '/userregistersuccess': {
     component: _userRegistrationSuccess2.default
   },
+  // h5用户忘记密码
   '/userforgotpass': {
     component: _userForgotPassword2.default
   },
+  // h5用户重设密码
   '/userresetpass': {
     component: _userResetPassword2.default
   },
+  // h5用户重设密码成功
   '/userresetsuccess': {
     component: _userResetSuccess2.default
   }

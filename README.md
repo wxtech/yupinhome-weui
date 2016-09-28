@@ -28,9 +28,55 @@ H5配送方式.psd
 ```
 
 
-> A Vue.js project
 
-## Build Setup
+##编译结果目录:
+```
+dist
+```
+让静态服务器指向这个目录就可以了。
+
+相当路由机制src/main.js
+```
+router.map({
+  // 首页
+  '/': {
+    component: Home
+  },
+  // 用户中心
+  '/numbershipcenter': {
+    component: numbershipcenter
+  },
+  // H5配送方式
+  '/deliver-methodslist': {
+    component: deliverMethodslist
+  },
+  // h5用户注册
+  '/userregister': {
+    component: userregister
+  },
+  // h5用户注册成功
+  '/userregistersuccess': {
+    component: userregistersuccess
+  },
+  // h5用户忘记密码
+  '/userforgotpass': {
+    component: userforgotpass
+  },
+  // h5用户重设密码
+  '/userresetpass': {
+    component: userresetpass
+  },
+  // h5用户重设密码成功
+  '/userresetsuccess': {
+    component: userresetsuccess
+  }
+})
+```
+###比如:查看方法为hash 如查看'h5用户重设密码成功' 页
+```
+http://localhost:8080/#!/userresetsuccess
+```
+## 安装
 
 ``` bash
 # install dependencies
@@ -52,4 +98,3 @@ npm run e2e
 npm test
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
