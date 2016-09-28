@@ -2,7 +2,7 @@
   <div class="webside-top">
     <div class="lf">
       <div class="logo">
-        <img src="~assets/logo.jpg">
+        <img src="~assets/home/homelogo-142x108.jpg">
       </div>
     </div>
     <div class="fr">
@@ -30,51 +30,34 @@
   </div>
   <div class="ad">
     <div class="ad-item"><img src="~assets/usercenter/ad-1242x455.jpg"></div>
-    <div class="ad-item"><img src="~assets/home/img2.png"></div>
+    <div class="ad-item"><img src="~assets/home/ad02-1242x455.jpg"></div>
   </div>
 
-  <div class="a-d">
-    <div class="l">
-      <a class="a-d-content">
-        <img src="~assets/home/final_02.jpg">
-        <span>品味生活</span>
-      </a>
-    </div>
-
-    <div class="r">
-      <a class="a-d-content">
-        <img src="~assets/home/final_03.jpg">
-        <span>厨房家电</span>
-      </a>
-    </div>
-  </div>
+  <tabbar>
+    <tabbar-item>
+      <img slot="icon" src="~assets/usercenter/bottombar-icon01-80x80.png">
+      <span slot="label">首页</span>
+    </tabbar-item>
+    <tabbar-item>
+      <img slot="icon" src="~assets/usercenter/bottombar-icon02-80x80.png">
+      <span slot="label">全部商品</span>
+    </tabbar-item>
+    <tabbar-item>
+      <img slot="icon" src="~assets/usercenter/bottombar-icon03-80x80.png">
+      <span slot="label">在线咨询</span>
+    </tabbar-item>
+    <tabbar-item>
+      <img slot="icon" src="~assets/usercenter/bottombar-icon04-80x80.png">
+      <span slot="label">购物车</span>
+    </tabbar-item>
+    <tabbar-item>
+      <img slot="icon" src="~assets/usercenter/bottombar-icon05-80x80.png">
+      <span slot="label">会员中心</span>
+    </tabbar-item>
+  </tabbar>
 </template>
 <style scope>
   @import "~assets/font-awesome/css/font-awesome.css";
-
-  .a-d .a-d-content {
-    position: relative;
-  }
-
-  .a-d .a-d-content span {
-    position: absolute;
-    bottom: 3px;
-    left: 0;
-    right: 0;
-    width: 100%;
-    font-size: 14px;
-    color: #fff;
-    padding: 5px;
-  }
-
-  .a-d .l .a-d-content span {
-    background: rgba(49, 14, 12, 0.5);
-
-  }
-
-  .a-d .r .a-d-content span {
-    background: rgba(255, 255, 255, 0.5);
-  }
 
   .webside-top {
     overflow: hidden;
@@ -176,30 +159,19 @@
     width: 20px !important;
   }
 
-  .a-d .r {
-    float: right;
-    width: 50%;
-
-  }
-
-  .a-d .l {
-    float: left;
-    width: 50%;
-  }
-
 </style>
 <script>
   import swiper from 'vux/src/components/swiper'
   import swiperItem from 'vux/src/components/swiper-item'
-  import flexbox from 'vux/src/components/flexbox'
-  import flexboxItem from 'vux/src/components/flexbox/flexbox-item.vue'
+  import tabbar from 'vux/src/components/tabbar/tabbar.vue'
+  import tabbarItem from 'vux/src/components/tabbar/tabbar-item.vue'
 
   export default {
     components: {
-      flexbox,
-      flexboxItem,
       swiper,
-      swiperItem
+      swiperItem,
+      tabbarItem,
+      tabbar
     },
     data: function () {
       return {}
