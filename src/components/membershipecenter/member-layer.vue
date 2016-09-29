@@ -86,6 +86,7 @@
     border: 1px solid;
     height: 4rem;
     padding: 5%;
+    text-align: center;
   }
 
   .layer_box .weui_dialog_ft:after {

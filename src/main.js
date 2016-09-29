@@ -10,6 +10,7 @@ import userforgotpass from './page/user-forgot-password.vue'
 import userresetpass from './page/user-reset-password.vue'
 import userresetsuccess from './page/user-reset-success.vue'
 import securitycenter from './page/security-center.vue'
+import categorylist from './page/category-list.vue'
 
 const FastClick = require('fastclick')
 FastClick.attach(document.body)
@@ -53,6 +54,9 @@ router.map({
   },
   '/securitycenter': {
     component: securitycenter
+  },
+  '/categorylist': {
+    component: categorylist
   }
 })
 router.start(App, '#app')
