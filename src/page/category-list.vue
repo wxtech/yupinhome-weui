@@ -1,5 +1,6 @@
 <template>
- ddd
+  <category-container :search-text="searchText"></category-container>
+  <!--<category-box></category-box>-->
   <section class="m-footer">
     <tabbar>
       <tabbar-item>
@@ -27,6 +28,7 @@
 </template>
 <style>
   @import "~assets/font-awesome/css/font-awesome.min.css";
+
   html {
     font-size: 50px;
     font-family: Arial, "Microsoft YaHei UI";
@@ -41,10 +43,17 @@
     font-size: .28em;
     /*line-height: 1;*/
     color: #333;
-    background-color: #f0efed;
+    background-color: #f5f5f5;
 
   }
-  .m-footer{
+  a, div, header, span {
+    -webkit-tap-highlight-color: rgba(255,255,255,0);
+  }
+  img, img a {
+    border: 0;
+    vertical-align: middle;
+  }
+  .m-footer {
     font-size: .28rem;
     width: 100%;
     /* height: 1rem; */
@@ -53,18 +62,20 @@
     /* left: -100%; */
     bottom: 0;
     z-index: 6;
-    margin:0px;
+    margin: 0px;
   }
-  section{
+
+  section {
     margin: 0 auto;
-    margin-bottom:10px;
+    margin-bottom: 10px;
     background: #ffffff;
     width: 100%;
     /*max-width: 800px;*/
     font-size: .28rem;
     position: relative;
   }
-  #app .weui_tabbar{
+
+  #app .weui_tabbar {
     background: none;
     background: #ffffff;
   }
@@ -72,15 +83,22 @@
 <script>
   import tabbar from 'vux/src/components/tabbar/tabbar.vue'
   import tabbarItem from 'vux/src/components/tabbar/tabbar-item.vue'
+  import categoryContainer from 'components/category/category-container.vue'
+  //  import categoryBox from 'components/category/category-box.vue'
 
   export default {
     components: {
       tabbar,
-      tabbarItem
+      tabbarItem,
+      categoryContainer
+//      ,
+//      categoryBox
 
     },
     data: function () {
-      return {}
+      return {
+        searchText: '切换品牌检索'
+      }
     },
     methods: {}
   }
