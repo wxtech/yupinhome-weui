@@ -3,61 +3,138 @@
     <header class="j-header">
       <div class="j-header-search">
         <input value="" placeholder="请输入关键字" type="text">
-        <a href="http://localhost:8080/#!/categorybrand">{{searchText}}</a>
+        <a href="http://localhost:8080/#!/categorylist">{{searchText}}</a>
       </div>
     </header>
   </section>
   <section id="categoryBody" class="category-viewport">
     <!--左边-->
     <div id="rootList" class="j-category-tab">
-      <div class="category8">
+      <div class="category8" id="category-lf">
         <ul id="category-ul">
           <li>
             <a href="javascript:;">
-              <i class="icon"></i>
-              <span>食物保鲜</span>
+              <i>A</i>
+              <span>AGA</span>
+              <span>ASKO</span>
+              <span>ARISTON</span>
             </a>
           </li>
           <li>
             <a href="javascript:;">
-              <i class="icon"></i>
-              <span>厨房家电</span>
+              <i>B</i>
+              <span>BLOMBERG</span>
+              <span>BRANDT</span>
+              <span>BERTAZZONI</span>
             </a>
           </li>
           <li>
             <a href="javascript:;">
-              <i class="icon"></i>
-              <span>衣服呵护</span>
+              <i>C</i>
+              <span>CRISTEL</span>
             </a>
           </li>
           <li>
             <a href="javascript:;">
-              <i class="icon"></i>
-              <span>生活家电</span>
+              <i>E</i>
+              <span>ELICA</span>
             </a>
           </li>
           <li>
             <a href="javascript:;">
-              <i class="icon"></i>
-              <span>品味生活</span>
+              <i>F</i>
+              <span>FHIABA</span>
             </a>
           </li>
           <li>
             <a href="javascript:;">
-              <i class="icon"></i>
-              <span>厨房五金设备</span>
+              <i>G</i>
+              <span>GORENJE</span>
+              <span>GRUNDIG</span>
             </a>
           </li>
           <li>
             <a href="javascript:;">
-              <i class="icon"></i>
-              <span>炊具用品</span>
+              <i>G</i>
+              <span>GORENJE</span>
+              <span>GRUNDIG</span>
             </a>
           </li>
           <li>
             <a href="javascript:;">
-              <i class="icon"></i>
-              <span>户外用品</span>
+              <i>G</i>
+              <span>GORENJE</span>
+              <span>GRUNDIG</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <i>G</i>
+              <span>GORENJE</span>
+              <span>GRUNDIG</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <i>G</i>
+              <span>GORENJE</span>
+              <span>GRUNDIG</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <i>G</i>
+              <span>GORENJE</span>
+              <span>GRUNDIG</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <i>G</i>
+              <span>GORENJE</span>
+              <span>GRUNDIG</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <i>G</i>
+              <span>GORENJE</span>
+              <span>GRUNDIG</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <i>G</i>
+              <span>GORENJE</span>
+              <span>GRUNDIG</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <i>G</i>
+              <span>GORENJE</span>
+              <span>GRUNDIG</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <i>G</i>
+              <span>GORENJE</span>
+              <span>GRUNDIG</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <i>G</i>
+              <span>GORENJE</span>
+              <span>GRUNDIG</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <i>A</i>
+              <span>GORENJE</span>
+              <span>GRUNDIG</span>
             </a>
           </li>
         </ul>
@@ -105,6 +182,12 @@
     margin-bottom: 0;
   }
 
+  #category-lf {
+    position: relative;
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+
   .j-header {
     background-color: #FFF;
     position: relative;
@@ -113,6 +196,14 @@
     border-bottom: 1px solid #d9d9d9;
     box-shadow: 0 0 2px #d9d9d9;
     overflow: hidden;
+  }
+
+  #branchList {
+    overflow: hidden;
+    position: relative;
+    top: 0px;
+    -webkit-transition: .3s;
+    transition: .3s;
   }
 
   .j-header-search {
@@ -204,7 +295,6 @@
     overflow: hidden;
     -webkit-transition: .3s;
     transition: .3s;
-
   }
 
   .j-category-tab li {
@@ -229,50 +319,6 @@
 
   }
 
-  .j-category-tab i.icon {
-    display: block;
-    width: 40px;
-    height: 40px;
-    padding: 0 !important;
-    margin: auto;
-    transition: .3s;
-    background-position: 0px 0px;
-    background: url("~assets/category/goodscat-icon.png") no-repeat;
-    background-size: cover;
-  }
-
-  .j-category-tab li:nth-child(1) i.icon {
-    background-position: 8px 4px;
-  }
-
-  .j-category-tab li:nth-child(2) i.icon {
-    background-position: 8px -67px;
-  }
-
-  .j-category-tab li:nth-child(3) i.icon {
-    background-position: 8px -135px;
-  }
-
-  .j-category-tab li:nth-child(4) i.icon {
-    background-position: 8px -212px;
-  }
-
-  .j-category-tab li:nth-child(5) i.icon {
-    background-position: 3px -304px;
-  }
-
-  .j-category-tab li:nth-child(6) i.icon {
-    background-position: 3px -370px;
-  }
-
-  .j-category-tab li:nth-child(7) i.icon {
-    background-position: 3px -444px;
-  }
-
-  .j-category-tab li:nth-child(8) i.icon {
-    background-position: 3px -524px;
-  }
-
   .j-category-tab li:active {
     background: #265baa;
   }
@@ -281,40 +327,20 @@
     color: #FFFFFF;
   }
 
-  .j-category-tab li:nth-child(1):active .icon {
-    background-position: 8px -35px;
-  }
-
-  .j-category-tab li:nth-child(2):active .icon {
-    background-position: 8px -99px;
-  }
-
-  .j-category-tab li:nth-child(3):active .icon {
-    background-position: 8px -170px;
-  }
-
-  .j-category-tab li:nth-child(4):active .icon {
-    background-position: 8px -254px;
-  }
-
-  .j-category-tab li:nth-child(5):active .icon {
-    background-position: 3px -332px;
-  }
-
-  .j-category-tab li:nth-child(6):active .icon {
-    background-position: 3px -407px;
-  }
-
-  .j-category-tab li:nth-child(7):active .icon {
-    background-position: 3px -482px;
-  }
-
-  .j-category-tab li:nth-child(8):active .icon {
-    background-position: 3px -565px;
-  }
-
   .j-category-tab a > span {
     padding-top: 5px;
+  }
+
+  .j-category-tab a > span, .j-category-tab a > i {
+    display: block;
+    font-style: normal;
+    font-family: Arial;
+    line-height: 30px;
+  }
+
+  .j-category-tab a > i {
+    color: #000000;
+    font-size: 24px;
   }
 
   .j-category-div {
@@ -347,13 +373,10 @@
       searchText: String
     },
     data () {
-      return {
-        demo: '食物保鲜',
-        list: [
-          '食物保鲜', '厨房家电', '衣服呵护', '生活家电', '品味生活', '厨房五金设备', '炊具用品', '户外用品'
-        ]
-      }
-    }
+      return {}
+    },
+    computed: {},
+    methods: {}
 
   }
 </script>

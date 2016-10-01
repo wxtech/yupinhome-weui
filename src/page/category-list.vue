@@ -46,13 +46,16 @@
     background-color: #f5f5f5;
 
   }
+
   a, div, header, span {
-    -webkit-tap-highlight-color: rgba(255,255,255,0);
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   }
+
   img, img a {
     border: 0;
     vertical-align: middle;
   }
+
   .m-footer {
     font-size: .28rem;
     width: 100%;
@@ -67,7 +70,7 @@
 
   section {
     margin: 0 auto;
-    margin-bottom: 10px;
+    /*margin-bottom: 10px;*/
     background: #ffffff;
     width: 100%;
     /*max-width: 800px;*/
@@ -84,22 +87,21 @@
   import tabbar from 'vux/src/components/tabbar/tabbar.vue'
   import tabbarItem from 'vux/src/components/tabbar/tabbar-item.vue'
   import categoryContainer from 'components/category/category-container.vue'
-  //  import categoryBox from 'components/category/category-box.vue'
-
+  import scroll from '../assets/scroll/move'
   export default {
     components: {
       tabbar,
       tabbarItem,
       categoryContainer
-//      ,
-//      categoryBox
-
     },
     data: function () {
       return {
         searchText: '切换品牌检索'
       }
     },
-    methods: {}
+    methods: {},
+    ready(){
+      scroll("#category-ul", "#category-ul li");
+    }
   }
 </script>

@@ -20,7 +20,12 @@ module.exports = {
     'comma-dangle': 0,
     'no-new': 0,
     'semi': 0,
-    'space-before-blocks':0,
-    'space-before-function-paren':0
+    'space-before-blocks': 0,
+    'space-before-function-paren': 0,
+    'camelcase': 0,
+    'quotes': 0,
+    'indent': 0,
+    'padded-blocks': 0
+
   }
 }

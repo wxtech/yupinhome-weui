@@ -1,5 +1,5 @@
 <template>
-  <category-container :search-text="searchText"></category-container>
+  <category-brand-container :search-text="searchText"></category-brand-container>
   <!--<category-box></category-box>-->
   <section class="m-footer">
     <tabbar>
@@ -70,7 +70,7 @@
 
   section {
     margin: 0 auto;
-    margin-bottom: 10px;
+    /*margin-bottom: 10px;*/
     background: #ffffff;
     width: 100%;
     /*max-width: 800px;*/
@@ -86,18 +86,22 @@
 <script>
   import tabbar from 'vux/src/components/tabbar/tabbar.vue'
   import tabbarItem from 'vux/src/components/tabbar/tabbar-item.vue'
-  import categoryContainer from 'components/category/category-container.vue'
+  import categoryBrandContainer from 'components/category/category-brand-container.vue'
+  import scroll from '../assets/scroll/move'
   export default {
     components: {
       tabbar,
       tabbarItem,
-      categoryContainer
+      categoryBrandContainer
+
     },
     data: function () {
       return {
         searchText: '切换分类检索'
       }
     },
-    methods: {}
+    ready(){
+      scroll("#category-ul", "#category-ul li");
+    }
   }
 </script>
