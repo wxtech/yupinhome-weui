@@ -20,41 +20,43 @@ Vue.use(VueRouter)
 const router = new VueRouter()
 
 router.map({
-
+  // 首页
   '/': {
     component: Home
   },
-
+  // 用户中心
   '/numbershipcenter': {
     component: numbershipcenter
   },
-
+  // H5配送方式
   '/deliver-methodslist': {
     component: deliverMethodslist
   },
-
+  // h5用户注册
   '/userregister': {
     component: userregister
   },
-
+  // h5用户注册成功
   '/userregistersuccess': {
     component: userregistersuccess
   },
-
+  // h5用户忘记密码
   '/userforgotpass': {
     component: userforgotpass
   },
-
+  // h5用户重设密码
   '/userresetpass': {
     component: userresetpass
   },
-
+  // h5用户重设密码成功
   '/userresetsuccess': {
     component: userresetsuccess
   },
+  // h5安全中心
   '/securitycenter': {
     component: securitycenter
   },
+  // H5商品分类.psd
   '/categorylist': {
     component: categorylist
   },
