@@ -28,6 +28,9 @@
     </div>
   </div>
 
+  <div class="text-center text-center-logo">
+    <img src="~assets/logo.png">
+  </div>
 </template>
 <style scope>
   .vux-header {
@@ -41,6 +44,15 @@
 
   .vux-header .vux-header-left .vux-header-back, .vux-header .vux-header-left .vux-header-back:before {
     color: #265baa;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .text-center-logo img {
+    width: 30%;
+    padding-top:15px;
   }
 </style>
 <script>
@@ -56,7 +68,6 @@
     data: function () {
       return {}
     },
-    methods: {
-    }
+    methods: {}
   }
 </script>
