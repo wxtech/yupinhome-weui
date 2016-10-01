@@ -77,8 +77,20 @@ router.map({
   // h5用户重设密码成功
   '/userresetsuccess': {
     component: userresetsuccess
+  },
+  // h5安全中心
+  '/securitycenter': {
+    component: securitycenter
+  },
+  // H5商品分类.psd
+  '/categorylist': {
+    component: categorylist
+  },
+  '/categorybrand': {
+    component: categorybrand
   }
 })
+
 ```
 ###比如:查看方法为hash 如查看'h5用户重设密码成功' 页
 ```
