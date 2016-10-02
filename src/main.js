@@ -12,7 +12,7 @@ import userresetsuccess from './page/user-reset-success.vue'
 import securitycenter from './page/security-center.vue'
 import categorylist from './page/category-list.vue'
 import categorybrand from './page/category-brand-list.vue'
-import aftersalesRepair from './page/aftersales-repair.vue'
+import aftersalesRepair from './page/aftersales.vue'
 const FastClick = require('fastclick')
 FastClick.attach(document.body)
 
@@ -66,7 +66,7 @@ router.map({
     component: categorybrand
   },
   // H5我的售后-返修.psd
-  '/aftersales-repair': {
+  '/aftersales': {
     component: aftersalesRepair
   }
 })

@@ -8,7 +8,7 @@
     <tab-item class="vux-center" v-for="item in parentTab">{{item}}</tab-item>
   </tab>
 
-  <swiper :index.sync="index" >
+  <swiper :index.sync="index">
     <swiper-item>
       <ul class="nav nav-tabs" role="tablist">
         <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">全部</a>
@@ -112,10 +112,32 @@
     border: #275bab solid 1px;
   }
 
-  .vux-tab-item{
-    background: #f5f5f5;
+  .vux-tab-item {
+    background: #f5f5f5 !important;
+    color: #275bab !important;
+  }
+
+  .vux-tab-ink-bar {
+    background: #275bab !important;
+    height: 2px !important;
+  }
+
+  .vux-tab-selected {
+    background: #fff !important;
+  }
+
+  .vux-swiper .nav-tabs > li > a {
+    border: none;
+    color: #989898;
+  }
+
+  .vux-swiper .nav-tabs > li.active > a {
     color: #275bab;
-    border: #ccc solid 1px !important;
+    border: none;
+  }
+
+  .vux-swiper .nav-tabs {
+    border: none;
   }
 </style>
 <script>
@@ -132,9 +154,7 @@
     data(){
       return {
         parentTab: ['保修', '退换货'],
-        childTab: ['全部', '保修期内商品', '已过保商品'],
-        index: 0,
-        childIndex: 0
+        index: 1
       }
     },
     components: {
