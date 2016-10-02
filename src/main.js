@@ -13,6 +13,7 @@ import securitycenter from './page/security-center.vue'
 import categorylist from './page/category-list.vue'
 import categorybrand from './page/category-brand-list.vue'
 import aftersalesRepair from './page/aftersales.vue'
+import myCustomerServices from './page/myCustomerServices.vue'
 const FastClick = require('fastclick')
 FastClick.attach(document.body)
 
@@ -65,10 +66,14 @@ router.map({
   '/categorybrand': {
     component: categorybrand
   },
-  // H5我的售后.psd H5我的售后-返修.psd
+  // H5我的售后.psd H5我的售后-返修.psd H5我的售后－退换货.psd
   '/aftersales': {
     component: aftersalesRepair
+  },
+  '/myCustomerServices': {
+    component: myCustomerServices
   }
+
 })
 router.start(App, '#app')
 
