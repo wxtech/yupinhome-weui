@@ -41,7 +41,7 @@
     border: 1px solid #345ca5;
     width: 25%;
     top: 30%;
-    height: 0.8rem;
+    height: 0.64rem;
     color: #345ca5;
   }
 

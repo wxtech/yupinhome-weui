@@ -211,7 +211,7 @@
     overflow: hidden;
   }
 
-  .j-header-search > input {
+  .j-header .j-header-search > input {
     width: 60%;
     border: 1px solid #275bab;
     height: 30px;
@@ -223,7 +223,7 @@
     padding-left: 10px;
   }
 
-  .j-header-search > a {
+  .j-header .j-header-search > a {
     float: right;
     margin-right: 12px;
     width: 30%;
@@ -232,7 +232,7 @@
     color: #FFFFFF;
   }
 
-  .j-category-tab a > img {
+  .j-header .j-category-tab a > img {
     display: block;
     width: 43%;
     height: auto;

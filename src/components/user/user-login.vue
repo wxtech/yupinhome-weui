@@ -77,7 +77,7 @@
 
   .login_main span {
     color: #6f6f6f;
-    font-size: 17px;
+    font-size: 13px;
     display: block;
     text-align: left;
     padding: 0px 0px 5px;
@@ -109,7 +109,7 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    height: 0.94rem;
+    height: 0.64rem;
   }
 
   .login_main .tips {

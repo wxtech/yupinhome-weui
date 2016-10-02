@@ -12,6 +12,8 @@ import userresetsuccess from './page/user-reset-success.vue'
 import securitycenter from './page/security-center.vue'
 import categorylist from './page/category-list.vue'
 import categorybrand from './page/category-brand-list.vue'
+import categorysearch from './page/category-search.vue'
+import goodsdetail from './page/goods-details-page.vue'
 const FastClick = require('fastclick')
 FastClick.attach(document.body)
 
@@ -60,6 +62,12 @@ router.map({
   },
   '/categorybrand': {
     component: categorybrand
+  },
+  '/categorysearch': {
+    component: categorysearch
+  },
+  '/goodsdetail': {
+    component: goodsdetail
   }
 })
 router.start(App, '#app')

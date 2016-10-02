@@ -28,10 +28,11 @@
     </tabbar>
   </section>
   <!--弹层-->
-  <layer-box class="layer_box"></layer-box>
+  <layer-box class="layer_box" :has-text="hasText" :share-title="shareTitle"></layer-box>
 </template>
 <style>
   @import "~assets/font-awesome/css/font-awesome.min.css";
+
   html {
     font-size: 50px;
     font-family: Arial, "Microsoft YaHei UI";
@@ -49,27 +50,30 @@
     background-color: #f0efed;
 
   }
-.m-footer{
-  font-size: .28rem;
-  width: 100%;
-  /* height: 1rem; */
-  /* border-top: #d5d5d5 solid 1px; */
-  position: fixed;
-  /* left: -100%; */
-  bottom: 0;
-  z-index: 6;
-  margin:0px;
-}
-  section{
+
+  .m-footer {
+    font-size: .28rem;
+    width: 100%;
+    /* height: 1rem; */
+    /* border-top: #d5d5d5 solid 1px; */
+    position: fixed;
+    /* left: -100%; */
+    bottom: 0;
+    z-index: 6;
+    margin: 0px;
+  }
+
+  section {
     margin: 0 auto;
-    margin-bottom:10px;
+    margin-bottom: 10px;
     background: #ffffff;
     width: 100%;
     /*max-width: 800px;*/
     font-size: .28rem;
     position: relative;
   }
-  #app .weui_tabbar{
+
+  #app .weui_tabbar {
     background: none;
     background: #ffffff;
   }
@@ -92,8 +96,11 @@
       myActivity,
       layerBox
     },
-    data: function () {
-      return {}
+    data() {
+      return {
+        hasText: true,
+        shareTitle: '将本站分享给朋友'
+      }
     },
     methods: {}
   }
