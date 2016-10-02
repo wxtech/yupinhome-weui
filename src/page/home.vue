@@ -66,6 +66,13 @@
     <div class="ad-item"><img src="~assets/home/ad02-1242x455.jpg"></div>
     <div class="ad-item"><img src="~assets/usercenter/ad-1242x455.jpg"></div>
     <div class="ad-item"><img src="~assets/home/ad02-1242x455.jpg"></div>
+    <div class="text-center">
+      <br>
+       没有更多了
+      <br>
+      <br>
+      <br>
+    </div>
   </div>
   <tabbar>
     <tabbar-item>
@@ -97,7 +104,7 @@
 
   .webside-top {
     overflow: hidden;
-    position: fixed;
+    position: absolute;
     right: 0;
     left: 0;
     top: 0;
