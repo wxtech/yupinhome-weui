@@ -24,6 +24,7 @@ h5商品分类.psd
 
 H5商品分类-品牌检索.psd
 
+
 H5商品检索PSD
 
 H5商品详情psd
@@ -37,9 +38,23 @@ H5商品详情-分享PSD
 品牌信息psd
 
 品牌详情psd
+=======
 
 H5配送方式.psd
 
+H5我的售后.psd
+
+H5我的售后-返修.psd
+
+H5我的售后－退换货.psd
+
+```
+正在进行的
+
+```
+H5我的客服-申请换客服.psd
+H5我的客服.psd
+H5购物车.psd
 ```
 
 
@@ -84,8 +99,20 @@ router.map({
   // h5用户重设密码成功
   '/userresetsuccess': {
     component: userresetsuccess
+  },
+  // h5安全中心
+  '/securitycenter': {
+    component: securitycenter
+  },
+  // H5商品分类.psd
+  '/categorylist': {
+    component: categorylist
+  },
+  '/categorybrand': {
+    component: categorybrand
   }
 })
+
 ```
 ###比如:查看方法为hash 如查看'h5用户重设密码成功' 页
 ```
