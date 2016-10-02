@@ -65,7 +65,7 @@ router.map({
   '/categorybrand': {
     component: categorybrand
   },
-  // H5我的售后-返修.psd
+  // H5我的售后.psd H5我的售后-返修.psd
   '/aftersales': {
     component: aftersalesRepair
   }
