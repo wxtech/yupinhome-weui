@@ -17,6 +17,7 @@ import goodsdetail from './page/goods-details-page.vue'
 import aftersalesRepair from './page/aftersales.vue'
 import myCustomerServices from './page/myCustomerServices.vue'
 import mybookmark from './page/mybookmark.vue'
+import myRight from './page/myRight.vue'
 const FastClick = require('fastclick')
 FastClick.attach(document.body)
 
@@ -87,6 +88,11 @@ router.map({
   // 我的收藏
   '/mybookmark': {
     component: mybookmark
+  },
+  // 我的权利
+  '/myRight': {
+    component: myRight
   }
 })
+
 router.start(App, '#app')
