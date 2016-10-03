@@ -1,4 +1,5 @@
 <template>
+  <!--商品分类-品牌检索页-->
   <category-brand-container :search-text="searchText"></category-brand-container>
   <!--<category-box></category-box>-->
   <section class="m-footer">

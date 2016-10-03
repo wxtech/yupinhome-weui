@@ -6,8 +6,8 @@
       <div class="weui_dialog_bd clear">
         <img class="img" src="~assets/usercenter/sao.jpg">
       </div>
-      <p class="layerP black1">将本站分享给朋友</p>
-      <p class="layerP">一旦有人通过此二维码注册为本站会员，您将获得1000积分奖励</p>
+      <p class="layerP black1">{{shareTitle}}</p>
+      <p class="layerP" v-if="hasText">一旦有人通过此二维码注册为本站会员，您将获得1000积分奖励</p>
       <div class="weui_dialog_ft">
         <a href="#" class="weui_btn_dialog"><i class="fa fa-weixin" aria-hidden="true"></i></a>
         <a href="#" class="weui_btn_dialog"><i class="fa fa-qq" aria-hidden="true"></i></a>
@@ -25,12 +25,13 @@
     margin: 0 15%;
     color: #787878;
     line-height: 21px;
+    font-size: 12px;
   }
 
   .black1 {
     padding: 3% 0;
     color: #000000;
-    font-size: 20px;
+    font-size: 15px;
   }
 
   .clear {
@@ -86,7 +87,9 @@
     border: 1px solid;
     height: 4rem;
     padding: 5%;
-    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
   }
 
   .layer_box .weui_dialog_ft:after {
@@ -122,6 +125,10 @@
 <script>
   import dialog from 'vux/src/components/dialog/index.vue'
   export default{
+    props: {
+      hasText: Boolean,
+      shareTitle: String
+    },
     components: {
       dialog
     }
