@@ -12,13 +12,13 @@ import userresetsuccess from './page/user-reset-success.vue'
 import securitycenter from './page/security-center.vue'
 import categorylist from './page/category-list.vue'
 import categorybrand from './page/category-brand-list.vue'
-<<<<<<< HEAD
+
 import categorysearch from './page/category-search.vue'
 import goodsdetail from './page/goods-details-page.vue'
-=======
+
 import aftersalesRepair from './page/aftersales.vue'
 import myCustomerServices from './page/myCustomerServices.vue'
->>>>>>> 7902c0696089741e757a15a3e9e5e2fb6e627258
+
 const FastClick = require('fastclick')
 FastClick.attach(document.body)
 
@@ -71,20 +71,20 @@ router.map({
   '/categorybrand': {
     component: categorybrand
   },
-<<<<<<< HEAD
+  //商品检索
   '/categorysearch': {
     component: categorysearch
   },
+  //商品详情
   '/goodsdetail': {
     component: goodsdetail
-=======
+  },
   // H5我的售后.psd H5我的售后-返修.psd H5我的售后－退换货.psd
   '/aftersales': {
     component: aftersalesRepair
   },
   '/myCustomerServices': {
     component: myCustomerServices
->>>>>>> 7902c0696089741e757a15a3e9e5e2fb6e627258
   }
 
 })
