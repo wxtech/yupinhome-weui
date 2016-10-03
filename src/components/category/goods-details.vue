@@ -38,14 +38,32 @@
     </div>
   </section>
   <section class="goods-tabBar">
-    <div class="s-header" id="s-header">
-      <a href="javascript:void(0);" class="s-info cur">基本信息</a>
-      <a href="javascript:void(0);" class="params">基本信息</a>
-      <a href="javascript:void(0);" class="service">基本信息</a>
+    <div class="myvux-swiper">
+      <ul class="nav nav-tabs parentnav-tabs" role="tablist">
+        <li role="presentation" class="active">
+          <a href="#pphome" aria-controls="pphome" role="tab" data-toggle="tab">商品介绍</a>
+        </li>
+        <li role="presentation">
+          <a href="#ppprofile" aria-controls="ppprofile" role="tab" data-toggle="tab">规格参数</a>
+        </li>
+        <li role="presentation">
+          <a href="#ppprofile2" aria-controls="ppprofile2" role="tab" data-toggle="tab">售后保障</a>
+        </li>
+      </ul>
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="pphome">
+          <section>
+            <img src="~assets/category/goodsinfo-1242x4600.jpg"/>
+          </section>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="ppprofile">
+          ddd
+        </div>
+        <div role="tabpanel" class="tab-pane" id="ppprofile2">
+          ccc
+        </div>
+      </div>
     </div>
-  </section>
-  <section>
-    <img src="~assets/category/goodsinfo-1242x4600.jpg"/>
   </section>
   <section class="commendetail">
     <div class="commendetailModel">
@@ -100,13 +118,61 @@
         </div>
         <p>购物车</p>
       </div>
-      <button class="cart cell btn" style="">加入购物车</button>
-      <button class="buy cell btn" style="">立即购买</button>
+      <button class="cart cell btn2" style="">加入购物车</button>
+      <button class="buy cell btn2" style="">立即购买</button>
     </div>
   </section>
 </template>
 <style>
   @import "~assets/font-awesome/css/font-awesome.min.css";
+
+  #app {
+    background: #f5f5f5;
+  }
+
+  .goods-info {
+    border-bottom: 1px solid #cccccc;
+  }
+
+  .goods-tabBar .myvux-swiper {
+    border-top: 1px solid #cccccc;
+  }
+
+  .goods-tabBar .myvux-swiper .parentnav-tabs li {
+    width: 33.3%;
+  }
+
+  .goods-tabBar .tab-content {
+    background: none;
+  }
+
+  .goods-tabBar .myvux-swiper .nav-tabs > li > a {
+    color: #989898 !important;
+    border-right: 1px solid #cccccc;
+  }
+
+  .goods-tabBar .nav-tabs > li > a {
+    border-radius: 0;
+    border: none;
+  }
+
+  .goods-tabBar .nav-tabs > li:last-child > a {
+    border-right: none;
+  }
+
+  .goods-tabBar .nav-tabs > li:first-child > a {
+    border-left: none;
+  }
+
+  .goods-tabBar .nav-tabs > li {
+    margin-bottom: 0;
+  }
+
+  #app .goodsBar {
+    background: #fff;
+    padding-bottom: 20px;
+    margin-bottom: 0;
+  }
 
   .prod-comment {
     margin-bottom: 100px;
@@ -416,8 +482,13 @@
     color: #265baa;
   }
 
-  .action-bar .btn {
+  .action-bar .btn2 {
     color: #ffffff;
+  }
+
+  .goods-tabBar .nav-tabs > li.active > a, .goods-tabBar .nav-tabs > li.active > a:hover, .goods-tabBar .nav-tabs > li.active > a:focus {
+    border: none;
+    border-right: 1px solid #cccccc;
   }
 
   .mui-flex > .cell {
@@ -479,19 +550,20 @@
 <script>
   import $ from '../../assets/swiper/dist/jquery-1.10.1.min'
   import Swiper from '../../assets/swiper/dist/idangerous.swiper.min'
-
+  window.jQuery = require('jquery')
   export default{
     data(){
       return {
-        demo1: '未发货'
+        parentTab: ['保修', '退换货'],
+        index: 1
       }
     },
     components: {
       $,
       Swiper
-
     },
     ready(){
+      require('bootstrap')
       let cssClassNames = ['flipInY', 'bounceInLeft', 'bounceInUp', 'bounceInRight', 'bounceInDown', 'flipInX', 'rotateInDownRight', 'rotateInDownLeft', 'rotateInUpLeft', 'rotateInUpRight', 'hinge', 'bounce', 'swing', 'wobble', 'jello', 'bounceIn', 'bounceInDown', 'fadeIn', 'fadeInDownBig', 'flip', 'lightSpeedIn', 'rotateIn', 'slideInUp', 'zoomIn', 'rollIn'];
       let swiper = new Swiper('.swiper-container', {
         // Optional parameters

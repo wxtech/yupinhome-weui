@@ -277,7 +277,7 @@
         },
         onSlideChangeEnd: function () {
           $(swiper.container).find('.swiper-slide-active .titles-bgs,.swiper-slide-active a').each(function () {
-            $(this).show()
+            $(this).show();
             $(this).addClass(cssClassNames[Math.floor(cssClassNames.length * Math.random())]);
           });
         }

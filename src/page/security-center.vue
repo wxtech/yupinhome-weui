@@ -1,6 +1,6 @@
 <template>
   <!--调用头部公共组件-->
-  <header class="navbar">
+  <header class="navbar navbar2">
     <nav-box :header-title="headerTitle">
     </nav-box>
   </header>
@@ -12,6 +12,12 @@
 
   html {
     background: #f5f5f5;
+  }
+
+  #app .navbar2 {
+    padding-bottom: 20px;
+    margin-bottom: 0;
+    background: #ffffff;
   }
 </style>
 <script>

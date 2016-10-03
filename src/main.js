@@ -16,6 +16,13 @@ import categorysearch from './page/category-search.vue'
 import goodsdetail from './page/goods-details-page.vue'
 import aftersalesRepair from './page/aftersales.vue'
 import myCustomerServices from './page/myCustomerServices.vue'
+import brandinformation from './page/brandInformation.vue'
+import branddetails from './page/brandDetails.vue'
+import waitreview from './page/wait-review.vue'
+import orderlist from './page/order-management.vue'
+import shopcart from './page/shop-cart.vue'
+import mybookmark from './page/mybookmark.vue'
+import myRight from './page/myRight.vue'
 
 const FastClick = require('fastclick')
 FastClick.attach(document.body)
@@ -77,13 +84,40 @@ router.map({
   '/goodsdetail': {
     component: goodsdetail
   },
+  //品牌信息
+  '/brandinformation': {
+    component: brandinformation
+  },
+  //品牌详情
+  '/branddetails': {
+    component: branddetails
+  },
+  //等待审核
+  '/waitreview': {
+    component: waitreview
+  },
+  //订单管理
+  '/orderlist': {
+    component: orderlist
+  },
+  //购物车
+  'shopcart': {
+    component: shopcart
+  },
   // H5我的售后.psd H5我的售后-返修.psd H5我的售后－退换货.psd
   '/aftersales': {
     component: aftersalesRepair
   }, //我的客服
   '/myCustomerServices': {
     component: myCustomerServices
+  },
+  // 我的收藏
+  '/mybookmark': {
+    component: mybookmark
+  },
+  // 我的权利
+  '/myRight': {
+    component: myRight
   }
-
 })
 router.start(App, '#app')

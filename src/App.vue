@@ -26,11 +26,6 @@
     margin-bottom: 50px;
   }
 
-  .weui_tabbar {
-    position: fixed !important;
-  }
-
-
 </style>
 <style lang="less">
   @import '~vux/src/styles/reset';
