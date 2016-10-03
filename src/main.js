@@ -81,7 +81,7 @@ router.map({
   // H5我的售后.psd H5我的售后-返修.psd H5我的售后－退换货.psd
   '/aftersales': {
     component: aftersalesRepair
-  },
+  }, //我的客服
   '/myCustomerServices': {
     component: myCustomerServices
   },
@@ -94,5 +94,8 @@ router.map({
     component: myRight
   }
 })
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2d3f5dc3be5b362b7fb677d3c8c8e021476feb44
 router.start(App, '#app')
