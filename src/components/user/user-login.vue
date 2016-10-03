@@ -42,7 +42,7 @@
     position: relative;
     width: auto;
     padding: .4rem 0.875rem 0.5rem;
-    border-bottom: 1px solid #265baa;
+    /*border-bottom: 1px solid #265baa;*/
   }
 
   .login_main form {
@@ -77,7 +77,7 @@
 
   .login_main span {
     color: #6f6f6f;
-    font-size: 13px;
+    font-size: 15px;
     display: block;
     text-align: left;
     padding: 0px 0px 5px;
@@ -109,7 +109,7 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    height: 0.64rem;
+    height: 0.65rem;
   }
 
   .login_main .tips {

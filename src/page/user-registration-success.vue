@@ -1,6 +1,6 @@
 <template>
   <!--调用头部公共组件-->
-  <header class="navbar">
+  <header class="navbar navbar2">
     <nav-box :header-title="headerTitle">
     </nav-box>
   </header>
