@@ -12,10 +12,8 @@ import userresetsuccess from './page/user-reset-success.vue'
 import securitycenter from './page/security-center.vue'
 import categorylist from './page/category-list.vue'
 import categorybrand from './page/category-brand-list.vue'
-
 import categorysearch from './page/category-search.vue'
 import goodsdetail from './page/goods-details-page.vue'
-
 import aftersalesRepair from './page/aftersales.vue'
 import myCustomerServices from './page/myCustomerServices.vue'
 
@@ -82,11 +80,10 @@ router.map({
   // H5我的售后.psd H5我的售后-返修.psd H5我的售后－退换货.psd
   '/aftersales': {
     component: aftersalesRepair
-  },
+  }, //我的客服
   '/myCustomerServices': {
     component: myCustomerServices
   }
 
 })
 router.start(App, '#app')
-
