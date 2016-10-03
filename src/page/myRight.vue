@@ -68,7 +68,9 @@
   }
 
   .right-mid li:first-child span {
-    /*background: url("~assets/usercenter/jifeng-icon-80x80.png");*/
+    background: url("~assets/usercenter/jifeng-icon-80x80.png") no-repeat;
+    background-size: 20px 20px;
+    padding-top: 20px;
   }
 
   .right-mid li:first-child strong {
@@ -130,7 +132,7 @@
     margin-bottom: 5px;
   }
   .box-btn{
-    margin: 10px 10px 10px 0;
+    margin: 10px 10px 0 0;
   }
 </style>
 <script>
