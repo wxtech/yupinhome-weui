@@ -239,14 +239,6 @@
     color: #6f6f6f;
   }
 
-  .l, .ll {
-    float: left;
-  }
-
-  .r, .rr {
-    float: right;
-  }
-
   .aftersales-itemdescription .l, .aftersales-itemdescription .r {
     float: left;
     width: 50%;
@@ -268,16 +260,6 @@
     padding-right: 15px;
     text-align: center;
     color: #265baa;
-  }
-
-  .repair-search {
-    padding: 10px 5px;
-    background: -webkit-linear-gradient(top, #ededed, #fff); /* Safari 5.1 - 6.0 */
-    background: -o-linear-gradient(top, #ededed, #fff); /* Opera 11.1 - 12.0 */
-    background: -moz-linear-gradient(top, #ededed, #fff); /* Firefox 3.6 - 15 */
-    background: linear-gradient(to bottom, #ededed, #fff); /* 标准的语法 */
-    border-top: #d9d9d9 solid 1px;
-    border-bottom: #d9d9d9 solid 1px;
   }
 
   .aftersales-itemdescription .btn {
@@ -324,17 +306,13 @@
     color: #275bab !important;
   }
 
-  body {
-    font-size: 12px;
-  }
-
   .text-center-logo2 {
     background: #f5f5f5;
   }
 </style>
 <script>
   import xHeader from 'vux/src/components/x-header'
-  window.jQuery = require('jquery')
+  window.jQuery = require('jquery');
   export default{
     ready(){
       require('bootstrap')

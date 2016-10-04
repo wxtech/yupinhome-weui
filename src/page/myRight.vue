@@ -6,7 +6,7 @@
   </div>
   <ul class="box right-mid bg">
     <li>
-      <span>积分</span><strong class="col-1">1432</strong>
+      <span class="col">积分</span><strong class="col-1">1432</strong>
     </li>
     <li>
       <span class="col">您拥有的积分</span>
@@ -39,8 +39,6 @@
   <div class="mar-btn get"><a href="###" class="button">去领优惠券</a></div>
 </template>
 <style>
-  @import "~assets/commen.css";
-
   body {
     background: none;
   }
@@ -66,15 +64,18 @@
     width: 33.33%;
     text-align: center;
   }
-
   .right-mid li:first-child span {
+    width: 30px;
+    text-align: center;
     background: url("~assets/usercenter/jifeng-icon-80x80.png") no-repeat;
-    background-size: 20px 20px;
-    padding-top: 20px;
+    background-size: 30px 30px;
+    padding-top: 32px;
+    vertical-align: middle;
   }
 
   .right-mid li:first-child strong {
     font-size: 18px;
+    vertical-align: middle;
   }
 
   .right-mid li:nth-child(2) {
@@ -100,6 +101,7 @@
     overflow: hidden;
     line-height: 40px;
     text-align: center;
+    font-size: 14px;
   }
 
   .right-list-1 li {
@@ -119,7 +121,9 @@
   .right-list-2 {
     padding: 12px 0;
   }
-
+  .right-list-2 .col-1{
+    font-size: 15px;
+  }
   .right-list-2 li {
     width: 50%;
     padding: 0 10px;
