@@ -28,10 +28,6 @@
     margin-bottom: 50px;
   }
 
-  .weui_tabbar {
-    position: fixed !important;
-  }
-
   *{
     box-sizing: border-box;
   }

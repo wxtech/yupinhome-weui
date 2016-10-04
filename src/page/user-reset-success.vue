@@ -1,6 +1,6 @@
 <template>
   <!--调用头部公共组件-->
-  <header class="navbar">
+  <header class="navbar navbar2">
     <nav-box :header-title="headerTitle">
     </nav-box>
   </header>
@@ -9,6 +9,10 @@
 </template>
 <style>
   @import "~assets/font-awesome/css/font-awesome.min.css";
+
+  #app .navbar2 {
+    border: none;
+  }
 
   html {
     background: #f5f5f5;

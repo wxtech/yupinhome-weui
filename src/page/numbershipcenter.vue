@@ -33,6 +33,40 @@
 <style>
   @import "~assets/font-awesome/css/font-awesome.min.css";
 
+  .black1, .layerP {
+    font-family: "Microsoft YaHei UI";
+  }
+
+  .wrap .power-box .vux-flex-row {
+    padding: 0px;
+  }
+
+  .title-line .card:before {
+    margin-top: 19px;
+  }
+
+  .wrap .vux-flexbox .vux-flexbox-item {
+    padding: 10px 0;
+  }
+
+  .wrap {
+    margin-top: 10px;
+  }
+
+  .wrap .title-line {
+    border-top: 1px solid #DDD8CE;
+    border-top: 1px solid #DDD8CE;
+    padding: 0 10px;
+  }
+
+  .memberCenter .h_bottom .mytabs .mytab-item a {
+    height: 15vw;
+  }
+
+  .h_bottom .mytabs .mytab-item a {
+    width: 50%;
+  }
+
   html {
     font-size: 50px;
     font-family: Arial, "Microsoft YaHei UI";

@@ -7,7 +7,16 @@
   .footer_box {
     background: #f5f5f5;
     text-align: center;
+    border-top: 1px solid #265baa;
+    padding-bottom: 100px;
   }
+
+  .login_success h4 {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
   .img_box {
     width: 20%;
     display: inline-block;
