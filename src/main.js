@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './App'
 import Home from './page/home.vue'
 import VueRouter from 'vue-router'
-import numbershipcenter from './page/numbershipcenter'
+import numbershipcenter from './page/numbershipcenter.vue'
 import deliverMethodslist from './page/methodslist.vue'
 import userregister from './page/user-registration.vue'
 import userregistersuccess from './page/user-registration-success.vue'
@@ -18,11 +18,12 @@ import aftersalesRepair from './page/aftersales.vue'
 import myCustomerServices from './page/myCustomerServices.vue'
 import mybookmark from './page/mybookmark.vue'
 import myRight from './page/myRight.vue'
+import myData from './page/myData.vue'
+
 const FastClick = require('fastclick')
 FastClick.attach(document.body)
 
 Vue.use(VueRouter)
-
 const router = new VueRouter()
 
 router.map({
@@ -92,10 +93,10 @@ router.map({
   // 我的权利
   '/myRight': {
     component: myRight
+  },
+  // 我的资料
+  '/myData': {
+    component: myData
   }
-})
-<<<<<<< HEAD
-
-=======
->>>>>>> 2d3f5dc3be5b362b7fb677d3c8c8e021476feb44
-router.start(App, '#app')
+});
+router.start(App, '#app');
