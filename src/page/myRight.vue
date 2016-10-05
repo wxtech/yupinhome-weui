@@ -1,5 +1,5 @@
 <template>
-  <x-header :left-options="{backText: '返回',showBack:true}">我的收藏</x-header>
+  <x-header :left-options="{backText: '返回',showBack:true}">我的权利</x-header>
   <div class="right-top bg">
     <img src="~assets/home/right.png"/>
     <p>您是我们的VIP客户，您可以享有在购买标记VIP优惠的商品中获得额外的折扣。</p>

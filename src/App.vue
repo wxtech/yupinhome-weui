@@ -8,15 +8,17 @@
     max-height: 100%;
     max-width: 100%;
   }
-  input,button,select,a{
+
+  input, button, select, a {
     outline: none;
   }
+
   body {
     font-size: 12px;
     font-family: normal;
   }
 
-  i, em, a, strong, span,label {
+  i, em, a, strong, span, label, b {
     display: inline-block;
   }
 
@@ -28,13 +30,14 @@
     margin-bottom: 50px;
   }
 
-  *{
+  * {
     box-sizing: border-box;
   }
 
-  li{
+  li {
     list-style: none;
   }
+
   .button {
     background: #275bab;
     border-radius: 4px;
@@ -44,8 +47,9 @@
     text-align: center;
     font-size: 16px;
   }
+
   .button-1 {
-    border:1px solid #275bab;
+    border: 1px solid #275bab;
     border-radius: 4px;
     line-height: 38px;
     color: #275bab;
@@ -54,17 +58,21 @@
     font-size: 16px;
     background: #fff;
   }
-  .mar-btn{
+
+  .mar-btn {
     margin: 20px 0;
     width: 100%;
   }
+
   p {
     color: #888;
     line-height: 1.5;
   }
-  img{
+
+  img {
     width: 100%;
   }
+
   .bg {
     background: #fff;
   }
@@ -74,19 +82,24 @@
     display: block;
     clear: both;
   }
-  .col{
+
+  .col {
     color: #275bab;
   }
-  .col-1{
+
+  .col-1 {
     color: #e82424;
   }
-  .col-2{
+
+  .col-2 {
     color: #b1b1b1;
   }
-  .box{
+
+  .box {
     display: -webkit-box;
     -webkit-box-align: center;
   }
+
   .l, .ll {
     float: left;
   }
@@ -94,17 +107,21 @@
   .r, .rr {
     float: right;
   }
-  .pad{
+
+  .pad {
     padding: 12px 4%;
   }
+
   .noMore {
     text-align: center;
     margin: 12px 0;
     color: #888;
   }
-  .vux-header{
-    box-shadow: 0 0 6px rgba(0,0,0,0.2);
+
+  .vux-header {
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
   }
+
   .repair-search {
     padding: 10px;
     background: #fff;

@@ -51,7 +51,7 @@
   }
 
   .text-center-logo img {
-    width: 30%;
+    width: 25%;
     padding-top:15px;
   }
 </style>

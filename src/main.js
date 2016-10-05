@@ -15,7 +15,7 @@ import categorybrand from './page/category-brand-list.vue'
 import categorysearch from './page/category-search.vue'
 import goodsdetail from './page/goods-details-page.vue'
 import aftersalesRepair from './page/aftersales.vue'
-import myCustomerServices from './page/myCustomerServices.vue'
+
 import brandinformation from './page/brandInformation.vue'
 import branddetails from './page/brandDetails.vue'
 import waitreview from './page/wait-review.vue'
@@ -24,6 +24,11 @@ import shopcart from './page/shop-cart.vue'
 import mybookmark from './page/mybookmark.vue'
 import myRight from './page/myRight.vue'
 import myData from './page/myData.vue'
+import mycustomservice from './page/myCustomerServices.vue'
+import accountmanager from './page/accountmanager.vue'
+import messagemanager from './page/messagemanager.vue'
+import applyreservation from './page/applyreservation.vue'
+
 const FastClick = require('fastclick')
 FastClick.attach(document.body)
 
@@ -106,9 +111,6 @@ router.map({
   // H5我的售后.psd H5我的售后-返修.psd H5我的售后－退换货.psd
   '/aftersales': {
     component: aftersalesRepair
-  }, //我的客服
-  '/myCustomerServices': {
-    component: myCustomerServices
   },
   // 我的收藏
   '/mybookmark': {
@@ -121,6 +123,23 @@ router.map({
   // 我的资料
   '/myData': {
     component: myData
+  },
+  // 我的客服
+  '/mycustomservice': {
+    component: mycustomservice
+  },
+  // H5账号管理
+  '/accountmanager': {
+    component: accountmanager
+  },
+  // H5消息管理.psd
+  '/messagemanager': {
+    component: messagemanager
+  },
+  // H5申请预约.psd
+  '/applyreservation': {
+    component: applyreservation
   }
+
 });
 router.start(App, '#app');
