@@ -1,7 +1,7 @@
 <template>
   <section>
     <header class="j-header">
-      <div class="j-header-search j-brand j-brand-info">
+      <div class="j-header-search j-brand j-brand-info brand-info">
         <input value="" placeholder="请输入关键字" type="text">
       </div>
     </header>
@@ -70,6 +70,10 @@
   .j-header .j-brand > input {
     width: 100%;
     margin: 0;
+  }
+
+  .j-header .brand-info {
+    width: 100%;
   }
 
   .img-box {

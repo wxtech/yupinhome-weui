@@ -9,8 +9,10 @@
       <li>
         <div class="cart-box">
           <div class="cart-checkbox pr">
-            <input type="checkbox" value="1" id="checkboxFiveInput" name="carts">
-            <label for="checkboxFiveInput"></label>
+            <label>
+              <input type="checkbox" value="1" id="checkboxFiveInput" name="carts">
+              <div class="label"></div>
+            </label>
           </div>
           <div class="cart-right">
             <div class="cart-img">
@@ -20,14 +22,14 @@
               <h3>多功能烤箱 GEKD 40000B</h3>
               <div>
                 <group :title="">
-                  <selector placeholder="规格" title="请选择规格" :options="list" @on-change="onChange"></selector>
+                  <selector placeholder="规格" :options="list" @on-change="onChange"></selector>
                 </group>
               </div>
               <p class="red ph">
                 <ins></ins>
                 233444
               </p>
-              <div class="quantity-wrapper">
+              <div class="quantity-wrapper num-wrapper shopcart-wrapper">
                 <a class="quantity-decrease J_ping">
                   <em id="minus">-</em>
                 </a>
@@ -41,8 +43,10 @@
       <li>
         <div class="cart-box">
           <div class="cart-checkbox pr">
-            <input type="checkbox" value="1" id="checkboxFiveInput2" name="carts" checked>
-            <label for="checkboxFiveInput2"></label>
+            <label>
+              <input type="checkbox" value="1" id="checkboxFiveInput" name="carts">
+              <div class="label"></div>
+            </label>
           </div>
           <div class="cart-right">
             <div class="cart-img">
@@ -52,14 +56,14 @@
               <h3>多功能烤箱 GEKD 40000B</h3>
               <div>
                 <group :title="">
-                  <selector placeholder="规格" title="请选择规格" :options="list" @on-change="onChange"></selector>
+                  <selector placeholder="规格" :options="list" @on-change="onChange"></selector>
                 </group>
               </div>
               <p class="red ph">
                 <ins></ins>
                 233444
               </p>
-              <div class="quantity-wrapper">
+              <div class="quantity-wrapper num-wrapper">
                 <a class="quantity-decrease J_ping">
                   <em id="minus">-</em>
                 </a>
@@ -116,9 +120,10 @@
   }
 
   .cart-right .cart-img {
-    width: 25%;
+    width: 32%;
     float: left;
     padding: 0 15px;
+    padding-left: 0px;
     height: 170px;
     overflow: hidden;
   }
@@ -133,6 +138,8 @@
 
   .pro-box h3 {
     color: #275bab;
+    font-size: 14px;
+    padding-top: 6px;
   }
 
   .cart-item li {
@@ -142,11 +149,11 @@
     background: #ffffff;
   }
 
-  .cart-checkbox input[type=checkbox] {
+  .cart-item input[type=checkbox] {
     visibility: hidden;
   }
 
-  .cart-checkbox label {
+  .cart-item .label {
     cursor: pointer;
     position: absolute;
     width: 20px;
@@ -156,9 +163,10 @@
     bottom: 0;
     background: #eee;
     border: 1px solid #ddd;
+    display: block;
   }
 
-  .cart-checkbox input[type=checkbox]:checked + label:after {
+  .cart-item input[type=checkbox]:checked + .label:after {
     content: '';
     position: absolute;
     width: 9px;
@@ -175,6 +183,11 @@
     -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
     opacity: 1;
+  }
+
+  .shopcart-wrapper {
+    padding-left: 0px;
+    margin-left: 0px;
   }
 </style>
 <script>

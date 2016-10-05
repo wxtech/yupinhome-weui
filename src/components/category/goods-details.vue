@@ -28,7 +28,7 @@
     </div>
     <div class="item-line">
       <span class="part-note-msg">数量</span>
-      <div class="quantity-wrapper">
+      <div class="quantity-wrapper num-wrapper">
         <a class="quantity-decrease J_ping">
           <em id="minus">-</em>
         </a>
@@ -60,7 +60,7 @@
           ddd
         </div>
         <div role="tabpanel" class="tab-pane" id="ppprofile2">
-          ccc
+          ccc wuwuwuwwu
         </div>
       </div>
     </div>
@@ -344,6 +344,10 @@
     padding: 20px 0;
   }
 
+  .num-wrapper {
+    height: auto;
+  }
+
   .quantity-decrease, .quantity-increase {
     background: #ebebeb;
     border: 1px solid #cbcbcb;
@@ -364,6 +368,14 @@
     display: block;
     margin: 6px;
     margin-left: 8px;
+  }
+
+  .num-wrapper .quantity-decrease em {
+    height: 16px;
+  }
+
+  .num-wrapper .quantity {
+    height: 30px;
   }
 
   .quantity {
