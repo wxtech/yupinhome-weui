@@ -28,6 +28,12 @@ import mycustomservice from './page/myCustomerServices.vue'
 import accountmanager from './page/accountmanager.vue'
 import messagemanager from './page/messagemanager.vue'
 import applyreservation from './page/applyreservation.vue'
+import integraldetail from './page/Integral-page.vue'
+import integralmall from './page/Integral-mall-page.vue'
+import productdetails from './page/Integral-product-page.vue'
+import categorychange from './page/category-change-page.vue'
+import contactcustomer from './page/contact-customer.vue'
+import ugc from './page/ugc.vue'
 
 const FastClick = require('fastclick')
 FastClick.attach(document.body)
@@ -107,6 +113,30 @@ router.map({
   //购物车
   'shopcart': {
     component: shopcart
+  },
+  //积分明细
+  'integraldetail': {
+    component: integraldetail
+  },
+  //积分商城
+  'integralmall': {
+    component: integralmall
+  },
+  //积分商品详情
+  'productdetails': {
+    component: productdetails
+  },
+  //可换购商品
+  'categorychange': {
+    component: categorychange
+  },
+  //联系客服
+  'contactcustomer': {
+    component: contactcustomer
+  },
+  //评价商品
+  'ugc': {
+    component: ugc
   },
   // H5我的售后.psd H5我的售后-返修.psd H5我的售后－退换货.psd
   '/aftersales': {
