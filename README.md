@@ -89,6 +89,7 @@ dist
 
 相当路由机制src/main.js
 ```
+```
 router.map({
   // 首页
   '/': {
