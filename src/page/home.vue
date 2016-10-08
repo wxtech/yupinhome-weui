@@ -12,13 +12,12 @@
       </div>
     </div>
   </div>
-
   <div class="swiper-container">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
         <div class="title-slider">
           <div><img class="titles-bgs animated" src="~assets/home/slidertext01-266x45.png"/></div>
-          <div><img class="titles-bgs animated" src="~assets/home/slidertext01-266x45.png"/></div>
+          <div><img class="titles-bgs animated" src="~assets/home/slidertext02-266x30.png"/></div>
           <div class="text-center">
             <a class="animated">了解更多</a>
           </div>
@@ -27,7 +26,7 @@
       <div class="swiper-slide">
         <div class="title-slider">
           <div><img class="titles-bgs animated" src="~assets/home/slidertext01-266x45.png"/></div>
-          <div><img class="titles-bgs animated" src="~assets/home/slidertext01-266x45.png"/></div>
+          <div><img class="titles-bgs animated" src="~assets/home/slidertext02-266x30.png"/></div>
           <div class="text-center">
             <a class="animated">了解更多</a>
           </div>
@@ -36,7 +35,7 @@
       <div class="swiper-slide">
         <div class="title-slider">
           <div><img class="titles-bgs animated" src="~assets/home/slidertext01-266x45.png"/></div>
-          <div><img class="titles-bgs animated" src="~assets/home/slidertext01-266x45.png"/></div>
+          <div><img class="titles-bgs animated" src="~assets/home/slidertext02-266x30.png"/></div>
           <div class="text-center">
             <a class="animated">了解更多</a>
           </div>
@@ -68,13 +67,13 @@
     <div class="ad-item"><img src="~assets/home/ad02-1242x455.jpg"></div>
     <div class="text-center">
       <br>
-       没有更多了
+      没有更多了
       <br>
       <br>
       <br>
     </div>
   </div>
-  <tabbar>
+  <tabbar class="tabbar-fixed">
     <tabbar-item>
       <img slot="icon" src="~assets/usercenter/bottombar-icon01-80x80.png">
       <span slot="label">首页</span>
@@ -141,8 +140,8 @@
     border-radius: 50%;
     background: #6fa4d8;
     display: inline-block;
-    width: 80%;
-    height: 18vw;
+    width: 60.87%;
+    height: 14vw;
     position: relative;
 
   }
@@ -191,7 +190,7 @@
   }
 
   .swiper-container {
-    height: 180px;
+    height: 200px;
     width: 100%;
   }
 
@@ -250,6 +249,10 @@
     padding: 5px 30px;
     font-size: 12px;
   }
+
+  .tabbar-fixed {
+    position: fixed !important;
+  }
 </style>
 <script>
   import $ from '../assets/swiper/dist/jquery-1.10.1.min'
@@ -258,7 +261,7 @@
   import tabbarItem from 'vux/src/components/tabbar/tabbar-item.vue'
   export default {
     ready(){
-      let cssClassNames = ['flipInY', 'bounceInLeft', 'bounceInUp', 'bounceInRight', 'bounceInDown', 'flipInX', 'rotateInDownRight', 'rotateInDownLeft', 'rotateInUpLeft', 'rotateInUpRight', 'hinge', 'bounce', 'swing', 'wobble', 'jello', 'bounceIn', 'bounceInDown', 'fadeIn', 'fadeInDownBig', 'flip', 'lightSpeedIn', 'rotateIn', 'slideInUp', 'zoomIn', 'rollIn'];
+      let cssClassNames = 'fadeInDown';
       let swiper = new Swiper('.swiper-container', {
         // Optional parameters
         direction: 'vertical',
@@ -273,13 +276,18 @@
         autoplay: 6000,
         speed: 2000,
         onSlideChangeStart: function () {
-          $(swiper.container).find('.titles-bgs,a').removeClass(cssClassNames.join(' ')).hide();
+          $(swiper.container).find('.titles-bgs,a').removeClass(cssClassNames).hide();
         },
         onSlideChangeEnd: function () {
-          $(swiper.container).find('.swiper-slide-active .titles-bgs,.swiper-slide-active a').each(function () {
-            $(this).show();
-            $(this).addClass(cssClassNames[Math.floor(cssClassNames.length * Math.random())]);
-          });
+          var elements = $(swiper.container).find('.swiper-slide-active .titles-bgs,.swiper-slide-active a').toArray();
+          (function doAnmiate() {
+            var ele = elements.pop();
+            if (ele) {
+              $(ele).show().addClass(cssClassNames).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+                doAnmiate();
+              });
+            }
+          })();
         }
       });
     },

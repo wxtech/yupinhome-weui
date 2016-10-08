@@ -13,7 +13,7 @@
 
     <div class="tab-content">
       <div role="tabpanel" class="tab-pane active" id="pphome">
-        <ul class="nav nav-tabs" role="tablist">
+        <ul class="nav nav-tabs tab-content-three" role="tablist">
           <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab"
                                                     data-toggle="tab">全部</a>
           </li>
@@ -77,7 +77,7 @@
         </div>
       </div>
       <div role="tabpanel" class="tab-pane" id="ppprofile">
-        <ul class="nav nav-tabs" role="tablist">
+        <ul class="nav nav-tabs tab-content-three" role="tablist">
           <li role="presentation" class="active"><a href="#home2" aria-controls="home2" role="tab"
                                                     data-toggle="tab">全部</a>
           </li>
@@ -308,6 +308,11 @@
 
   .text-center-logo2 {
     background: #f5f5f5;
+  }
+
+  .tab-content-three li {
+    width: 33.33%;
+    text-align: center;
   }
 </style>
 <script>

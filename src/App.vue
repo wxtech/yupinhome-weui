@@ -126,6 +126,18 @@
     padding: 10px;
     background: #fff;
   }
+
+  .vux-header {
+    position: fixed !important;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .vux-header + * {
+    margin-top:50px;
+  }
 </style>
 <style lang="less">
   @import '~vux/src/styles/reset';
