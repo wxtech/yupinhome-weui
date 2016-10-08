@@ -34,6 +34,8 @@ import productdetails from './page/Integral-product-page.vue'
 import categorychange from './page/category-change-page.vue'
 import contactcustomer from './page/contact-customer.vue'
 import ugc from './page/ugc.vue'
+import applysales from './page/apply-sales.vue'
+import makesureorder from './page/make-sure-order.vue'
 
 const FastClick = require('fastclick')
 FastClick.attach(document.body)
@@ -111,32 +113,40 @@ router.map({
     component: orderlist
   },
   //购物车
-  'shopcart': {
+  '/shopcart': {
     component: shopcart
   },
   //积分明细
-  'integraldetail': {
+  '/integraldetail': {
     component: integraldetail
   },
   //积分商城
-  'integralmall': {
+  '/integralmall': {
     component: integralmall
   },
   //积分商品详情
-  'productdetails': {
+  '/productdetails': {
     component: productdetails
   },
   //可换购商品
-  'categorychange': {
+  '/categorychange': {
     component: categorychange
   },
   //联系客服
-  'contactcustomer': {
+  '/contactcustomer': {
     component: contactcustomer
   },
   //评价商品
-  'ugc': {
+  '/ugc': {
     component: ugc
+  },
+  //审请售后
+  '/applysales': {
+    component: applysales
+  },
+  //确认订单
+  '/makesureorder': {
+    component: makesureorder
   },
   // H5我的售后.psd H5我的售后-返修.psd H5我的售后－退换货.psd
   '/aftersales': {
