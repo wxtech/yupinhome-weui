@@ -159,22 +159,14 @@ http://localhost:8080/#!/userresetsuccess
 ## 安装
 
 ``` bash
-# install dependencies
+# install dependencies //安装依赖
 npm install
 
-# serve with hot reload at localhost:8080
+# serve with hot reload at localhost:8080 //本地服务器
 npm run dev
 
-# build for production with minification
+# build for production with minification//  打包,合并页面 并生成在dist文件夹下
 npm run build
 
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
 ```
 

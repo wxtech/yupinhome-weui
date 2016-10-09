@@ -253,6 +253,11 @@
   .tabbar-fixed {
     position: fixed !important;
   }
+
+  .hiddens {
+    visibility: hidden !important;
+  }
+
 </style>
 <script>
   import $ from '../assets/swiper/dist/jquery-1.10.1.min'
@@ -276,14 +281,14 @@
         autoplay: 6000,
         speed: 2000,
         onSlideChangeStart: function () {
-          $(swiper.container).find('.titles-bgs,a').removeClass(cssClassNames).hide();
+          $(swiper.container).find('.titles-bgs,a').removeClass(cssClassNames).addClass('hiddens');
         },
         onSlideChangeEnd: function () {
           var elements = $(swiper.container).find('.swiper-slide-active .titles-bgs,.swiper-slide-active a').toArray();
           (function doAnmiate() {
             var ele = elements.pop();
             if (ele) {
-              $(ele).show().addClass(cssClassNames).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+              $(ele).removeClass('hiddens').addClass(cssClassNames).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
                 doAnmiate();
               });
             }
