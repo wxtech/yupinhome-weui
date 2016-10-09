@@ -144,7 +144,7 @@ router.map({
   '/applysales': {
     component: applysales
   },
-  //确认订单
+  //确认订单 && 确认订单-预约订金
   '/makesureorder': {
     component: makesureorder
   },

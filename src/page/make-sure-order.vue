@@ -32,7 +32,14 @@
           </div>
         </div>
         <div role="tabpanel" class="tab-pane" id="ppprofile">
-          ddd
+          <div class="reserve">
+            <div class="reserve-title">
+              预付金额<span class="red"><ins></ins>3000.00</span>
+            </div>
+            <p class="reserve-box">
+              提示：您选择了预付定金的方式来购买商品，您需要在收货之后马上支付剩余的款项￥20000.00。
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -71,9 +78,11 @@
       <li>
         <div class="cart-box">
           <div class="cart-right">
-            <span class="black lh">配送方式</span>
+            <div class="make-sure-order-line">
+              <span class="black lh">配送方式</span>
+              <p class="fr">某某流</p>
+            </div>
             <div class="pro-box pro-send">
-              <p>某某流</p>
               <p class="order-send">送货时间：<span>2016-9-14</span><span>周六</span><span>9:00-15:00</span></p>
             </div>
           </div>
@@ -81,10 +90,191 @@
       </li>
     </ul>
   </section>
+  <section class="make-sure-container bt">
+    <div class="bz">
+      <div class="b1">备注</div>
+      <div class="b2"><textarea></textarea></div>
+    </div>
+  </section>
+  <section class="make-sure-container">
+    <div class="weui_cell vux-tap-active">
+      <div class="weui_cell_hd"><span class="black">促销优惠</span></div>
+      <div class="weui_cell_bd weui_cell_primary">
+        <p class="txt-fr">优惠券满20000减1000</p></div>
+      <div class="weui_cell_ft with_arrow"></div>
+    </div>
+    <div class="weui_cell vux-tap-active">
+      <div class="weui_cell_hd"><span class="black">发票信息</span></div>
+      <div class="weui_cell_bd weui_cell_primary">
+        <p class="txt-fr">个人</p></div>
+      <div class="weui_cell_ft with_arrow"></div>
+    </div>
+    <div class="weui_cell vux-tap-active">
+      <div class="weui_cell_hd"><span class="black">可用积分</span></div>
+      <div class="weui_cell_bd weui_cell_primary">
+        <p class="txt-fr">1231积分可抵扣123元</p></div>
+      <div class="weui_cell_ft with_arrow"></div>
+    </div>
+  </section>
+  <section class="make-sure-container">
+    <div class="total-line">
+      <div class="total-box"><span>总计：</span>
+        <span class="red"><ins></ins>
+        23321.00</span>
+      </div>
+      <ul class="total-ul">
+        <li><a href="javascript:;">
+          <img src="~assets/order/payment-icon01-414x195.jpg"/>
+          <i class="icon active"><img src="~assets/order/payment-seclected-72x72.jpg"/></i>
+        </a></li>
+        <li><a href="javascript:;">
+          <img src="~assets/order/payment-icon02-414x195.jpg"/>
+          <i class="icon"><img src="~assets/order/payment-seclected-72x72.jpg"/></i>
+        </a></li>
+        <li><a href="javascript:;">
+          <img src="~assets/order/payment-icon03-414x195.jpg"/>
+          <i class="icon"><img src="~assets/order/payment-seclected-72x72.jpg"/></i>
+        </a></li>
+        <li><a href="javascript:;">
+          <img src="~assets/order/payment-icon04-414x195.jpg"/>
+          <i class="icon"><img src="~assets/order/payment-seclected-72x72.jpg"/></i>
+        </a></li>
+        <li><a href="javascript:;">
+          <img src="~assets/order/payment-icon05-414x195.jpg"/>
+          <i class="icon"><img src="~assets/order/payment-seclected-72x72.jpg"/></i>
+        </a></li>
+      </ul>
+    </div>
+  </section>
+  <section class="bgf5">
+    <div class="contact-btn">
+      <button>提交</button>
+    </div>
+  </section>
 </template>
 <style>
-  .lh {
+  .reserve {
+    padding: 10px 15px;
+  }
+
+  .reserve-title {
+    color: #000000;
+    padding-bottom: 5px;
+  }
+
+  .reserve-box {
+    background: #ffcccc;
+    border: 1px solid #ff0000;
+    color: #e40000;
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .reserve-title span {
+    float: right;
+  }
+
+  .bgf5 {
+    background: #f5f5f5;
+  }
+
+  .total-ul, .total-ul a {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .total-ul {
+    border-top: 1px solid #999999;
+  }
+
+  .total-ul a {
+    display: block;
+    border-right: 1px solid #999999;
+    border-bottom: 1px solid #999999;
+    box-sizing: border-box;
+    display: -webkit-box;
+  }
+
+  .total-ul a:nth-child(3) {
+    border-right: none;
+  }
+
+  .total-ul .icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: -12px;
+    right: 0px;
+    display: none;
+  }
+
+  .total-ul .active {
+    display: block;
+  }
+
+  .total-ul li {
+    width: 33.3%;
+    float: left;
+  }
+
+  .total-line {
+    text-align: center;
     line-height: 40px;
+  }
+
+  .txt-fr {
+    text-align: right;
+  }
+
+  .bz {
+    padding: 12px 15px 10px 15px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .bt {
+    border-bottom: 1px solid #999999;
+  }
+
+  .b1 {
+    width: 20%;
+    float: left;
+    width: 20%;
+    display: inline-block;
+    line-height: 12px;
+  }
+
+  .b2 {
+    float: right;
+    width: 80%;
+
+  }
+
+  .b2 textarea {
+    width: 100%;
+    height: 85px;
+    resize: none;
+  }
+
+  textarea {
+    border: 1px solid #999999;
+  }
+
+  .make-sure-order-line {
+
+    overflow: hidden;
+  }
+
+  .lh {
+    /*line-height: 42px;*/
+    float: left;
+    position: absolute;
+    top: 10px;
+  }
+
+  .fr {
+    float: right;
   }
 
   .order-send span {
@@ -100,6 +290,7 @@
   .pro-send {
     float: right;
     text-align: right;
+    padding-top: 10px;
   }
 
   .make-sure-item li {
@@ -150,6 +341,7 @@
 
   .make-sure-item .cart-right {
     width: 100%;
+    position: relative;
   }
 
   .make-sure-item .cart-right .cart-img {
