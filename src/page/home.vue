@@ -73,28 +73,59 @@
       <br>
     </div>
   </div>
-  <tabbar class="tabbar-fixed">
-    <tabbar-item>
-      <img slot="icon" src="~assets/usercenter/bottombar-icon01-80x80.png">
-      <span slot="label">首页</span>
-    </tabbar-item>
-    <tabbar-item>
-      <img slot="icon" src="~assets/usercenter/bottombar-icon02-80x80.png">
-      <span slot="label">全部商品</span>
-    </tabbar-item>
-    <tabbar-item>
-      <img slot="icon" src="~assets/usercenter/bottombar-icon03-80x80.png">
-      <span slot="label">在线咨询</span>
-    </tabbar-item>
-    <tabbar-item>
-      <img slot="icon" src="~assets/usercenter/bottombar-icon04-80x80.png">
-      <span slot="label">购物车</span>
-    </tabbar-item>
-    <tabbar-item>
-      <img slot="icon" src="~assets/usercenter/bottombar-icon05-80x80.png">
-      <span slot="label">会员中心</span>
-    </tabbar-item>
-  </tabbar>
+  <div class="weui_tabbar tabbar-fixed">
+    <a href="javascript:;" class="weui_tabbar_item">
+      <div class="weui_tabbar_icon">
+        <img slot="icon" class="icon1" src="~assets/usercenter/bottombar-icon01-80x80.png">
+        <img slot="icon" class="icon2" src="~assets/home/bottombar-icon01-80x80-actived.png">
+        <sup></sup>
+      </div>
+      <p class="weui_tabbar_label">
+        <span slot="label">首页</span>
+      </p>
+    </a>
+    <a href="javascript:;" class="weui_tabbar_item">
+      <div class="weui_tabbar_icon">
+        <img slot="icon" class="icon1" src="~assets/usercenter/bottombar-icon02-80x80.png">
+        <img slot="icon" class="icon2" src="~assets/home/bottombar-icon02-80x80-actived.png">
+        <sup></sup>
+      </div>
+      <p class="weui_tabbar_label">
+        <span slot="label">全部商品</span>
+      </p>
+    </a>
+    <a href="javascript:;" class="weui_tabbar_item">
+      <div class="weui_tabbar_icon">
+        <img slot="icon" class="icon1" src="~assets/usercenter/bottombar-icon03-80x80.png">
+        <img slot="icon" class="icon2" src="~assets/home/bottombar-icon03-80x80-actived.png">
+        <sup></sup>
+      </div>
+      <p class="weui_tabbar_label">
+        <span slot="label">在线咨询</span>
+      </p>
+    </a>
+    <a href="javascript:;" class="weui_tabbar_item">
+      <div class="weui_tabbar_icon">
+        <img slot="icon" class="icon1" src="~assets/usercenter/bottombar-icon04-80x80.png">
+        <img slot="icon" class="icon2" src="~assets/home/bottombar-icon04-80x80-actived.png">
+        <sup></sup>
+      </div>
+      <p class="weui_tabbar_label">
+        <span slot="label">购物车</span>
+      </p>
+    </a>
+    <a href="javascript:;" class="weui_tabbar_item">
+      <div class="weui_tabbar_icon">
+        <img slot="icon" class="icon1" src="~assets/usercenter/bottombar-icon05-80x80.png">
+        <img slot="icon" class="icon2" src="~assets/home/bottombar-icon05-80x80-actived.png">
+        <sup></sup>
+      </div>
+      <p class="weui_tabbar_label">
+        <span slot="label">会员中心</span>
+      </p>
+    </a>
+  </div>
+
 </template>
 <style scope>
   @import "~assets/font-awesome/css/font-awesome.css";
@@ -254,17 +285,20 @@
     position: fixed !important;
   }
 
-  .hiddens {
-    visibility: hidden !important;
-  }
-
   .mytabs .mytab-item a.active {
     background: #265baa;
   }
 
-  .weui_bar_item_on {
-    background: #6fa4d8;
-    color: #fff;
+  .weui_tabbar_item img.icon2 {
+    display: none;
+  }
+
+  .weui_tabbar_item.on img.icon2 {
+    display: block;
+  }
+
+  .weui_tabbar_item.on img.icon1 {
+    display: none;
   }
 </style>
 <script>
@@ -275,12 +309,15 @@
 
   export default {
     ready(){
-      let cssClassNames = 'fadeInDown';
+      let cssClassNames = 'fadeInDown fadeIn';
       $('.mytabs a').off('click').click(function () {
         $('.mytabs a').removeClass('active');
         $(this).addClass('active');
       });
-
+      $('.weui_tabbar_item').click(function () {
+        $('.weui_tabbar_item').removeClass('on');
+        $(this).addClass('on');
+      });
       let swiper = new Swiper('.swiper-container', {
         // Optional parameters
         direction: 'vertical',
@@ -296,16 +333,14 @@
         speed: 2000,
         onSlideChangeStart: function () {
           $(swiper.container).find('.titles-bgs,a').removeClass(cssClassNames).addClass('fadeOut');
-
         },
         onSlideChangeEnd: function () {
-
-          $(swiper.container).find('.titles-bgs,a').removeClass('fadeOut');
           var elements = $(swiper.container).find('.swiper-slide-active .titles-bgs,.swiper-slide-active a').toArray();
+          $(swiper.container).find('.titles-bgs,a').removeClass('fadeOut');
           (function doAnmiate() {
             var ele = elements.pop();
             if (ele) {
-              $(ele).removeClass('hiddens').addClass(cssClassNames).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+              $(ele).addClass(cssClassNames).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
                 doAnmiate();
               });
             }
