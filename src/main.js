@@ -36,6 +36,8 @@ import contactcustomer from './page/contact-customer.vue'
 import ugc from './page/ugc.vue'
 import applysales from './page/apply-sales.vue'
 import makesureorder from './page/make-sure-order.vue'
+import cashpay from './page/cashpay-page.vue'
+import paysuccess from './page/pay-success.vue'
 
 const FastClick = require('fastclick')
 FastClick.attach(document.body)
@@ -147,6 +149,14 @@ router.map({
   //确认订单 && 确认订单-预约订金
   '/makesureorder': {
     component: makesureorder
+  },
+  //现金支付
+  '/cashpay': {
+    component: cashpay
+  },
+  //支付成功
+  '/paysuccess': {
+    component: paysuccess
   },
   // H5我的售后.psd H5我的售后-返修.psd H5我的售后－退换货.psd
   '/aftersales': {

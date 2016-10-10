@@ -1,5 +1,5 @@
 <template>
-  <section class="login_main login_success">
+  <section class="login_main login_success login_wait">
     <p class="p1">
       <div class="infoicon"> <img src="~assets/usercenter/waiting-icon-143x143.png"/></div>
     </p>
@@ -14,6 +14,15 @@
   </section>
 </template>
 <style>
+  .login_wait a {
+    font-size: 0.25em;
+  }
+
+ .login_wait h4 {
+    font-weight: bold;
+    font-size: 24px;
+  }
+
   .icon_img {
     width: 20%;
   }
