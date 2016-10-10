@@ -20,7 +20,7 @@
     </div>
     <table cellpadding="0" cellspacing="0" class="accountmanger-avaible">
       <tr>
-        <th class="active"><a class="accountbtn"><img src="~assets/usercenter/account-manage-icon01-120x120.png"/><span>安全中心</span></a>
+        <th><a class="accountbtn"><img src="~assets/usercenter/account-manage-icon01-120x120.png"/><span>安全中心</span></a>
         </th>
         <td><a class="accountbtn"><img
           src="~assets/usercenter/account-manage-icon02-120x120.png"/><span>收货地址管理</span></a></td>
@@ -165,9 +165,18 @@
 
   export default{
     ready(){
+
       require('bootstrap')
       var w = $('.accountmanger-avaible th').width();
       $('.accountmanger-avaible th').css('height', w);
+
+      $('.accountmanger-avaible th,.accountmanger-avaible td').on({
+        'touchstart': function () {
+          $(this).addClass('active')
+        }, 'touchend': function () {
+          $(this).removeClass('active')
+        }
+      });
     },
     data(){
       return {

@@ -257,19 +257,30 @@
   .hiddens {
     visibility: hidden !important;
   }
+
   .mytabs .mytab-item a.active {
     background: #265baa;
   }
 
+  .weui_bar_item_on {
+    background: #6fa4d8;
+    color: #fff;
+  }
 </style>
 <script>
   import $ from '../assets/swiper/dist/jquery-1.10.1.min'
   import Swiper from '../assets/swiper/dist/idangerous.swiper.min'
   import tabbar from 'vux/src/components/tabbar/tabbar.vue'
   import tabbarItem from 'vux/src/components/tabbar/tabbar-item.vue'
+
   export default {
     ready(){
       let cssClassNames = 'fadeInDown';
+      $('.mytabs a').off('click').click(function () {
+        $('.mytabs a').removeClass('active');
+        $(this).addClass('active');
+      });
+
       let swiper = new Swiper('.swiper-container', {
         // Optional parameters
         direction: 'vertical',
@@ -284,10 +295,12 @@
         autoplay: 6000,
         speed: 2000,
         onSlideChangeStart: function () {
-          $(swiper.container).find('.titles-bgs,a').removeClass(cssClassNames).addClass('slideOutUp');
+          $(swiper.container).find('.titles-bgs,a').removeClass(cssClassNames).addClass('fadeOut');
+
         },
         onSlideChangeEnd: function () {
-          $(swiper.container).find('.titles-bgs,a').removeClass('slideOutUp');
+
+          $(swiper.container).find('.titles-bgs,a').removeClass('fadeOut');
           var elements = $(swiper.container).find('.swiper-slide-active .titles-bgs,.swiper-slide-active a').toArray();
           (function doAnmiate() {
             var ele = elements.pop();
