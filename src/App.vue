@@ -138,6 +138,34 @@
   .vux-header + * {
     margin-top:50px;
   }
+
+  .nomoretext {
+    color:#aaa;
+    font-size:12px;
+  }
+  .weui_tabbar_item {
+    padding:5px 0 5px!important;
+  }
+  .weui_tabbar_label {
+    color:#345ca5!important;
+    margin-top:-2px!important;
+  }
+  .weui_tabbar_item.weui_bar_item_on .weui_tabbar_label
+  {
+    color:black!important;
+  }
+  .infoicon {
+    width:20%;
+    margin:0 auto;
+  }
+  .infoicon img{
+    width:100%;
+    display:block;
+  }
+  .vux-header-back {
+    text-indent: -9999px;
+  }
+
 </style>
 <style lang="less">
   @import '~vux/src/styles/reset';

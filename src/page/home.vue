@@ -257,6 +257,9 @@
   .hiddens {
     visibility: hidden !important;
   }
+  .mytabs .mytab-item a.active {
+    background: #265baa;
+  }
 
 </style>
 <script>
@@ -281,9 +284,10 @@
         autoplay: 6000,
         speed: 2000,
         onSlideChangeStart: function () {
-          $(swiper.container).find('.titles-bgs,a').removeClass(cssClassNames).addClass('hiddens');
+          $(swiper.container).find('.titles-bgs,a').removeClass(cssClassNames).addClass('slideOutUp');
         },
         onSlideChangeEnd: function () {
+          $(swiper.container).find('.titles-bgs,a').removeClass('slideOutUp');
           var elements = $(swiper.container).find('.swiper-slide-active .titles-bgs,.swiper-slide-active a').toArray();
           (function doAnmiate() {
             var ele = elements.pop();

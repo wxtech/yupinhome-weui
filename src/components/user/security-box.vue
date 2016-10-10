@@ -1,6 +1,6 @@
 <template>
   <section class="login_main login_success">
-    <form>
+    <form class="inputarea">
       <label>
         <span class="m">你已绑定的手机号</span>
         <p class="ltxt">13123231314</p>
@@ -31,6 +31,8 @@
 
   .ltxt {
     text-align: left;
+    padding-bottom: 10px;
+    font-size:18px;
   }
 
   .login_main .solution {
@@ -40,8 +42,7 @@
     background: #ffffff;
     border: 1px solid #345ca5;
     width: 25%;
-    top: 30%;
-
+    top: 40%;
     color: #345ca5;
   }
 
@@ -83,7 +84,10 @@
   }
 
   .login_main span.m {
-    padding-bottom: 15px;
+    padding-bottom: 10px;
+  }
+  .login_main span {
+    padding: 0px 0px 10px;
   }
 </style>
 <script>

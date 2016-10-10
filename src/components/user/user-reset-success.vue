@@ -1,10 +1,14 @@
 <template>
   <section class="login_main login_success">
     <p class="p1">
-      <i class="weui_icon_msg weui_icon_success"></i>
+    <div class="infoicon">    
+    <img src="~assets/usercenter/success-icon-143x143.png" />
+    </div>
     </p>
     <h4>您的密码已重设成功！</h4>
+    <div class="exptext">
     <p class="p1">请使用新密码重新登录</p>
+    </div>
     <a href="javascript:;" class="btn_login_success" id="">登录</a>
   </section>
 </template>

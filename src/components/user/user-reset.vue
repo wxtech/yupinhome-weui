@@ -1,10 +1,12 @@
 <template>
   <section class="login_main login_success">
     <p class="p1">
-      <i class="weui_icon_msg weui_icon_success"></i>
+    <div class="infoicon">    
+    <img src="~assets/usercenter/success-icon-143x143.png" />
+    </div>
     </p>
     <h4>您的验证已通过</h4>
-   <form>
+   <form class="inputarea">
      <label>
        <span>请输入新密码<i>*</i></span>
        <input type="text" size="20" value="" class="inp" maxlength="20" name="mobile">
@@ -14,7 +16,7 @@
        <input type="text" size="20" value="" class="inp" maxlength="20" name="mobile">
      </label>
    </form>
-    <a href="javascript:;" class="btn_login_success" id="">登录</a>
+    <a href="javascript:;" class="btn_login_success" id="">提交</a>
   </section>
 </template>
 <style>
@@ -50,6 +52,9 @@
     font-family: sans-serif;
     padding:5% 0;
 
+  }
+  .inputarea {
+    margin-bottom:30px;
   }
 </style>
 <script>

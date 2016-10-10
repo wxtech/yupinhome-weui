@@ -3,7 +3,7 @@
     <header class="j-header j-search">
       <div class="j-header-search">
         <input value="" class="inp_a" placeholder="请输入关键字" type="text">
-        <a href=“javascript:;" class="search_a"><span id="J_style_icon"></span></a>
+        <a href="javascript:;" class="search_a"><span id="J_style_icon"></span></a>
       </div>
     </header>
   </section>

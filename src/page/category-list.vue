@@ -83,6 +83,9 @@
     background: none;
     background: #ffffff;
   }
+  #app .m-footer .weui_tabbar {
+    padding-bottom: 0px!important;
+}
 </style>
 <script>
   import tabbar from 'vux/src/components/tabbar/tabbar.vue'
