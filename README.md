@@ -102,10 +102,9 @@ dist
 让静态服务器指向这个目录就可以了。
 
 相当路由机制src/main.js
-```
-
 
 ```
+
 router.map({
   // 首页
   '/': {
@@ -253,9 +252,9 @@ router.map({
   }
 
 });
-```
 
 ```
+
 ###比如:查看方法为hash 如查看'h5用户重设密码成功' 页
 ```
 http://localhost:8080/#!/userresetsuccess
