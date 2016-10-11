@@ -87,6 +87,17 @@
   #app .m-footer .weui_tabbar {
     padding-bottom: 10px;
   }
+
+  .j-header {
+    position: fixed !important;
+    left: 0;
+    top: 0;
+    right: 0;
+  }
+
+  .height {
+    height: 53px;
+  }
 </style>
 <script>
   import tabbar from 'vux/src/components/tabbar/tabbar.vue'

@@ -79,6 +79,7 @@ H5现金支付psd
 
 H5支付成功psd
 
+```
 H5收货地址管理psd
 
 H5收货地址管理编辑psd
@@ -88,6 +89,7 @@ H5收货地址管理编辑psd
 H5提醒登录页psd
 
 H5我的预约psd
+
 
 ```
 
@@ -100,8 +102,9 @@ dist
 让静态服务器指向这个目录就可以了。
 
 相当路由机制src/main.js
+
 ```
-```
+
 router.map({
   // 首页
   '/': {
@@ -143,12 +146,115 @@ router.map({
   '/categorylist': {
     component: categorylist
   },
+  // h5商品分类-品牌检索
   '/categorybrand': {
     component: categorybrand
+  },
+  //商品检索
+  '/categorysearch': {
+    component: categorysearch
+  },
+  //商品详情
+  '/goodsdetail': {
+    component: goodsdetail
+  },
+  //品牌信息
+  '/brandinformation': {
+    component: brandinformation
+  },
+  //品牌详情
+  '/branddetails': {
+    component: branddetails
+  },
+  //等待审核
+  '/waitreview': {
+    component: waitreview
+  },
+  //订单管理
+  '/orderlist': {
+    component: orderlist
+  },
+  //购物车
+  '/shopcart': {
+    component: shopcart
+  },
+  //积分明细
+  '/integraldetail': {
+    component: integraldetail
+  },
+  //积分商城
+  '/integralmall': {
+    component: integralmall
+  },
+  //积分商品详情
+  '/productdetails': {
+    component: productdetails
+  },
+  //可换购商品
+  '/categorychange': {
+    component: categorychange
+  },
+  //联系客服
+  '/contactcustomer': {
+    component: contactcustomer
+  },
+  //评价商品
+  '/ugc': {
+    component: ugc
+  },
+  //审请售后
+  '/applysales': {
+    component: applysales
+  },
+  //确认订单 && 确认订单-预约订金
+  '/makesureorder': {
+    component: makesureorder
+  },
+  //现金支付
+  '/cashpay': {
+    component: cashpay
+  },
+  //支付成功
+  '/paysuccess': {
+    component: paysuccess
+  },
+  // H5我的售后.psd H5我的售后-返修.psd H5我的售后－退换货.psd
+  '/aftersales': {
+    component: aftersalesRepair
+  },
+  // 我的收藏
+  '/mybookmark': {
+    component: mybookmark
+  },
+  // 我的权利
+  '/myRight': {
+    component: myRight
+  },
+  // 我的资料
+  '/myData': {
+    component: myData
+  },
+  // 我的客服
+  '/mycustomservice': {
+    component: mycustomservice
+  },
+  // H5账号管理
+  '/accountmanager': {
+    component: accountmanager
+  },
+  // H5消息管理.psd
+  '/messagemanager': {
+    component: messagemanager
+  },
+  // H5申请预约.psd
+  '/applyreservation': {
+    component: applyreservation
   }
-})
+
+});
 
 ```
+
 ###比如:查看方法为hash 如查看'h5用户重设密码成功' 页
 ```
 http://localhost:8080/#!/userresetsuccess

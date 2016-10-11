@@ -3,15 +3,17 @@
     <form>
       <label>
         <span>请输入用户名<i>*</i></span>
-        <input type="text" size="20" value="" class="inp" maxlength="20" name="mobile">
+        <input type="text" size="24" value="" class="inp" maxlength="20" name="mobile">
+        <div class="error">请正确输入手机号!</div>
       </label>
       <label>
         <span>请输入您的电话号码<i>*</i></span>
-        <input type="text" size="20" value="" class="inp" maxlength="20" name="mobile">
+        <input type="text" size="24" value="" class="inp" maxlength="20" name="mobile">
+        <div class="error">请正确输入电话号码!</div>
       </label>
       <label>
         <span>请输入图形验证码<i>*</i></span>
-        <input type="text" size="20" value="" class="inp inp_pic" maxlength="20" name="mobile">
+        <input type="text" size="24" value="" class="inp inp_pic" maxlength="20" name="mobile">
         <span class="icon_pic"><img slot="icon" src="~assets/usercenter/code.png"></span>
         <div class="btn_refresh">
           <input type="submit" size="20" value="" class="inp inp_refresh" maxlength="20" name="mobile">
@@ -20,12 +22,12 @@
       </label>
       <label>
         <span>请输入短信验证码<i>*</i></span>
-        <input type="text" size="20" value="" class="inp inw" maxlength="20" name="mobile">
+        <input type="text" size="24" value="" class="inp inw" maxlength="20" name="mobile">
         <input type="submit" size="20" value="获取验证码" class="inp inw" maxlength="20" name="mobile">
       </label>
       <label>
         <span>微信号</span>
-        <input type="text" size="20" value="" class="inp" maxlength="20" name="mobile">
+        <input type="text" size="24" value="" class="inp" maxlength="20" name="mobile">
         <span class="tips">填写微信号可获得1000积分奖励</span>
       </label>
       <a href="javascript:;" class="btn_login" id="loginAction">下一步</a>
@@ -42,7 +44,13 @@
     position: relative;
     width: auto;
     padding: .4rem 0.875rem 0.5rem;
-    /*border-bottom: 1px solid #265baa;*/
+    border-bottom: 1px solid #e5e5e5;
+    box-shadow: 0px 2px 10px #eaeaea;
+    z-index: 2;
+  }
+
+  .error {
+    color: red;
   }
 
   .login_main form {
@@ -54,8 +62,9 @@
     display: inline-block;
     position: relative;
     width: 100%;
-    padding-top: 0.60em;
+    padding-top: 0;
     overflow: hidden;
+    margin-bottom: 5%;
   }
 
   .btn_refresh {
@@ -84,7 +93,7 @@
   }
 
   .login_main .icon_pic {
-    width: 20%;
+    width: 30%;
     display: inline-block;
     vertical-align: middle;
     padding: 0px 4%;
@@ -102,14 +111,14 @@
   .login_main input {
     border: 1px solid #999999;
     width: 100%;
-    height: 40px;
+    height: 48px;
     width: 100%;
     height: 100%;
     padding-left: 5px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    height: 0.65rem;
+    height: 0.75rem;
   }
 
   .login_main .tips {
@@ -123,7 +132,7 @@
     text-align: center;
     font-size: 1.25em;
     background: #265baa;
-    margin-top: 0.8rem;
+    margin-top: 0px;
     letter-spacing: .38em;
     color: #FFFFFF;
   }
@@ -155,6 +164,11 @@
     border: 1px solid #345ca5;
     background: #FFFFFF;
   }
+
+  .login_main label:first-child {
+    padding-bottom: 0 !important;
+  }
+
 </style>
 <script>
   export default{}

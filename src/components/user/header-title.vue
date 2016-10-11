@@ -7,11 +7,14 @@
   .navbar {
     border-bottom: 1px solid #d9d9d9;
   }
+  .vux-header {
+    padding:5px 0;
+  }
   .navbar .vux-header {
     background: #ffffff;
-    box-shadow: 0px -32px 67px #265baa;
-    box-shadow: 0px -32px 67px #265baa;
+    box-shadow: 0px 2px 10px #eaeaea;
     z-index: 9;
+    border-bottom: 1px solid #d9d9d9;
   }
   .navbar .vux-header .vux-header-left .vux-header-back {
     color: #ffffff;

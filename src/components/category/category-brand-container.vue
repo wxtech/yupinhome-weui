@@ -7,6 +7,7 @@
       </div>
     </header>
   </section>
+  <div class="height"></div>
   <section id="categoryBody" class="category-viewport">
     <!--左边-->
     <div id="rootList" class="j-category-tab">

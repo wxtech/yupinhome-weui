@@ -1,12 +1,14 @@
 <template>
   <section class="login_main login_success login_wait">
     <p class="p1">
-      <i class="icon_img"><img src="~assets/usercenter/waiting-icon-143x143.png"/></i>
+      <div class="infoicon"> <img src="~assets/usercenter/waiting-icon-143x143.png"/></div>
     </p>
     <h4>线下支付凭证等待审核中...</h4>
+    <div class="exptext">
     <p class="p1">您的线下支付凭证将由您的客服提交审核，</p>
     <p class="p1">审核结果将在2个工作日内完成，</p>
     <p class="p1">请耐心等待。如需帮助请联系客服。</p>
+    </div>
     <a href="javascript:;" class="btn_login_success contact">联系客服</a>
     <a href="javascript:;" class="btn_login_success continue">继续购物</a>
   </section>

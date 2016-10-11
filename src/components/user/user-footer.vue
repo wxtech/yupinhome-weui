@@ -7,7 +7,6 @@
   .footer_box {
     background: #f5f5f5;
     text-align: center;
-    border-top: 1px solid #265baa;
     padding-bottom: 100px;
   }
 
