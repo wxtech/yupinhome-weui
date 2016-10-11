@@ -13,6 +13,10 @@
   html {
     background: #f5f5f5;
   }
+
+  .login_main a {
+    padding: 0.4em 0;
+  }
 </style>
 <script>
   import userPassword from 'components/user/user-password.vue'
