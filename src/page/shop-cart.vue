@@ -7,7 +7,7 @@
   <section>
     <ul class="cart-item">
       <li>
-        <div class="cart-box">
+        <div class="cart-box new-cart-box">
           <div class="cart-checkbox pr">
             <label>
               <input type="checkbox" value="1" id="checkboxFiveInput" name="carts">
@@ -20,6 +20,11 @@
             </div>
             <div class="pro-box">
               <h3>多功能烤箱 GEKD 40000B</h3>
+              <p>
+                <group title="with placeholder">
+                  <selector placeholder="请选择省份" title="" :options="list" @on-change="onChange"></selector>
+                </group>
+              </p>
               <p class="red ph">
                 <ins></ins>
                 233444
@@ -36,7 +41,7 @@
         </div>
       </li>
       <li>
-        <div class="cart-box">
+        <div class="cart-box new-cart-box">
           <div class="cart-checkbox pr">
             <label>
               <input type="checkbox" value="1" id="checkboxFiveInput" name="carts">
@@ -49,6 +54,11 @@
             </div>
             <div class="pro-box">
               <h3>多功能烤箱 GEKD 40000B</h3>
+              <p>
+                <group title="with placeholder">
+                  <selector placeholder="请选择省份" title="" :options="list" @on-change="onChange"></selector>
+                </group>
+              </p>
               <p class="red ph">
                 <ins></ins>
                 233444
@@ -73,8 +83,41 @@
     </div>
   </section>
   <user-footer></user-footer>
+  <section class="s-actionBar-container">
+    <div class="s-actionbar mui-flex action-bar cart-bar">
+      <div class="support cell">
+        <p slot="label">全选</p>
+      </div>
+      <div class="toshop cell">
+        <p slot="label">删除</p>
+      </div>
+      <div class="cell j-mdv j-price">
+        <span class="f12">总计：<span class="red"><ins></ins>33333.00</span></span>
+        <span class="f12">（不含运费，已优惠￥0.00）</span>
+      </div>
+      <button class="buy cell btn2" style="">去结算</button>
+    </div>
+  </section>
 </template>
 <style>
+  .cart-bar > .j-price {
+    -webkit-box-flex: 2;
+    -ms-flex: 2;
+    flex: 2;
+  }
+
+  .cart-bar > .j-price > span:nth-of-type(1) {
+    color: #000000;
+  }
+
+  .cart-bar > .j-price > span:nth-of-type(2) {
+    color: #999999;
+  }
+
+  .f12 {
+    font-size: 12px;
+  }
+
   .ph {
     margin-top: 10px;
   }
@@ -118,6 +161,10 @@
     overflow: hidden;
   }
 
+  .new-cart-box .cart-right .cart-img {
+    height: 100%;
+  }
+
   .pr {
     position: relative;
     line-height: 22px;
@@ -130,7 +177,12 @@
     color: #275bab;
     font-size: 15px;
     padding-top: 6px;
-    font-weight:normal;
+    font-weight: normal;
+  }
+
+  .new-cart-box .pro-box {
+    float: right;
+    width: 67%;
   }
 
   .cart-item li {
@@ -179,6 +231,23 @@
   .shopcart-wrapper {
     padding-left: 0px;
     margin-left: 0px;
+  }
+
+  .new-cart-box .pr {
+    float: left;
+    width: 20%;
+  }
+
+  .new-cart-box .cart-right {
+    width: 80%;
+  }
+
+  .cart-bar .cell p {
+    line-height: 55px;
+  }
+
+  .cart-bar .cell {
+    height: 60px;
   }
 </style>
 <script>

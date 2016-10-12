@@ -3,7 +3,7 @@
   <header class="j-header">
     <div class="j-header-search">
       <input value="" placeholder="请输入关键字" type="text">
-      <a href="http://localhost:8080/#!/categorybrand">{{searchText}}</a>
+      <a href="#">{{searchText}}</a>
     </div>
   </header>
   <section id="categoryBody" class="category-viewport">

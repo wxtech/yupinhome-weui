@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="h51">
     <header class="j-header j-search">
       <div class="j-header-search">
         <input value="" class="inp_a" placeholder="请输入关键字" type="text">
@@ -82,6 +82,10 @@
   </div>
 </template>
 <style>
+  .h51 {
+    height: 51px;
+  }
+
   section {
     margin-bottom: 0;
   }
