@@ -2,7 +2,7 @@
   <section class="wrap">
     <div class="title-line">
       <h2>我的权利</h2>
-      <span class="card">我的VIP卡</span>
+      <a href="#" class="viplink"><span class="card">我的VIP卡</span></a>
     </div>
     <div class="power-box">
       <flexbox>
@@ -67,6 +67,10 @@
     color: #265baa;
 
   }
+  .viplink {
+    float:right;
+    font-size:14px;
+  }
 
   .power-box {
     position: relative;
@@ -114,7 +118,7 @@
   }
 
   .flex-box {
-    width: 50%;
+    width: 70%;
     text-align: center;
     display: inline-block;
   }

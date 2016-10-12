@@ -18,12 +18,13 @@
     <div class="item-line">
       <div class="item-top">
         <h2>Redfyre Elan110一体式灶具</h2>
-        <span><i class="share-icon"><img src="~assets/category/sharebtn-82x82.png"/></i>
-          <i class="fa fa-star-o" aria-hidden="true"></i></span>
+        <span>
+        <a href="#" class="itembtn"><i class="share-icon"><img src="~assets/category/sharebtn-82x82.png"/></i></a>
+        <a href="#" class="itembtn"><i class="fa fa-star-o " aria-hidden="true"></i></span></a>
       </div>
       <div class="item-price">
         <span class="red fl"><ins></ins>20000.0</span>
-        <span><em class="num">1</em>人评价</span><span>好评率<em class="nice">100%</em></span>
+        <div class="commitinfo"><span><em class="num">1</em>人评价</span><span>好评率<em class="nice">100%</em></span></div>
       </div>
     </div>
     <div class="item-line">
@@ -135,7 +136,7 @@
   }
 
   .goods-tabBar .myvux-swiper {
-    border-top: 1px solid #cccccc;
+    border-top: 0px solid #cccccc;
   }
 
   .goods-tabBar .myvux-swiper .parentnav-tabs li {
@@ -316,7 +317,7 @@
   }
 
   .item-top .share-icon {
-    width: 20%;
+    width: 30%;
     vertical-align: top;
     line-height: 26px;
   }
@@ -412,10 +413,15 @@
 
   .item-top {
     line-height: 35px;
+    margin-top: 10px;
   }
 
   .item-price {
     text-align: right;
+    width: 100%;
+    display: block;
+    position: relative;
+    float: left;
   }
 
   .item-price span {
@@ -434,13 +440,14 @@
   .item-price span.fl {
     float: left;
     color: #e40000;
+    font-size:18px;
   }
 
   .item-top h2 {
     display: inline;
     color: #275bab;
     font-weight: normal;
-    font-size: 15px;
+    font-size: 18px;
   }
 
   .item-top span {
@@ -456,6 +463,11 @@
   .item-top span i:nth-child(1) {
     margin-right: 5px;
   }
+
+  .item-top span i:nth-child(1) img{
+    margin-top:3px;
+  }
+
 
   .item-line {
     border-top: 1px solid rgba(0, 0, 0, .1);
@@ -492,6 +504,7 @@
 
   .action-bar .cell {
     color: #265baa;
+    font-size:16px;
   }
 
   .action-bar .btn2 {
@@ -557,6 +570,33 @@
 
   .goods-swiper .swiper-pagination {
     bottom: -1px;
+  }
+  .itembtn {
+    font-size:22px;
+    color:#265baa;
+    
+  }
+  .commitinfo {
+    float:right;
+  }
+  .commitinfo span {
+    margin-left:10px;
+  }
+  .commendetail {margin-top:10px;}
+  .action-bar .buy:active {
+    background: #c70d0d;
+  }
+  .action-bar .cart:active {
+    background: #ef8c01;
+  }
+  .s-actionbar .cell p {
+    color:#265baa;
+    font-size:12px;
+  }
+  .s-actionbar .weui_tabbar_icon {
+    width:30px;
+    height:30px;
+    margin-top:3px;
   }
 </style>
 <script>

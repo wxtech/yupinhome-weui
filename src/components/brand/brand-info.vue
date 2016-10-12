@@ -115,6 +115,7 @@
     text-align: center;
     font-family: arial;
     font-size: 16px;
+    color: #265baa;
   }
 </style>
 <script>

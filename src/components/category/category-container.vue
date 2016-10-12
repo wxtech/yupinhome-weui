@@ -1,16 +1,15 @@
 <template>
-  <section>
-    <header class="j-header">
-      <div class="j-header-search">
-        <input value="" placeholder="请输入关键字" type="text">
-        <a href="http://localhost:8080/#!/categorybrand">{{searchText}}</a>
-      </div>
-    </header>
-  </section>
+
+  <header class="j-header">
+    <div class="j-header-search">
+      <input value="" placeholder="请输入关键字" type="text">
+      <a href="http://localhost:8080/#!/categorybrand">{{searchText}}</a>
+    </div>
+  </header>
   <section id="categoryBody" class="category-viewport">
     <!--左边-->
     <div id="rootList" class="j-category-tab">
-      <div class="category8">
+      <div class="category8 mCustomScrollbar">
         <ul id="category-ul">
           <li>
             <a href="javascript:;">
@@ -340,6 +339,7 @@
   .j-category-div ul li a span {
     line-height: 25px;
   }
+
 </style>
 <script>
   export default{

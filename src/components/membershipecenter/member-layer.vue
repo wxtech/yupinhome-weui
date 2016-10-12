@@ -2,16 +2,17 @@
   <div class="weui_dialog_confirm">
     <div class="weui_mask"></div>
     <div class="weui_dialog">
-      <div class="weui_dialog_hd"><i class="fa fa-times" aria-hidden="true"></i></div>
+      <a class="weui_dialog_hd closebtn"><img src="~assets/usercenter/close-icon-122x122.png"／></a>
       <div class="weui_dialog_bd clear">
         <img class="img" src="~assets/usercenter/sao.jpg">
       </div>
       <p class="layerP black1">{{shareTitle}}</p>
       <p class="layerP" v-if="hasText">一旦有人通过此二维码注册为本站会员，您将获得1000积分奖励</p>
-      <div class="weui_dialog_ft">
-        <a href="#" class="weui_btn_dialog"><i class="fa fa-weixin" aria-hidden="true"></i></a>
-        <a href="#" class="weui_btn_dialog"><i class="fa fa-qq" aria-hidden="true"></i></a>
-        <a href="#" class="weui_btn_dialog"><i class="fa fa-weibo" aria-hidden="true"></i></a>
+      <div class="weui_dialog_ft sharebtnarea">
+        <a href="#" class=" sharebtn"><img src="~assets/usercenter/sharebtn-icon01-100x100.jpg"／></a>
+        <a href="#" class=" sharebtn"><img src="~assets/usercenter/sharebtn-icon02-100x100.jpg"／></a>
+        <a href="#" class=" sharebtn"><img src="~assets/usercenter/sharebtn-icon03-100x100.jpg"／></a>
+        <a href="#" class=" sharebtn"><img src="~assets/usercenter/sharebtn-icon04-100x100.jpg"／></a>
       </div>
     </div>
   </div>
@@ -22,16 +23,17 @@
   }
 
   .layerP {
-    margin: 0 15%;
+    margin: 0 14%;
     color: #787878;
     line-height: 21px;
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .black1 {
     padding: 3% 0;
     color: #000000;
-    font-size: 15px;
+    font-size: 18px;
+    margin-top:10px;
   }
 
   .clear {
@@ -40,7 +42,7 @@
 
   .layer_box .weui_dialog_ft a {
     border-radius: 50%;
-    margin: 0 10%;
+
 
   }
 
@@ -48,18 +50,6 @@
     color: #ffffff;
     font-size: 23px;
     vertical-align: middle;
-  }
-
-  .layer_box .weui_dialog_ft a:nth-child(1) {
-    background: #8dc81b;
-  }
-
-  .layer_box .weui_dialog_ft a:nth-child(2) {
-    background: #68a5e1;
-  }
-
-  .layer_box .weui_dialog_ft a:nth-child(3) {
-    background: #f56467;
   }
 
   .layer_box .weui_dialog {
@@ -85,7 +75,8 @@
     text-align: left;
     margin: 0 14%;
     border: 1px solid;
-    height: 4rem;
+    width:254px;
+    height: 254px;
     padding: 5%;
     vertical-align: middle;
     display: flex;
@@ -121,6 +112,10 @@
     -webkit-transform: scaleX(0.5);
     transform: scaleX(0.5);
   }
+  .closebtn {width:48px;height:48px;padding:0!important;}
+  .closebtn img {width:100%;}
+  .weui_dialog_ft a.sharebtn {width:50px;height: auto;margin: 0 15px;}
+  .sharebtnarea {margin: 20px 5% 0;}
 </style>
 <script>
   import dialog from 'vux/src/components/dialog/index.vue'

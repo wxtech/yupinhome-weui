@@ -30,11 +30,11 @@
     </div>
     <div class="h_bottom">
       <div class="mytabs">
-        <div class="mytab-item"><a class=""><img src="~assets/usercenter/shoucang-icon-140x140.png"></a><span>首页</span>
+        <div class="mytab-item"><a class="" href="##"><img src="~assets/usercenter/shoucang-icon-140x140.png"></a><span>我的收藏</span>
         </div>
-        <div class="mytab-item"><a class=""><img src="~assets/usercenter/yuyue-icon-140x140.png"></a><span>全部商品</span>
+        <div class="mytab-item"><a class="" href="##"><img src="~assets/usercenter/yuyue-icon-140x140.png"></a><span>我的预约</span>
         </div>
-        <div class="mytab-item"><a class=""><img src="~assets/usercenter/kefu-icon-140x140.png"></a><span>在线咨询</span>
+        <div class="mytab-item"><a class="" href="##"><img src="~assets/usercenter/kefu-icon-140x140.png"></a><span>我的客服</span>
         </div>
       </div>
     </div>
@@ -84,7 +84,7 @@
     display: block;
     -webkit-border-radius: 50%;
     border-radius: 50%;
-    border: .04rem solid #f9b5b6;
+    
   }
 
   .msg-num {
@@ -103,15 +103,20 @@
   .membername .p1 {
     color: #414a55;
   }
+   .p1 {
+    color: #414a55;
+    font-size:15px;
+  }
 
   .p2 {
     color: #414a55;
-
+    font-size:13px;
   }
 
   .p-text {
     color: #7c858d;
-
+    font-size:13px;
+    margin-top:10px;
   }
 
   .content .person_i {

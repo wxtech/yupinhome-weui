@@ -60,11 +60,11 @@
   }
 
   .memberCenter .h_bottom .mytabs .mytab-item a {
-    height: 15vw;
+    height: 65px;
   }
 
   .h_bottom .mytabs .mytab-item a {
-    width: 50%;
+    width: 65px;
   }
 
   html {
@@ -110,6 +110,9 @@
   #app .weui_tabbar {
     background: none;
     background: #ffffff;
+  }
+  .mytabs .mytab-item a:actived {
+    background:#265baa;
   }
 </style>
 <script>

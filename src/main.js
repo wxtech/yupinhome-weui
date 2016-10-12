@@ -57,7 +57,7 @@ router.map({
     component: numbershipcenter
   },
   // H5配送方式
-  '/deliver-methodslist': {
+  '/deliverMethodslist': {
     component: deliverMethodslist
   },
   // h5用户注册
@@ -169,7 +169,7 @@ router.map({
     component: myreservation
   },
   // H5我的售后.psd H5我的售后-返修.psd H5我的售后－退换货.psd
-  '/aftersales': {
+  '/aftersalesRepair': {
     component: aftersalesRepair
   },
   // 我的收藏

@@ -20,11 +20,6 @@
             </div>
             <div class="pro-box">
               <h3>多功能烤箱 GEKD 40000B</h3>
-              <div>
-                <group :title="">
-                  <selector placeholder="规格" :options="list" @on-change="onChange"></selector>
-                </group>
-              </div>
               <p class="red ph">
                 <ins></ins>
                 233444
@@ -54,11 +49,6 @@
             </div>
             <div class="pro-box">
               <h3>多功能烤箱 GEKD 40000B</h3>
-              <div>
-                <group :title="">
-                  <selector placeholder="规格" :options="list" @on-change="onChange"></selector>
-                </group>
-              </div>
               <p class="red ph">
                 <ins></ins>
                 233444
@@ -124,7 +114,7 @@
     float: left;
     padding: 0 15px;
     padding-left: 0px;
-    height: 170px;
+    height: 23vw;
     overflow: hidden;
   }
 
@@ -132,14 +122,15 @@
     position: relative;
     line-height: 22px;
     display: inline-block;
-    width: 22px;
-    margin: 72px 0;
+    width: 30px;
+    margin: 50px 0;
   }
 
   .pro-box h3 {
     color: #275bab;
-    font-size: 14px;
+    font-size: 15px;
     padding-top: 6px;
+    font-weight:normal;
   }
 
   .cart-item li {

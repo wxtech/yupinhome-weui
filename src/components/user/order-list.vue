@@ -44,7 +44,7 @@
               <div class="b-color">下单日期：</div>
               <p class="price-data">
                 2015-4-23
-                <span class="bought">已售7</span>
+                <span class="bought">x 1</span>
               </p>
             </div>
           </a>
@@ -81,7 +81,7 @@
               <div class="b-color">下单日期：</div>
               <p class="price-data">
                 2015-4-23
-                <span class="bought">已售7</span>
+                <span class="bought">x 1</span>
               </p>
             </div>
           </a>
@@ -122,7 +122,7 @@
               <div class="b-color">下单日期：</div>
               <p class="price-data">
                 2015-4-23
-                <span class="bought">已售7</span>
+                <span class="bought">x 1</span>
               </p>
             </div>
           </a>
@@ -159,7 +159,7 @@
               <div class="b-color">下单日期：</div>
               <p class="price-data">
                 2015-4-23
-                <span class="bought">已售7</span>
+                <span class="bought">x 1</span>
               </p>
             </div>
           </a>
@@ -199,7 +199,7 @@
               <div class="b-color">下单日期：</div>
               <p class="price-data">
                 2015-4-23
-                <span class="bought">已售7</span>
+                <span class="bought">x 1</span>
               </p>
             </div>
           </a>
@@ -232,7 +232,7 @@
   }
 
   .j-item .txt {
-    width: 90%;
+    width: 100%;
     padding: 12px 5%;
   }
 

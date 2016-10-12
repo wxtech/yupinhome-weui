@@ -33,6 +33,7 @@
   .order-box {
     position: relative;
     padding-bottom: 10px;
+    
   }
 
   .wrap h2 {

@@ -17,7 +17,7 @@
         <div class="vux-flexbox-item" style="margin-left: 8px;">
           <div class="item-box item-box-txt">
             <div class="flex-demo flex-txt">
-              <div class="flex-box">
+              <div class="flex-box wdate">
                 <h3>您拥有的积分</h3>
                 <p>即将过期的积分效期到</p>
                 <p>2017年9月12日</p>
@@ -40,11 +40,11 @@
   <section class="detail-list">
     <dl>
       <dt>购物抵扣－订单编号2132312312312</dt>
-      <dd><span class="mr">22015-09-12</span><span class="green">-2000</span></dd>
+      <dd><span class="mr">22015-09-12</span><span class="green score">-2000</span></dd>
     </dl>
     <dl>
       <dt>购物抵扣－订单编号2132312312312</dt>
-      <dd><span class="mr">22015-09-12</span><span class="red">+2000</span></dd>
+      <dd><span class="mr">22015-09-12</span><span class="red score">+2000</span></dd>
     </dl>
   </section>
   <div class="view-all">
@@ -62,7 +62,7 @@
 
   .detail-list dl {
     border-bottom: 1px solid #e1e1e1;
-    padding: 15px 15px;
+    padding: 15px 25px;
     width: 100%;
     text-align: left;
     display: -webkit-box;
@@ -85,7 +85,7 @@
     float: left;
     color: #6f6f6f;
     margin-right: 16px;
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .detail-list dl dd {
@@ -95,12 +95,21 @@
     -ms-flex: 1;
     flex: 1;
     color: #6f6f6f;
-    font-size: 12px;
+    font-size: 13px;
     overflow: hidden;
+  }
+
+  .detail-list .dd .mr {
+    text-align: left;
+  }
+  .detail-list .score {
+    text-align:right;
+    float:right;
   }
 
   .green {
     color: #6af87a;
+
   }
 
   .wrap2 {
@@ -114,13 +123,15 @@
   }
 
   .integral-box .flex-img {
-    width: 50%;
+    width: 70%;
   }
 
   .integral-box .flex-box h3 {
-    font-size: 14px;
+    font-size: 15px;
     padding-bottom: 6px;
     color: #275bab;
+    font-weight:normal;
+    margin-top:10px;
   }
 
   .integral-box .flex-demo:nth-child(1) {
@@ -154,7 +165,7 @@
 
   .integral-box .flex-box p {
     font-size: 12px;
-    color: #7f7f7f;
+    color: #265baa;
   }
 
   .integral-box .flex-box button {
@@ -171,6 +182,10 @@
 
   .integral-box .vux-flexbox-item .item-btn {
     width: 70px;
+  }
+
+  .integral-box .wdate p {
+    color:#a7a7a7;
   }
 
   .item-btn {

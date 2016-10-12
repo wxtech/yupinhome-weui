@@ -15,7 +15,8 @@
 </template>
 <style>
   .login_wait a {
-    font-size: 0.25em;
+    font-size: 16px;
+    margin-top:10px;
   }
 
  .login_wait h4 {
@@ -32,9 +33,16 @@
     border: 1px solid #265baa;
     color: #265baa;
   }
-
-  .login_main .continue {
-    margin-top: 0.3rem;
+  .login_main a.contact:active {
+    background: #265baa;
+    color:white;
+  }
+  .login_main a.continue {
+    margin-top: 25px;
+    border: 1px solid #265baa;
+   }
+  .login_main a.continue:active {
+    background: black;
   }
 
   .login_success h4 {
