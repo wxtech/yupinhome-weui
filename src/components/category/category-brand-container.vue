@@ -11,7 +11,7 @@
   <section id="categoryBody" class="category-viewport">
     <!--左边-->
     <div id="rootList" class="j-category-tab">
-      <div class="category8" id="category-lf">
+      <div class="category8 mCustomScrollbar" id="category-lf">
         <ul id="category-ul">
           <li>
             <a href="javascript:;">

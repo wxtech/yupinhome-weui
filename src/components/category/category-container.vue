@@ -8,7 +8,7 @@
   </header>
   <section id="categoryBody" class="category-viewport">
     <!--左边-->
-    <div id="rootList" class="j-category-tab">
+    <div id="rootList" class="j-category-tab myrootList">
       <div class="category8 mCustomScrollbar">
         <ul id="category-ul">
           <li>
@@ -65,7 +65,7 @@
     <!--右边-->
     <div class="j-category-content">
       <div id="branchScroll" class="j-category-content-wrapper">
-        <div id="branchList">
+        <div id="branchList" class="mybranchList">
           <div class="j-category-third-promotion">
             <a href="javascript:;"><img slot="icon" src="~assets/category/cat-ad-912x438.jpg"></a>
           </div>
@@ -277,6 +277,13 @@
   }
 
   .j-category-tab li:active a {
+    color: #FFFFFF;
+  }
+  .j-category-tab li.active {
+    background: #265baa;
+  }
+
+  .j-category-tab li.active a {
     color: #FFFFFF;
   }
 
