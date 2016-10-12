@@ -78,13 +78,15 @@
   .contact-wrap h3 {
     line-height: 40px;
     font-size: 14px;
+    font-weight:normal;
+    color:#4a4a55;
   }
 
   .contact-wrap textarea {
     display: block;
     width: 100%;
     height: 280px;
-    border: 1px solid #999999;
+    border: 1px solid #ccc;
   }
 
   .service-center {

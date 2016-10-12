@@ -24,7 +24,7 @@
       <div class="form-group">
         <label>性别</label>
         <div class="sex clear">
-          <label><input type="radio" name="sex" checked/><span>男</span></label>
+          <label class="checked"><input type="radio" name="sex" /><span>男</span></label>
           <label><input type="radio" name="sex"/><span>女</span></label>
         </div>
       </div>
@@ -167,7 +167,7 @@
     border: 1px solid #ddd;
   }
 
-  .sex label input:checked + span {
+  .sex label.checked span {
     background: #265baa url("~assets/home/select.png") no-repeat 30% center;
     background-size: 16px 16px;
     border: 1px solid #265baa;
@@ -4088,9 +4088,15 @@
   }));
   export default{
     ready(){
+
       require('bootstrap');
       $(".myyear").datepicker({
         dateFormat: "yy-mm-dd"
+      });
+      var label = $('.sex label');
+      label.click(function () {
+        label.removeClass('checked');
+        $(this).addClass('checked');
       });
     },
     data(){
