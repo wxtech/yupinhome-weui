@@ -4,6 +4,7 @@
   </div>
 </template>
 <style>
+  @import "assets/css/jquery-ui.css";
   img {
     max-height: 100%;
     max-width: 100%;
@@ -1859,8 +1860,6 @@
     position: relative;
     height: 600px;
   }
-
-  /* ---------------------------------------- */
 
 </style>
 <style lang="less">

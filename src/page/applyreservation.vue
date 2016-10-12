@@ -200,10 +200,7 @@
     color: #666;
     margin-bottom: 5px;
   }
-  .personData select{
-    width: 80px;
-    height: 32px;
-  }
+
   .personData .select-1{
     width: 60px;
   }
