@@ -59,7 +59,9 @@
 </template>
 <style>
   @import "~assets/font-awesome/css/font-awesome.min.css";
-
+  .rootList,#branchList{
+    top: 44px;
+  }
   html {
     font-size: 50px;
     font-family: Arial, "Microsoft YaHei UI";
@@ -2832,12 +2834,6 @@
       return {
         searchText: '切换品牌检索'
       }
-    },
-    ready(){
-      console.log($(".j-category-tab").mCustomScrollbar);
-      $(".j-category-tab").mCustomScrollbar({
-        axis: "y" // horizontal scrollbar
-      });
     },
     methods: {}
   }
