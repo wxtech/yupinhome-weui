@@ -110,7 +110,7 @@ dist
 ```
 
 router.map({
-  // 首页
+  // 首页 && 提醒登录页
   '/': {
     component: Home
   },
@@ -119,7 +119,7 @@ router.map({
     component: numbershipcenter
   },
   // H5配送方式
-  '/deliver-methodslist': {
+  '/deliverMethodslist': {
     component: deliverMethodslist
   },
   // h5用户注册
@@ -222,8 +222,16 @@ router.map({
   '/paysuccess': {
     component: paysuccess
   },
+  //收货地址管理 && 收货地址管理-编辑
+  '/receiptaddress': {
+    component: receiptaddress
+  },
+  //我的预约
+  '/myreservation': {
+    component: myreservation
+  },
   // H5我的售后.psd H5我的售后-返修.psd H5我的售后－退换货.psd
-  '/aftersales': {
+  '/aftersalesRepair': {
     component: aftersalesRepair
   },
   // 我的收藏
@@ -256,7 +264,6 @@ router.map({
   }
 
 });
-
 ```
 
 ###比如:查看方法为hash 如查看'h5用户重设密码成功' 页
