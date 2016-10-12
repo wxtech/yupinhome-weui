@@ -38,13 +38,13 @@
           <option>上海</option>
           <option>北京</option>
         </select>
-        省
+        <label>省<b class="col-1">*</b></label>
         <select class="form-control">
           <option>浦东新区</option>
           <option>黄浦区</option>
           <option>徐汇区</option>
         </select>
-        市
+        <label>市<b class="col-1">*</b></label>
         <input type="text" class="form-control margin-t" placeholder="请输入详细地址">
       </div>
       <div class="form-group">
@@ -61,11 +61,11 @@
         <input type="password" class="form-control">
         <p>填写微信号可获得1000积分奖励</p>
       </div>
-      <div class="checkbox">
+      <div class="checkbox mycheckbox">
         <label><input type="checkbox" name="message"><span>所有消息</span></label>
         <label><input type="checkbox" name="sell"><span>促销、活动提醒</span></label>
-        <label><input type="checkbox" name="order"><span>订单状态</span></label>
-        <label><input type="checkbox" name="account"><span>账户变动</span></label>
+        <label><input type="checkbox" name="order"><span>订单状态</span></label><br>
+        <label><input type="checkbox" name="accountsss"><span>账户变动</span></label>
       </div>
       <div class="mar-btn"><a href="###" class="button">下一步</a></div>
     </form>
@@ -100,7 +100,7 @@
           <h4 class="modal-title" id="myModalLabel-2">请输入手机号</h4>
         </div>
         <div class="modal-body">
-          <input type="text">
+          <input type="text" class="form-control">
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
@@ -188,9 +188,11 @@
   .personData .select-1 {
     width: 60px;
   }
-  .myselect select{
-    display: inline-block;
+
+  .myselect select {
+    margin-bottom: 5px;
   }
+
   .modal-file {
     display: block;
     text-align: center;
@@ -205,18 +207,34 @@
     height: 100%;
   }
 
+  .checkbox input[type="checkbox"] {
+    position: static;
+  }
+
+  .checkbox {
+
+  }
+
   .margin-t {
     margin-top: 8px;
   }
 
   .checkbox label {
-    margin-right: 15px;
-    margin-bottom: 10px;
+    white-space: nowrap;
+
   }
 
-  .checkbox label input {
-    position: relative;
-    top: 6px;
+  .mycheckbox input {
+    margin-right: 3px;
+  }
+
+  .mycheckbox span {
+    margin-right: 10px;
+  }
+
+  .mycheckbox input, .mycheckbox span {
+    display: inline-block;
+    vertical-align: middle;
   }
 
   .modal-footer {
@@ -4070,7 +4088,8 @@
   }));
   export default{
     ready(){
-      $( ".myyear" ).datepicker({
+      require('bootstrap');
+      $(".myyear").datepicker({
         dateFormat: "yy-mm-dd"
       });
     },

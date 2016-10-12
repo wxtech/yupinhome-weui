@@ -47,6 +47,10 @@
   <user-footer></user-footer>
 </template>
 <style>
+  .myvux-swiper .nav-tabs > li.active > a {
+    color:#275baa!important;
+
+  }
   .contact-wrap {
     padding: 0px 20px;
     width: 100%;
@@ -66,6 +70,9 @@
     background: #265baa;
     width: 80%;
     line-height: 30px;
+    font-size:18px;
+    font-weight:lighter;
+    padding: 6px 12px;
   }
 
   .contact-wrap h3 {
@@ -85,6 +92,7 @@
     overflow: hidden;
     position: relative;
     padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
   }
 
   .service-center a {
@@ -110,12 +118,17 @@
     line-height: 36px;
   }
 
-  .service-center .service-info h3, .service-info p {
+  .service-center .service-info h3{
     color: #414a55;
     font-weight: normal;
-    font-size: 12px;
+    font-size: 15px;
   }
+  .service-info p {
+     color: #7a7a7a;
+    font-weight: normal;
+    font-size: 13px;
 
+  }
   .service-info p > .redn {
     font-weight: bold;
   }
