@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+  <link href="css/app.css" rel="stylesheet">
+</head>
+<body>
+<div id="app">
+  <div class="vux-header">
+    <div class="vux-header-left">
+      <a class="vux-header-back v-transition">返回</a>
+
+    </div>
+    <h1 class="vux-header-title"><span class="v-transition" style="display: none;"></span>我的收藏</h1>
+    <div class="vux-header-right">
+
+
+    </div>
+  </div>
+  <div class="repair-search">
+    <input class="form-control" placeholder="请输入关键词">
+  </div>
+  <ul class="product-list">
+    <li>
+      <a>
+        <img src="img/sub-cat-img01-438x326.jpg">
+        <div>多功能冰箱</div>
+        <p>￥1200.00</p>
+      </a>
+    </li>
+    <li>
+      <a>
+        <img src="img/sub-cat-img01-438x326.jpg">
+        <div>多功能冰箱</div>
+        <p>￥1200.00</p>
+      </a>
+    </li>
+    <li>
+      <a>
+        <img src="img/sub-cat-img01-438x326.jpg">
+        <div>多功能冰箱</div>
+        <p>￥1200.00</p>
+      </a>
+    </li>
+    <li>
+      <a>
+        <img src="img/sub-cat-img01-438x326.jpg">
+        <div>多功能冰箱</div>
+        <p>￥1200.00</p>
+      </a>
+    </li>
+    <li>
+      <a>
+        <img src="img/sub-cat-img01-438x326.jpg">
+        <div>多功能冰箱</div>
+        <p>￥1200.00</p>
+      </a>
+    </li>
+    <li>
+      <a>
+        <img src="img/sub-cat-img01-438x326.jpg">
+        <div>多功能冰箱</div>
+        <p>￥1200.00</p>
+      </a>
+    </li>
+  </ul>
+  <div class="noMore">没有更多的收藏</div>
+</div>
+
+<script src="lib/jquery/dist/jquery.min.js"></script>
+<script src="lib/swiper/dist/idangerous.swiper.min.js"></script>
+
+<script>
+  $(function () {
+    let cssClassNames = 'fadeInDown fadeIn';
+    $('.mytabs a').off('click').click(function () {
+      $('.mytabs a').removeClass('active');
+      $(this).addClass('active');
+    });
+    $('.weui_tabbar_item').click(function () {
+      $('.weui_tabbar_item').removeClass('on');
+      $(this).addClass('on');
+    });
+    let swiper = new Swiper('.swiper-container', {
+      // Optional parameters
+      direction: 'vertical',
+      loop: true,
+      // If we need pagination
+      pagination: '.swiper-pagination',
+      // Navigation arrows
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev',
+      // And if we need scrollbar
+      scrollbar: '.swiper-scrollbar',
+      autoplay: 6000,
+      speed: 2000,
+      onSlideChangeStart: function () {
+        $(swiper.container).find('.titles-bgs,a').removeClass(cssClassNames).addClass('fadeOut');
+      },
+      onSlideChangeEnd: function () {
+        var elements = $(swiper.container).find('.swiper-slide-active .titles-bgs,.swiper-slide-active a').toArray();
+        $(swiper.container).find('.titles-bgs,a').removeClass('fadeOut');
+        (function doAnmiate() {
+          var ele = elements.pop();
+          if (ele) {
+            $(ele).addClass(cssClassNames).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+              doAnmiate();
+            });
+          }
+        })();
+      }
+    });
+  })
+
+</script>
+</body>
+</html>

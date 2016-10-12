@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+  <link href="css/app.css" rel="stylesheet">
+</head>
+<body>
+
+<div id="app">
+  <div class="vux-header">
+    <div class="vux-header-left">
+      <a class="vux-header-back v-transition">返回</a>
+
+    </div>
+    <h1 class="vux-header-title"><span class="v-transition" style="display: none;"></span>我的售后</h1>
+    <div class="vux-header-right">
+
+
+    </div>
+  </div>
+  <div class="mycustomer-main">
+    <div class="my-customer-services">
+      <div class="l">
+        <div class="lll">
+          <div class="picture"><img src="img/person.jpg" alt=""></div>
+          <button type="button" data-toggle="modal" data-target="#changecustomerservice-dialog" class="button-1 apply-changeservice">申请换客服
+          </button>
+        </div>
+      </div>
+      <div class="r">
+        <div class="lll">
+          <div class="inforgroup">
+            <div class="items"><label for="">姓名</label><span>爱丽丝</span></div>
+            <div class="items"><label for="">性别</label><span>女</span></div>
+            <div class="items"><label for="">电话号码</label><span>13214231231</span></div>
+            <div class="items"><label for="">所属城市</label><span>上海</span></div>
+            <div class="items"><label for="">所属门店</label><span>正大广场店</span></div>
+            <div class="items"><label for="">姓名</label><span>爱丽丝</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-her"><a href="###" class="button"><i class="fa fa-volume-control-phone"></i> 联系客服</a><a href="###" class="button"><i class="fa fa-comments-o"></i> 给他／她留言</a></div>
+  </div>
+  <div class="text-center text-center-logo text-center-logo2">
+    <img src="img/logo.png">
+  </div>
+
+  <div class="modal fade" id="changecustomerservice-dialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display: none;">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          <h4 class="modal-title" id="myModalLabel">申请换客服</h4>
+        </div>
+        <div class="modal-body">
+          <p>请说明您要换客服的理由，本站管理员将在2个工作日内与您取得联系并安排更换事宜：</p>
+          <textarea class="form-control" rows="10"></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+          <button type="button" class="btn btn-primary">提交</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="lib/jquery/dist/jquery.min.js"></script>
+<script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+
+
+</body>
+</html>

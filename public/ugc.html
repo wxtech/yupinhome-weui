@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+  <link href="css/app.css" rel="stylesheet">
+</head>
+<body>
+<div id="app">
+  <header class="navbar navbar2">
+    <div class="vux-header">
+      <div class="vux-header-left">
+        <a class="vux-header-back v-transition">Back</a>
+
+      </div>
+      <h1 class="vux-header-title"><span class="v-transition" style="display: none;"></span><div class="title">评论商品</div></h1>
+      <div class="vux-header-right">
+
+
+      </div>
+    </div>
+  </header>
+  <section class="ugc-bar">
+    订单信息
+    <span class="order-num">订单编号：112323131</span>
+  </section>
+  <section class="ugc-bar">
+    <p>状态：<span class="black">已签收</span></p>
+    <p>总价：<span class="red"><ins></ins>233332</span></p>
+  </section>
+  <section class="ugc-bar">
+    <div class="ugc-img">
+      <img src="img/good-sample-200x200.jpg">
+    </div>
+    <div class="ugc-info">
+      <h2>多功能烤箱 GEKD 40000B</h2>
+      <p>购买日期：</p>
+      <p><span class="fl">2016-08-12</span>x1 件</p>
+
+    </div>
+  </section>
+  <section>
+    <div class="contact-wrap">
+      <h3>请输入您要评价的内容</h3>
+      <textarea maxlength="200">dd</textarea>
+      <span>请控制在200字以内</span>
+      <div class="upload-img">
+        <a href="javascript:;" class="upload-item">
+          上传照片
+        </a>
+      </div>
+      <span>您可以上传最多3张图片</span>
+    </div>
+    <div class="star-list">
+      <ul class="scoreList">
+        <li>
+          <span>综合印象</span>
+          <nav>
+            <a href="javascript:;" class="active"></a>
+            <a href="javascript:;" class="active"></a>
+            <a href="javascript:;" class="active"></a>
+            <a href="javascript:;" class="active"></a>
+            <a href="javascript:;" class="active"></a>
+          </nav>
+          <input type="hidden" value="棒极了">
+        </li>
+        <li>
+          <span>服务指数</span>
+          <nav>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+          </nav>
+          <input type="hidden" value="没有想象的那么差">
+        </li>
+        <li>
+          <span>消费指数</span>
+          <nav>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+          </nav>
+          <input type="hidden" value="0">
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section>
+    <div class="contact-btn">
+      <button>提交</button>
+    </div>
+  </section>
+</div>
+
+<script src="lib/jquery/dist/jquery.min.js"></script>
+<script src="lib/swiper/dist/idangerous.swiper.min.js"></script>
+
+<script>
+  $(function () {
+    let cssClassNames = 'fadeInDown fadeIn';
+    $('.mytabs a').off('click').click(function () {
+      $('.mytabs a').removeClass('active');
+      $(this).addClass('active');
+    });
+    $('.weui_tabbar_item').click(function () {
+      $('.weui_tabbar_item').removeClass('on');
+      $(this).addClass('on');
+    });
+    let swiper = new Swiper('.swiper-container', {
+      // Optional parameters
+      direction: 'vertical',
+      loop: true,
+      // If we need pagination
+      pagination: '.swiper-pagination',
+      // Navigation arrows
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev',
+      // And if we need scrollbar
+      scrollbar: '.swiper-scrollbar',
+      autoplay: 6000,
+      speed: 2000,
+      onSlideChangeStart: function () {
+        $(swiper.container).find('.titles-bgs,a').removeClass(cssClassNames).addClass('fadeOut');
+      },
+      onSlideChangeEnd: function () {
+        var elements = $(swiper.container).find('.swiper-slide-active .titles-bgs,.swiper-slide-active a').toArray();
+        $(swiper.container).find('.titles-bgs,a').removeClass('fadeOut');
+        (function doAnmiate() {
+          var ele = elements.pop();
+          if (ele) {
+            $(ele).addClass(cssClassNames).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+              doAnmiate();
+            });
+          }
+        })();
+      }
+    });
+  })
+
+</script>
+</body>
+</html>

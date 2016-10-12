@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+  <link href="css/app.css" rel="stylesheet">
+</head>
+<body>
+<div id="app">
+  <header class="navbar navbar2">
+    <div class="vux-header">
+      <div class="vux-header-left">
+        <a class="vux-header-back v-transition">Back</a>
+
+      </div>
+      <h1 class="vux-header-title"><span class="v-transition" style="display: none;"></span><div class="title">收货地址管理</div></h1>
+      <div class="vux-header-right">
+
+
+      </div>
+    </div>
+  </header>
+  <section class="receipt-label">
+    <label><input type="text" placeholder="请输入关键词">
+      <a href="javascript:;">添加</a>
+    </label>
+  </section>
+  <section class="make-sure-container receipt-wrap">
+    <div class="weui_cell vux-tap-active">
+      <div class="weui_cell_bd weui_cell_primary">
+        <a href="javascript:;" class="address-cir">
+             <span class="address-icon">
+             默认
+          </span>
+        </a>
+        <span class="vux-label-desc receipt-address">
+           收货人：<span>张某某</span><span>1323224124</span>
+        </span>
+        <p>上海市闵行区万源路212号324室</p>
+      </div>
+      <div class="weui_cell_ft with_arrow"></div>
+    </div>
+    <div class="weui_cell vux-tap-active">
+      <div class="weui_cell_bd weui_cell_primary">
+        <a href="javascript:;" class="address-cir" style="visibility: hidden;">
+             <span class="address-icon">
+             默认
+          </span>
+        </a>
+        <span class="vux-label-desc receipt-address">
+          收货人：<span>张某某</span><span>1323224124</span>
+        </span>
+        <p>上海市闵行区万源路212号324室</p>
+      </div>
+      <div class="weui_cell_ft with_arrow"></div>
+    </div>
+  </section>
+  <div class="view-all">
+    没有更多的地址了
+  </div>
+  <section class="footer_box">
+    <div class="img_box"><img slot="icon" src="img/logo.png"></div>
+  </section>
+  <!--弹层-->
+  <div class="weui_dialog_confirm layer_box">
+    <div class="weui_mask"></div>
+    <div class="weui_dialog">
+      <h4>添加收货地址
+        <div class="weui_dialog_hd"><i class="fa fa-times" aria-hidden="true"></i></div>
+      </h4>
+      <div class="address-edit-box">
+        <label>
+          <span>收件人</span>
+          <input type="text" placeholder="请填写真实姓名">
+        </label>
+        <label>
+          <span>联系方式</span>
+          <input type="text" placeholder="请输入手机号或电话号码">
+        </label>
+        <label>
+          <span>选择城市</span>
+          <input type="text" placeholder="请选择省市区">
+        </label>
+        <label>
+          <span>详细地址</span>
+          <input type="text" placeholder="请详细到门牌号">
+        </label>
+        <label>
+          <span> <input type="checkbox" class="check_btn">设置为默认收货地址</span>
+        </label>
+        <label>
+          <a href="javascript:;" class="save_btn">保存</a>
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="lib/jquery/dist/jquery.min.js"></script>
+<script src="lib/swiper/dist/idangerous.swiper.min.js"></script>
+
+<script>
+  $(function () {
+    let cssClassNames = 'fadeInDown fadeIn';
+    $('.mytabs a').off('click').click(function () {
+      $('.mytabs a').removeClass('active');
+      $(this).addClass('active');
+    });
+    $('.weui_tabbar_item').click(function () {
+      $('.weui_tabbar_item').removeClass('on');
+      $(this).addClass('on');
+    });
+    let swiper = new Swiper('.swiper-container', {
+      // Optional parameters
+      direction: 'vertical',
+      loop: true,
+      // If we need pagination
+      pagination: '.swiper-pagination',
+      // Navigation arrows
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev',
+      // And if we need scrollbar
+      scrollbar: '.swiper-scrollbar',
+      autoplay: 6000,
+      speed: 2000,
+      onSlideChangeStart: function () {
+        $(swiper.container).find('.titles-bgs,a').removeClass(cssClassNames).addClass('fadeOut');
+      },
+      onSlideChangeEnd: function () {
+        var elements = $(swiper.container).find('.swiper-slide-active .titles-bgs,.swiper-slide-active a').toArray();
+        $(swiper.container).find('.titles-bgs,a').removeClass('fadeOut');
+        (function doAnmiate() {
+          var ele = elements.pop();
+          if (ele) {
+            $(ele).addClass(cssClassNames).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+              doAnmiate();
+            });
+          }
+        })();
+      }
+    });
+  })
+
+</script>
+</body>
+</html>

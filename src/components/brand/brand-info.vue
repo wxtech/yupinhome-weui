@@ -5,7 +5,7 @@
         <input value="" placeholder="请输入关键字" type="text">
       </div>
     </header>
-    <ul class="img-box">
+    <ul class="img-box" style="margin-top: 50px;">
       <li><a href="javascript:;">
         <img src="~assets/brand/brandinfo-aga-368x368.jpg"/>
         <span>AGA</span>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+  <link href="css/app.css" rel="stylesheet">
+</head>
+<body>
+<div id="app">
+  <section class="h51">
+    <header class="j-header j-search">
+      <div class="j-header-search">
+        <input value="" class="inp_a" placeholder="请输入关键字" type="text">
+        <a href="javascript:;" class="search_a"><span id="J_style_icon"></span></a>
+      </div>
+    </header>
+  </section>
+  <article>
+    <section class="j-filter-sort">
+      <section class="filter-sort">
+        <ul class="filter-sort-head">
+          <li>默认排序</li>
+          <li class="head-tab tab4">销量优先</li>
+          <li class="head-tab tab4">品牌</li>
+          <li class="head-tab tab4">价格</li>
+        </ul>
+      </section>
+    </section>
+    <section class="details-container">
+      <div class="details-div">
+        <div class="details-line">
+          <a class="details-content" href="javascript:;">
+            <div class="img-wrapper">
+              <div class="img-placeholder">
+                <img src="img/1.jpg">
+              </div>
+            </div>
+            <div class="info-wrapper">
+              <div class="title-line">elica skin 挂壁式脱排油烟机</div>
+              <p class="red">¥ 23321.00</p>
+              <p class="price">参考价
+                <ins>30000.00</ins>
+              </p>
+              <p class="price"><span><em class="num">1</em>人评价</span><span>好评率<em class="nice">100%</em></span></p>
+              <p class="price-line"><span>VIP优惠</span><span>可用积分抵扣</span></p>
+            </div>
+          </a>
+        </div>
+        <div class="details-line">
+          <a class="details-content" href="javascript:;">
+            <div class="img-wrapper">
+              <div class="img-placeholder">
+                <img src="img/1.jpg">
+              </div>
+            </div>
+            <div class="info-wrapper">
+              <div class="title-line">elica skin 挂壁式脱排油烟机</div>
+              <p class="red">¥ 23321.00</p>
+              <p class="price">参考价
+                <ins>30000.00</ins>
+              </p>
+              <p class="price"><span><em class="num">1</em>人评价</span><span>好评率<em class="nice">100%</em></span></p>
+              <p class="price-line"><span>VIP优惠</span><span>可用积分抵扣</span></p>
+            </div>
+          </a>
+        </div>
+        <div class="details-line">
+          <a class="details-content" href="javascript:;">
+            <div class="img-wrapper">
+              <div class="img-placeholder">
+                <img src="img/1.jpg">
+              </div>
+            </div>
+            <div class="info-wrapper">
+              <div class="title-line">elica skin 挂壁式脱排油烟机</div>
+              <p class="red">¥ 23321.00</p>
+              <p class="price">参考价
+                <ins>30000.00</ins>
+              </p>
+              <p class="price"><span><em class="num">1</em>人评价</span><span>好评率<em class="nice">100%</em></span></p>
+              <p class="price-line"><span>VIP优惠</span><span>可用积分抵扣</span></p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </article>
+  <div class="view-all">
+    没有更多商品了
+  </div>
+</div>
+
+<script src="lib/jquery/dist/jquery.min.js"></script>
+<script src="lib/swiper/dist/idangerous.swiper.min.js"></script>
+
+<script>
+  $(function () {
+    let cssClassNames = 'fadeInDown fadeIn';
+    $('.mytabs a').off('click').click(function () {
+      $('.mytabs a').removeClass('active');
+      $(this).addClass('active');
+    });
+    $('.weui_tabbar_item').click(function () {
+      $('.weui_tabbar_item').removeClass('on');
+      $(this).addClass('on');
+    });
+    let swiper = new Swiper('.swiper-container', {
+      // Optional parameters
+      direction: 'vertical',
+      loop: true,
+      // If we need pagination
+      pagination: '.swiper-pagination',
+      // Navigation arrows
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev',
+      // And if we need scrollbar
+      scrollbar: '.swiper-scrollbar',
+      autoplay: 6000,
+      speed: 2000,
+      onSlideChangeStart: function () {
+        $(swiper.container).find('.titles-bgs,a').removeClass(cssClassNames).addClass('fadeOut');
+      },
+      onSlideChangeEnd: function () {
+        var elements = $(swiper.container).find('.swiper-slide-active .titles-bgs,.swiper-slide-active a').toArray();
+        $(swiper.container).find('.titles-bgs,a').removeClass('fadeOut');
+        (function doAnmiate() {
+          var ele = elements.pop();
+          if (ele) {
+            $(ele).addClass(cssClassNames).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+              doAnmiate();
+            });
+          }
+        })();
+      }
+    });
+  })
+
+</script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+  <link href="css/app.css" rel="stylesheet">
+</head>
+<body>
+<div id="app">
+  <section class="brand-details-navBar">
+    <header class="navbar j-brandDetail">
+      <div class="vux-header">
+        <div class="vux-header-left">
+          <a class="vux-header-back v-transition">Back</a>
+
+        </div>
+        <h1 class="vux-header-title"><span class="v-transition" style="display: none;"></span><div class="title">ARISTON</div></h1>
+        <div class="vux-header-right">
+
+
+        </div>
+      </div>
+    </header>
+  </section>
+  <section>
+    <div class="img-details">
+      <img src="img/details.png">
+    </div>
+    <div class="text-details">
+      <p>完美烹饪是容易实现的,这多亏有控制烹饪周期的精密电子设备所提供的连续热循环技术。高精度烹饪意味着在每 一个烹饪水平上可以达到完全一致的结果。在双流系统作用下,意黛喜制造集团的专利授权 - 位于烤箱内腔的风扇
+        会形成两个独立的空气流,以确保烹饪过程。</p>
+    </div>
+  </section>
+</div>
+
+<script src="lib/jquery/dist/jquery.min.js"></script>
+<script src="lib/swiper/dist/idangerous.swiper.min.js"></script>
+
+<script>
+  $(function () {
+    let cssClassNames = 'fadeInDown fadeIn';
+    $('.mytabs a').off('click').click(function () {
+      $('.mytabs a').removeClass('active');
+      $(this).addClass('active');
+    });
+    $('.weui_tabbar_item').click(function () {
+      $('.weui_tabbar_item').removeClass('on');
+      $(this).addClass('on');
+    });
+    let swiper = new Swiper('.swiper-container', {
+      // Optional parameters
+      direction: 'vertical',
+      loop: true,
+      // If we need pagination
+      pagination: '.swiper-pagination',
+      // Navigation arrows
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev',
+      // And if we need scrollbar
+      scrollbar: '.swiper-scrollbar',
+      autoplay: 6000,
+      speed: 2000,
+      onSlideChangeStart: function () {
+        $(swiper.container).find('.titles-bgs,a').removeClass(cssClassNames).addClass('fadeOut');
+      },
+      onSlideChangeEnd: function () {
+        var elements = $(swiper.container).find('.swiper-slide-active .titles-bgs,.swiper-slide-active a').toArray();
+        $(swiper.container).find('.titles-bgs,a').removeClass('fadeOut');
+        (function doAnmiate() {
+          var ele = elements.pop();
+          if (ele) {
+            $(ele).addClass(cssClassNames).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+              doAnmiate();
+            });
+          }
+        })();
+      }
+    });
+  })
+
+</script>
+</body>
+</html>

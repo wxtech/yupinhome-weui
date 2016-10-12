@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+  <link href="css/app.css" rel="stylesheet">
+</head>
+<body>
+<div id="app">
+  <header class="navbar navbar2">
+    <div class="vux-header">
+      <div class="vux-header-left">
+        <a class="vux-header-back v-transition">Back</a>
+
+      </div>
+      <h1 class="vux-header-title"><span class="v-transition" style="display: none;"></span><div class="title">支付成功</div></h1>
+      <div class="vux-header-right">
+
+
+      </div>
+    </div>
+  </header>
+  <section class="login_main login_success login_wait login_cash">
+    <p class="p1">
+      <i class="weui_icon_msg weui_icon_success"></i>
+    </p>
+    <h4>恭喜您！您的订单已支付成功</h4>
+    <p class="p1">订单编号：213213123132</p>
+    <a href="javascript:;" class="continue-shopping">继续购物</a>
+  </section>
+  <section class="make-sure-container">
+    <div class="weui_cell vux-tap-active">
+      <div class="weui_cell_hd"><span class="black">送至</span></div>
+      <div class="weui_cell_bd weui_cell_primary">
+        <a href="javascript:;" class="address-cir">
+             <span class="address-icon">
+             默认
+          </span>
+        </a>
+        <p>上海市闵行区万源路212号324室</p> <span class="vux-label-desc">
+          <span>张某某</span><span>1323224124</span>
+        </span></div>
+      <div class="weui_cell_ft with_arrow"></div>
+    </div>
+  </section>
+  <section class="make-sure-container">
+    <ul class="cart-item make-sure-item new-sure-item">
+      <li>
+        <div class="cart-box">
+          <div class="cart-right">
+            <div class="cart-img">
+              <img src="data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAABGAAD/4QMxaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjYtYzA2NyA3OS4xNTc3NDcsIDIwMTUvMDMvMzAtMjM6NDA6NDIgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE1IChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkZBRkI1MjdEN0NGNDExRTY5NzY2QTJBMEM5RDAwMDYzIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkZBRkI1MjdFN0NGNDExRTY5NzY2QTJBMEM5RDAwMDYzIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RkFGQjUyN0I3Q0Y0MTFFNjk3NjZBMkEwQzlEMDAwNjMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RkFGQjUyN0M3Q0Y0MTFFNjk3NjZBMkEwQzlEMDAwNjMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7/7gAOQWRvYmUAZMAAAAAB/9sAhAAEAwMDAwMEAwMEBgQD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">
+            </div>
+            <div class="pro-box">
+              <div class="title-line ">
+                <div class="title">
+                  <h4 class="item-name">多功能烤箱 GEKD 40000B</h4>
+                </div>
+                <span class="distance"></span>
+                <span class="store"><ins></ins>23321.00</span>
+              </div>
+              <div class="f6">
+                商品编号：231232
+              </div>
+              <p class="f6">
+                数量：<span>1</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="cart-box">
+          <div class="cart-right">
+            <div class="make-sure-order-line">
+              <span class="black lh">配送方式</span>
+              <p class="fr">某某流</p>
+            </div>
+            <div class="pro-box pro-send">
+              <p class="order-send">送货时间：<span>2016-9-14</span><span>周六</span><span>9:00-15:00</span></p>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </section>
+  <section class="footer_box">
+    <div class="img_box"><img slot="icon" src="img/logo.png"></div>
+  </section>
+</div>
+
+<script src="lib/jquery/dist/jquery.min.js"></script>
+<script src="lib/swiper/dist/idangerous.swiper.min.js"></script>
+
+<script>
+  $(function () {
+    let cssClassNames = 'fadeInDown fadeIn';
+    $('.mytabs a').off('click').click(function () {
+      $('.mytabs a').removeClass('active');
+      $(this).addClass('active');
+    });
+    $('.weui_tabbar_item').click(function () {
+      $('.weui_tabbar_item').removeClass('on');
+      $(this).addClass('on');
+    });
+    let swiper = new Swiper('.swiper-container', {
+      // Optional parameters
+      direction: 'vertical',
+      loop: true,
+      // If we need pagination
+      pagination: '.swiper-pagination',
+      // Navigation arrows
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev',
+      // And if we need scrollbar
+      scrollbar: '.swiper-scrollbar',
+      autoplay: 6000,
+      speed: 2000,
+      onSlideChangeStart: function () {
+        $(swiper.container).find('.titles-bgs,a').removeClass(cssClassNames).addClass('fadeOut');
+      },
+      onSlideChangeEnd: function () {
+        var elements = $(swiper.container).find('.swiper-slide-active .titles-bgs,.swiper-slide-active a').toArray();
+        $(swiper.container).find('.titles-bgs,a').removeClass('fadeOut');
+        (function doAnmiate() {
+          var ele = elements.pop();
+          if (ele) {
+            $(ele).addClass(cssClassNames).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+              doAnmiate();
+            });
+          }
+        })();
+      }
+    });
+  })
+
+</script>
+</body>
+</html>

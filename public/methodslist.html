@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+  <link href="css/app.css" rel="stylesheet">
+</head>
+<body>
+<div id="app">
+  <div class="vux-header vux-header-two">
+    <div class="vux-header-left">
+      <a class="vux-header-back v-transition">返回</a>
+
+    </div>
+    <h1 class="vux-header-title"><span class="v-transition" style="display: none;"></span>配送方式配送方式</h1>
+    <div class="vux-header-right">
+
+
+    </div>
+  </div>
+  <div class="weui_cells">
+    <div class="weui_cell">
+      <div class="weui_cell_bd weui_cell_primary">
+        <p>物流</p>
+      </div>
+      <div class="weui_cell_ft with_arrow">
+      </div>
+    </div>
+  </div>
+  <div class="weui_cells">
+    <div class="weui_cell">
+      <div class="weui_cell_bd weui_cell_primary">
+        <p>自提</p>
+      </div>
+      <div class="weui_cell_ft with_arrow">
+      </div>
+    </div>
+  </div>
+  <div class="weui_cells">
+    <div class="weui_cell">
+      <div class="weui_cell_bd weui_cell_primary">
+        <p>另约</p>
+      </div>
+      <div class="weui_cell_ft with_arrow">
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center text-center-logo">
+    <img src="img/logo.png">
+  </div>
+</div>
+
+<script src="lib/jquery/dist/jquery.min.js"></script>
+<script src="lib/swiper/dist/idangerous.swiper.min.js"></script>
+
+<script>
+  $(function () {
+    let cssClassNames = 'fadeInDown fadeIn';
+    $('.mytabs a').off('click').click(function () {
+      $('.mytabs a').removeClass('active');
+      $(this).addClass('active');
+    });
+    $('.weui_tabbar_item').click(function () {
+      $('.weui_tabbar_item').removeClass('on');
+      $(this).addClass('on');
+    });
+    let swiper = new Swiper('.swiper-container', {
+      // Optional parameters
+      direction: 'vertical',
+      loop: true,
+      // If we need pagination
+      pagination: '.swiper-pagination',
+      // Navigation arrows
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev',
+      // And if we need scrollbar
+      scrollbar: '.swiper-scrollbar',
+      autoplay: 6000,
+      speed: 2000,
+      onSlideChangeStart: function () {
+        $(swiper.container).find('.titles-bgs,a').removeClass(cssClassNames).addClass('fadeOut');
+      },
+      onSlideChangeEnd: function () {
+        var elements = $(swiper.container).find('.swiper-slide-active .titles-bgs,.swiper-slide-active a').toArray();
+        $(swiper.container).find('.titles-bgs,a').removeClass('fadeOut');
+        (function doAnmiate() {
+          var ele = elements.pop();
+          if (ele) {
+            $(ele).addClass(cssClassNames).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+              doAnmiate();
+            });
+          }
+        })();
+      }
+    });
+  })
+
+</script>
+</body>
+</html>

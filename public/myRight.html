@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+  <link href="css/app.css" rel="stylesheet">
+</head>
+<body>
+<div id="app">
+  <div class="vux-header">
+    <div class="vux-header-left">
+      <a class="vux-header-back v-transition">返回</a>
+
+    </div>
+    <h1 class="vux-header-title"><span class="v-transition" style="display: none;"></span>我的权利</h1>
+    <div class="vux-header-right">
+
+
+    </div>
+  </div>
+  <div class="right-top bg">
+    <img src="img/right.png">
+    <p>您是我们的VIP客户，您可以享有在购买标记VIP优惠的商品中获得额外的折扣。</p>
+  </div>
+  <ul class="box right-mid bg">
+    <li>
+      <span class="col">积分</span><strong class="col-1">1432</strong>
+    </li>
+    <li>
+      <span class="col">您拥有的积分</span>
+      <p>即将过期的积分效期到2017年9月12日</p>
+    </li>
+    <li>
+      <a href="###" class="button">立刻使用</a>
+    </li>
+  </ul>
+  <div class="right-bot bg">
+    <ul class="right-list-1">
+      <li>待使用 <b class="col-1">1</b></li>
+      <li>已过期 0</li>
+      <li>已过期 0</li>
+    </ul>
+    <ul class="box right-list-2">
+      <li>
+        <a href="###"><img src="img/right-1.png"></a>
+      </li>
+      <li>
+        <div class="col title">50元优惠券</div>
+        <p>您在本站购买了超过1000元的商品即可使用此优惠券抵扣50元</p>
+        <div class="col">优惠券使用截至日期</div>
+        <div class="col-1">2016-11-12</div>
+        <div class="box-btn"><a href="###" class="button-1">立刻使用 </a></div>
+      </li>
+    </ul>
+  </div>
+  <div class="noMore">没有更多的收藏</div>
+  <div class="mar-btn get"><a href="###" class="button">去领优惠券</a></div>
+</div>
+
+<script src="lib/jquery/dist/jquery.min.js"></script>
+<script src="lib/swiper/dist/idangerous.swiper.min.js"></script>
+
+<script>
+  $(function () {
+    let cssClassNames = 'fadeInDown fadeIn';
+    $('.mytabs a').off('click').click(function () {
+      $('.mytabs a').removeClass('active');
+      $(this).addClass('active');
+    });
+    $('.weui_tabbar_item').click(function () {
+      $('.weui_tabbar_item').removeClass('on');
+      $(this).addClass('on');
+    });
+    let swiper = new Swiper('.swiper-container', {
+      // Optional parameters
+      direction: 'vertical',
+      loop: true,
+      // If we need pagination
+      pagination: '.swiper-pagination',
+      // Navigation arrows
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev',
+      // And if we need scrollbar
+      scrollbar: '.swiper-scrollbar',
+      autoplay: 6000,
+      speed: 2000,
+      onSlideChangeStart: function () {
+        $(swiper.container).find('.titles-bgs,a').removeClass(cssClassNames).addClass('fadeOut');
+      },
+      onSlideChangeEnd: function () {
+        var elements = $(swiper.container).find('.swiper-slide-active .titles-bgs,.swiper-slide-active a').toArray();
+        $(swiper.container).find('.titles-bgs,a').removeClass('fadeOut');
+        (function doAnmiate() {
+          var ele = elements.pop();
+          if (ele) {
+            $(ele).addClass(cssClassNames).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+              doAnmiate();
+            });
+          }
+        })();
+      }
+    });
+  })
+
+</script>
+</body>
+</html>

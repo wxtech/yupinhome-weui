@@ -3,7 +3,7 @@ import App from './App'
 import Home from './page/home.vue'
 import VueRouter from 'vue-router'
 import numbershipcenter from './page/numbershipcenter.vue'
-import deliverMethodslist from './page/methodslist.vue'
+import  methodslist from './page/methodslist.vue'
 import userregister from './page/user-registration.vue'
 import userregistersuccess from './page/user-registration-success.vue'
 import userforgotpass from './page/user-forgot-password.vue'
@@ -57,8 +57,8 @@ router.map({
     component: numbershipcenter
   },
   // H5配送方式
-  '/deliverMethodslist': {
-    component: deliverMethodslist
+  '/methodslist': {
+    component: methodslist
   },
   // h5用户注册
   '/userregister': {

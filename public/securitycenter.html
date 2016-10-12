@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+  <link href="css/app.css" rel="stylesheet">
+</head>
+<body>
+<div id="app">
+  <header class="navbar navbar2">
+    <div class="vux-header">
+      <div class="vux-header-left">
+        <a class="vux-header-back v-transition">Back</a>
+
+      </div>
+      <h1 class="vux-header-title"><span class="v-transition" style="display: none;"></span><div class="title">安全中心</div></h1>
+      <div class="vux-header-right">
+
+
+      </div>
+    </div>
+  </header>
+  <section class="login_main login_success">
+    <form class="inputarea">
+      <label>
+        <span class="m">你已绑定的手机号</span>
+        <p class="ltxt">13123231314</p>
+        <input type="submit" size="20" value="解绑" class="inp solution" maxlength="20" name="mobile">
+      </label>
+      <label>
+        <span>验证邮箱地址</span>
+        <input type="text" size="20" value="" class="inp" maxlength="20" name="mobile">
+      </label>
+      <label>
+        <span>请输入发送到您注册时使用的邮箱的验证码</span>
+        <input type="text" size="20" value="" class="inp inw ins" maxlength="20" name="mobile">
+        <input type="submit" size="20" value="验证" class="inp inw" maxlength="20" name="mobile">
+      </label>
+    </form>
+    <a href="javascript:;" class="btn_login_success" id="">下一步</a>
+  </section>
+  <section class="footer_box">
+    <div class="img_box"><img slot="icon" src="img/logo.png"></div>
+  </section>
+</div>
+
+<script src="lib/jquery/dist/jquery.min.js"></script>
+<script src="lib/swiper/dist/idangerous.swiper.min.js"></script>
+
+<script>
+  $(function () {
+    let cssClassNames = 'fadeInDown fadeIn';
+    $('.mytabs a').off('click').click(function () {
+      $('.mytabs a').removeClass('active');
+      $(this).addClass('active');
+    });
+    $('.weui_tabbar_item').click(function () {
+      $('.weui_tabbar_item').removeClass('on');
+      $(this).addClass('on');
+    });
+    let swiper = new Swiper('.swiper-container', {
+      // Optional parameters
+      direction: 'vertical',
+      loop: true,
+      // If we need pagination
+      pagination: '.swiper-pagination',
+      // Navigation arrows
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev',
+      // And if we need scrollbar
+      scrollbar: '.swiper-scrollbar',
+      autoplay: 6000,
+      speed: 2000,
+      onSlideChangeStart: function () {
+        $(swiper.container).find('.titles-bgs,a').removeClass(cssClassNames).addClass('fadeOut');
+      },
+      onSlideChangeEnd: function () {
+        var elements = $(swiper.container).find('.swiper-slide-active .titles-bgs,.swiper-slide-active a').toArray();
+        $(swiper.container).find('.titles-bgs,a').removeClass('fadeOut');
+        (function doAnmiate() {
+          var ele = elements.pop();
+          if (ele) {
+            $(ele).addClass(cssClassNames).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+              doAnmiate();
+            });
+          }
+        })();
+      }
+    });
+  })
+
+</script>
+</body>
+</html>
