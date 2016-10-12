@@ -38,6 +38,7 @@ import applysales from './page/apply-sales.vue'
 import makesureorder from './page/make-sure-order.vue'
 import cashpay from './page/cashpay-page.vue'
 import paysuccess from './page/pay-success.vue'
+import receiptaddress from './page/receipt-address-page.vue'
 
 const FastClick = require('fastclick')
 FastClick.attach(document.body)
@@ -157,6 +158,10 @@ router.map({
   //支付成功
   '/paysuccess': {
     component: paysuccess
+  },
+  //收货地址管理 && 收货地址管理-编辑
+  '/receiptaddress': {
+    component: receiptaddress
   },
   // H5我的售后.psd H5我的售后-返修.psd H5我的售后－退换货.psd
   '/aftersales': {
