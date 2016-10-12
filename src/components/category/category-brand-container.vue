@@ -202,7 +202,6 @@
   #branchList {
     overflow: hidden;
     position: relative;
-    top: 0px;
     -webkit-transition: .3s;
     transition: .3s;
   }

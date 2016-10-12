@@ -1,5 +1,5 @@
 <template>
-  <x-header :left-options="{backText: '返回',showBack:true}">配送方式配送方式</x-header>
+  <x-header class="vux-header-two" :left-options="{backText: '返回',showBack:true}">配送方式配送方式</x-header>
   <div class="weui_cells">
     <div class="weui_cell">
       <div class="weui_cell_bd weui_cell_primary">
@@ -53,6 +53,9 @@
   .text-center-logo img {
     width: 25%;
     padding-top:15px;
+  }
+  div.vux-header-two{
+    position: relative !important;
   }
 </style>
 <script>
