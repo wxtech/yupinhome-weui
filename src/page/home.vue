@@ -125,12 +125,54 @@
       </p>
     </a>
   </div>
-
+  <section>
+    <div class="weui_dialog_confirm layer_box layer-home" style="display:block;">
+      <div class="weui_mask"></div>
+      <div class="weui_dialog">
+        <div class="layer-logo"><img src="~assets/logo.png"/></div>
+        <h4>您需要登录才能进行下一步操作</h4>
+        <div class="address-edit-box">
+          <label>
+            <span>用户名或电话号码</span>
+            <input type="text" placeholder="">
+          </label>
+          <label>
+            <span>密码</span>
+            <input type="text" placeholder="">
+          </label>
+          <label>
+            <div class="home-btn">
+              <a href="javascript:;" class="cur">密码</a>
+              <a href="javascript:;">忘记密码</a>
+            </div>
+          </label>
+          <label>
+            <a href="javascript:;" class="save_btn home-go home-cur">没有帐号，立即注册</a>
+          </label>
+          <label>
+            <a href="javascript:;" class="save_btn home-go">暂不登录，继续浏览</a>
+          </label>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 <style scope>
   @import "~assets/font-awesome/css/font-awesome.css";
   @import "~assets/swiper/dist/idangerous.swiper.css";
   @import "~assets/swiper/dist/animate.min.css";
+
+  .layer-home .address-edit-box .home-go {
+    background: #FFFFFF;
+    color: #345ca5;
+    border: 1px solid #345ca5;
+  }
+
+  .layer-home .address-edit-box .home-cur {
+    background: #6fa4d8;
+    color: #FFFFFF;
+    border-color: #6fa4d8;
+  }
 
   .webside-top {
     overflow: hidden;
@@ -139,6 +181,45 @@
     left: 0;
     top: 0;
     z-index: 10;
+  }
+
+  .home-btn {
+    overflow: hidden;
+  }
+
+  .home-btn a {
+    width: 50%;
+    line-height: 40px;
+    background: #FFFFFF;
+    color: #345ca5;
+
+  }
+
+  .home-btn a.cur {
+    background: #345ca5;
+    color: #FFFFFF;
+  }
+
+  .home-btn a:nth-child(1) {
+    float: left;
+  }
+
+  .home-btn a:nth-child(2) {
+    float: right;
+  }
+
+  section .layer-home .weui_dialog {
+    border: none;
+  }
+
+  .layer-home .weui_dialog h4 {
+    border: none;
+  }
+
+  .layer-logo {
+    width: 20%;
+    margin: 0 auto;
+    margin-top: 10px;
   }
 
   .webside-top .lf {

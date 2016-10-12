@@ -39,6 +39,7 @@ import makesureorder from './page/make-sure-order.vue'
 import cashpay from './page/cashpay-page.vue'
 import paysuccess from './page/pay-success.vue'
 import receiptaddress from './page/receipt-address-page.vue'
+import myreservation from './page/my-reservation.vue'
 
 const FastClick = require('fastclick')
 FastClick.attach(document.body)
@@ -47,7 +48,7 @@ Vue.use(VueRouter)
 const router = new VueRouter()
 
 router.map({
-  // 首页
+  // 首页 && 提醒登录页
   '/': {
     component: Home
   },
@@ -162,6 +163,10 @@ router.map({
   //收货地址管理 && 收货地址管理-编辑
   '/receiptaddress': {
     component: receiptaddress
+  },
+  //我的预约
+  '/myreservation': {
+    component: myreservation
   },
   // H5我的售后.psd H5我的售后-返修.psd H5我的售后－退换货.psd
   '/aftersales': {
