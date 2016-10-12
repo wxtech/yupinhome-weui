@@ -59,8 +59,12 @@
 </template>
 <style>
   @import "~assets/font-awesome/css/font-awesome.min.css";
-  .rootList,#branchList{
+  #rootList,#branchList{
     top: 44px;
+    position: relative;
+  }
+  #rootList{
+    top: 55px;
   }
   html {
     font-size: 50px;
@@ -2834,6 +2838,8 @@
       return {
         searchText: '切换品牌检索'
       }
+    },
+    ready(){
     },
     methods: {}
   }

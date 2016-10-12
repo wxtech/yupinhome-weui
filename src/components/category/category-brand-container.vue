@@ -328,14 +328,14 @@
   }
 
   .j-category-tab a > span {
-    padding-top: 5px;
+
   }
 
   .j-category-tab a > span, .j-category-tab a > i {
     display: block;
     font-style: normal;
     font-family: Arial;
-    line-height: 30px;
+    line-height: 18px;
   }
 
   .j-category-tab a > i {

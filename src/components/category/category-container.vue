@@ -313,7 +313,7 @@
   }
 
   .j-category-tab a > span {
-    padding-top: 5px;
+
   }
 
   .j-category-div {
