@@ -410,31 +410,31 @@
 }
 
 .ui-icon, .ui-widget-content .ui-icon {
-  background-image: url(img/ui-icons_444444_256x240.png)
+  background-image: url(../img/ui-icons_444444_256x240.png)
 }
 
 .ui-widget-header .ui-icon {
-  background-image: url(img/ui-icons_444444_256x240.png)
+  background-image: url(../img/ui-icons_444444_256x240.png)
 }
 
 .ui-button:focus .ui-icon, .ui-button:hover .ui-icon, .ui-state-focus .ui-icon, .ui-state-hover .ui-icon {
-  background-image: url(img/ui-icons_555555_256x240.png)
+  background-image: url(../img/ui-icons_555555_256x240.png)
 }
 
 .ui-button:active .ui-icon, .ui-state-active .ui-icon {
-  background-image: url(img/ui-icons_ffffff_256x240.png)
+  background-image: url(../img/ui-icons_ffffff_256x240.png)
 }
 
 .ui-button .ui-state-highlight.ui-icon, .ui-state-highlight .ui-icon {
-  background-image: url(img/ui-icons_777620_256x240.png)
+  background-image: url(../img/ui-icons_777620_256x240.png)
 }
 
 .ui-state-error-text .ui-icon, .ui-state-error .ui-icon {
-  background-image: url(img/ui-icons_cc0000_256x240.png)
+  background-image: url(../img/ui-icons_cc0000_256x240.png)
 }
 
 .ui-button .ui-icon {
-  background-image: url(img/ui-icons_777777_256x240.png)
+  background-image: url(../img/ui-icons_777777_256x240.png)
 }
 
 .ui-icon-blank {
@@ -2626,7 +2626,7 @@ a {
 @font-face {
   font-family: FontAwesome;
   src: url(fonts/fontawesome-webfont.eot);
-  src: url(fonts/fontawesome-webfont.eot?#iefix&v=4.6.3) format('embedded-opentype'), url(fonts/fontawesome-webfont.woff2) format('woff2'), url(fonts/fontawesome-webfont.woff) format('woff'), url(fonts/fontawesome-webfont.ttf) format('truetype'), url(img/fontawesome-webfont.svg#fontawesomeregular) format('svg');
+  src: url(fonts/fontawesome-webfont.eot?#iefix&v=4.6.3) format('embedded-opentype'), url(fonts/fontawesome-webfont.woff2) format('woff2'), url(fonts/fontawesome-webfont.woff) format('woff'), url(fonts/fontawesome-webfont.ttf) format('truetype'), url(../img/fontawesome-webfont.svg#fontawesomeregular) format('svg');
   font-weight: 400;
   font-style: normal
 }
@@ -8820,7 +8820,7 @@ a {
 @font-face {
   font-family: FontAwesome;
   src: url(fonts/fontawesome-webfont.eot);
-  src: url(fonts/fontawesome-webfont.eot?#iefix&v=4.6.3) format('embedded-opentype'), url(fonts/fontawesome-webfont.woff2) format('woff2'), url(fonts/fontawesome-webfont.woff) format('woff'), url(fonts/fontawesome-webfont.ttf) format('truetype'), url(img/fontawesome-webfont.svg#fontawesomeregular) format('svg');
+  src: url(fonts/fontawesome-webfont.eot?#iefix&v=4.6.3) format('embedded-opentype'), url(fonts/fontawesome-webfont.woff2) format('woff2'), url(fonts/fontawesome-webfont.woff) format('woff'), url(fonts/fontawesome-webfont.ttf) format('truetype'), url(../img/fontawesome-webfont.svg#fontawesomeregular) format('svg');
   font-weight: 400;
   font-style: normal
 }
@@ -13308,7 +13308,7 @@ html {
 }
 
 .myrootList {
-  top: 55px !important
+  top: 50px !important
 }
 
 html {
@@ -13500,7 +13500,7 @@ section {
   -webkit-transition: .3s;
   transition: .3s;
   background-position: 0 0;
-  background: url(img/goodscat-icon.png) no-repeat;
+  background: url(../img/goodscat-icon.png) no-repeat;
   background-size: cover
 }
 
@@ -13534,14 +13534,6 @@ section {
 
 .j-category-tab li:nth-child(8) i.icon {
   background-position: 3px -524px
-}
-
-.j-category-tab li:active {
-  background: #265baa
-}
-
-.j-category-tab li:active a {
-  color: #fff
 }
 
 .j-category-tab li.active {
@@ -13812,14 +13804,6 @@ section {
   text-align: center
 }
 
-.j-category-tab li:active {
-  background: #265baa
-}
-
-.j-category-tab li:active a {
-  color: #fff
-}
-
 .j-category-tab a > i, .j-category-tab a > span {
   display: block;
   font-style: normal;
@@ -13933,7 +13917,7 @@ section {
 }
 
 #J_style_icon {
-  background: url(img/icon.jpg) no-repeat;
+  background: url(../img/icon.jpg) no-repeat;
   background-size: cover;
   width: 22px;
   height: 22px;
@@ -14022,34 +14006,12 @@ ins:before {
   text-overflow: ellipsis
 }
 
-.filter-sort-head li {
-  color: #275bab
-}
-
 .filter-sort .filter-sort-head .tab4 {
   color: #989898
 }
 
-.filter-sort .filter-sort-head .head-tab:after {
-  content: '';
-  display: inline-block;
-  margin-left: 7px;
-  margin-bottom: 3px;
-  box-sizing: border-box;
-  width: 6px;
-  height: 6px;
-  -webkit-transform: rotate(-227deg);
-  -moz-transform: rotate(-227deg);
-  -ms-transform: rotate(-227deg);
-  -o-transform: rotate(-227deg);
-  transform: rotate(-227deg);
-  -webkit-transition-duration: .3s;
-  transition-duration: .3s;
-  width: 0;
-  height: 0;
-  border-left: 7px solid transparent;
-  border-right: 1px solid transparent;
-  border-top: 7px solid #275bab
+.filter-sort-head li.dropup {
+  color: #275bab !important;
 }
 
 .details-content {
@@ -14247,7 +14209,7 @@ ins:before {
   height: 14px;
   margin-top: 10px;
   margin-left: 20px;
-  background: url(img/Favouritebt.png) repeat-x 0 0;
+  background: url(../img/Favouritebt.png) repeat-x 0 0;
   background-size: 15px 30px
 }
 
@@ -14262,7 +14224,7 @@ ins:before {
 .product-item-star .real-star {
   display: inline-block;
   height: 22px;
-  background: url(img/Favouritebt.png) repeat-x 0 0;
+  background: url(../img/Favouritebt.png) repeat-x 0 0;
   background-size: 15px 30px
 }
 
@@ -14403,7 +14365,7 @@ a, em, i, span, strong {
 }
 
 .quantity-decrease em {
-  background: url(img/cart-number-new.png) no-repeat;
+  background: url(../img/cart-number-new.png) no-repeat;
   background-size: 25px 25px;
   background-position: 0 -15px;
   height: 12px;
@@ -14443,7 +14405,7 @@ a, em, i, span, strong {
 }
 
 .quantity-increase em {
-  background: url(img/cart-number-new.png) no-repeat 0 0;
+  background: url(../img/cart-number-new.png) no-repeat 0 0;
   background-size: 25px 25px;
   height: 12px;
   width: 12px;
@@ -20862,7 +20824,7 @@ body {
 .right-mid li:first-child span {
   width: 30px;
   text-align: center;
-  background: url(img/jifeng-icon-80x80.png) no-repeat;
+  background: url(../img/jifeng-icon-80x80.png) no-repeat;
   background-size: 30px 30px;
   padding-top: 32px;
   vertical-align: middle
@@ -20995,7 +20957,7 @@ body {
 }
 
 .sex label.checked span {
-  background: #265baa url(img/select.png) no-repeat 30%;
+  background: #265baa url(../img/select.png) no-repeat 30%;
   background-size: 16px 16px;
   border: 1px solid #265baa;
   color: #fff
@@ -21016,8 +20978,21 @@ body {
   width: 60px
 }
 
+.myselect {
+  white-space: nowrap;
+}
+
+.myselect select.form-control {
+  width: auto;
+  display: inline-block;
+  padding-left: 0;
+  padding-right: 0;
+  max-width: 8em;
+}
+
 .myselect select {
-  margin-bottom: 5px
+  margin-right: 8px;
+  margin-left: 3px;
 }
 
 .modal-file {
@@ -21703,7 +21678,7 @@ body {
 
 .star-list nav a {
   float: left;
-  background: url(img/Favouritebt.png) no-repeat 0 0;
+  background: url(../img/Favouritebt.png) no-repeat 0 0;
   width: 34px;
   height: 34px;
   margin-right: 10px;
@@ -22363,4 +22338,3 @@ textarea {
   color: #fff
 }
 
-/*# sourceMappingURL=app.css.map*/

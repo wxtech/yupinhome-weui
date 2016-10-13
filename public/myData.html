@@ -48,22 +48,24 @@
         </div>
       </div>
       <div class="form-group">
-        <input type="text" placeholder="年-月-日" class="form-control myyear hasDatepicker" id="dp1476293796722">
+        <input type="text" placeholder="年-月-日" class="form-control myyear">
         <p>*填写生日可享生日礼包</p>
       </div>
       <div class="form-group myselect">
-        <label>所在地<b class="col-1">*</b></label>
+        <label><span class="mlabel">所在地<b class="col-1">*</b></span></label>
         <select class="form-control">
           <option>上海</option>
           <option>北京</option>
         </select>
-        <label>省<b class="col-1">*</b></label>
+        <label><span class="mlabel">省<b class="col-1">*</b></span></label>
         <select class="form-control">
-          <option>浦东新区</option>
-          <option>黄浦区</option>
-          <option>徐汇区</option>
+          <option>上海</option>
         </select>
-        <label>市<b class="col-1">*</b></label>
+        <label><span class="mlabel">市<b class="col-1">*</b></span><select class="form-control">
+          <option>黄浦区黄区</option>
+          <option>徐汇区</option>
+        </select></label>
+
         <input type="text" class="form-control margin-t" placeholder="请输入详细地址">
       </div>
       <div class="form-group">
@@ -3987,5 +3989,10 @@
   });
 
 </script>
+<style>
+  .myselect select {
+
+  }
+</style>
 </body>
 </html>

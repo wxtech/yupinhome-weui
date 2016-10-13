@@ -20,10 +20,10 @@
     <section class="j-filter-sort">
       <section class="filter-sort">
         <ul class="filter-sort-head">
-          <li>默认排序</li>
-          <li class="head-tab tab4">销量优先</li>
-          <li class="head-tab tab4">品牌</li>
-          <li class="head-tab tab4">价格</li>
+          <li class="dropup">默认排序 </li>
+          <li class="head-tab tab4">销量优先 <span class="caret"></span></li>
+          <li class="head-tab tab4">品牌 <span class="caret"></span></li>
+          <li class="head-tab tab4">价格 <span class="caret"></span></li>
         </ul>
       </section>
     </section>
@@ -92,50 +92,16 @@
 </div>
 
 <script src="lib/jquery/dist/jquery.min.js"></script>
-<script src="lib/swiper/dist/idangerous.swiper.min.js"></script>
-
+<script src="lib/bootstrap/dist/js/bootstrap.js"></script>
 <script>
   $(function () {
-    let cssClassNames = 'fadeInDown fadeIn';
-    $('.mytabs a').off('click').click(function () {
-      $('.mytabs a').removeClass('active');
-      $(this).addClass('active');
+    var li =$('.filter-sort-head li');
+    li.click(function () {
+      li.removeClass('dropup');
+      $(this).addClass('dropup');
     });
-    $('.weui_tabbar_item').click(function () {
-      $('.weui_tabbar_item').removeClass('on');
-      $(this).addClass('on');
-    });
-    let swiper = new Swiper('.swiper-container', {
-      // Optional parameters
-      direction: 'vertical',
-      loop: true,
-      // If we need pagination
-      pagination: '.swiper-pagination',
-      // Navigation arrows
-      nextButton: '.swiper-button-next',
-      prevButton: '.swiper-button-prev',
-      // And if we need scrollbar
-      scrollbar: '.swiper-scrollbar',
-      autoplay: 6000,
-      speed: 2000,
-      onSlideChangeStart: function () {
-        $(swiper.container).find('.titles-bgs,a').removeClass(cssClassNames).addClass('fadeOut');
-      },
-      onSlideChangeEnd: function () {
-        var elements = $(swiper.container).find('.swiper-slide-active .titles-bgs,.swiper-slide-active a').toArray();
-        $(swiper.container).find('.titles-bgs,a').removeClass('fadeOut');
-        (function doAnmiate() {
-          var ele = elements.pop();
-          if (ele) {
-            $(ele).addClass(cssClassNames).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
-              doAnmiate();
-            });
-          }
-        })();
-      }
-    });
-  })
 
+  });
 </script>
 </body>
 </html>
