@@ -22338,3 +22338,122 @@ textarea {
   color: #fff
 }
 
+.form-box label {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.new_inp {
+  margin-top: 5px;
+}
+
+.form-box label select,.form-box label input {
+  line-height: 40px;
+  display: inline-block;
+  padding: 8px 0px 8px 8px;
+  text-align: center;
+
+}
+.new_inp{
+  overflow: hidden;
+  width: 100%;
+}
+.form-box label input{
+  line-height: 15px;
+  text-align: left;
+  color:#aeaeae;
+  width: 100%;
+}
+.select-1 {
+  width: 100%;
+}
+
+.select-2 {
+  width: 25%;
+}
+
+.ads {
+  font-size: 14px;
+}
+.mt{
+  margin-top:10px;
+}
+.inp_box_item{
+  border:1px solid #999999;
+  padding: 5px;
+  position: relative;
+  padding-bottom: 0px;
+}
+.inp_box_item span{
+  position: relative;
+  background: #265baa;
+  color:#ffffff;
+  padding: 2px 5px;
+
+}
+.border-l{
+  border-left:1px solid #fff;
+  height: 26px;
+  width: 25px;
+}
+.inp_box_item .close{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  opacity: 1;
+}
+.inp_box_item .close:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 20px;
+  height: 1px;
+  margin: auto;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.inp_box_item .close:after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 20px;
+  height: 1px;
+  margin: auto;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #fff;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.form-box textarea{
+  resize: none;
+  height: 160px;
+  width: 100%;
+}
+.form-box label input.sumbit_btn {
+  background: #265baa;
+  color: #ffffff;
+  border: none;
+  text-align: center;
+  margin-bottom: 20px;
+}
