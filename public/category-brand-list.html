@@ -3333,11 +3333,12 @@
   }));
 
 
-  var li = $('#category-ul li');
+  var li = $('#category-ul span');
   var h1 = $('.j-header').height();
   var h2 = $('.tabbar-fixed').height();
   var h3 = $(window).height();
   $('.category8').css({height: h3 - (h1 + h2)});
+
   li.click(function () {
     li.removeClass('active')
     $(this).addClass('active')

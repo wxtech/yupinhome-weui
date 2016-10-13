@@ -13536,11 +13536,11 @@ section {
   background-position: 3px -524px
 }
 
-.j-category-tab li.active {
+.j-category-tab span.active, .j-category-tab li.active {
   background: #265baa
 }
 
-.j-category-tab li.active a {
+.j-category-tab span.active, .j-category-tab li.active a {
   color: #fff
 }
 
