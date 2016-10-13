@@ -56,35 +56,17 @@
       <ul class="scoreList">
         <li>
           <span>综合印象</span>
-          <nav>
-            <a href="javascript:;" class="active"></a>
-            <a href="javascript:;" class="active"></a>
-            <a href="javascript:;" class="active"></a>
-            <a href="javascript:;" class="active"></a>
-            <a href="javascript:;" class="active"></a>
-          </nav>
+          <span class="default-demo"></span>
           <input type="hidden" value="棒极了">
         </li>
         <li>
           <span>服务指数</span>
-          <nav>
-            <a href="javascript:;"></a>
-            <a href="javascript:;"></a>
-            <a href="javascript:;"></a>
-            <a href="javascript:;"></a>
-            <a href="javascript:;"></a>
-          </nav>
+          <span class="default-demo"></span>
           <input type="hidden" value="没有想象的那么差">
         </li>
         <li>
           <span>消费指数</span>
-          <nav>
-            <a href="javascript:;"></a>
-            <a href="javascript:;"></a>
-            <a href="javascript:;"></a>
-            <a href="javascript:;"></a>
-            <a href="javascript:;"></a>
-          </nav>
+          <span class="default-demo"></span>
           <input type="hidden" value="0">
         </li>
       </ul>
@@ -98,50 +80,23 @@
 </div>
 
 <script src="lib/jquery/dist/jquery.min.js"></script>
-<script src="lib/swiper/dist/idangerous.swiper.min.js"></script>
+<script src="lib/jquery/dist/jquery.raty.js"></script>
 
 <script>
-  $(function () {
-    let cssClassNames = 'fadeInDown fadeIn';
-    $('.mytabs a').off('click').click(function () {
-      $('.mytabs a').removeClass('active');
-      $(this).addClass('active');
-    });
-    $('.weui_tabbar_item').click(function () {
-      $('.weui_tabbar_item').removeClass('on');
-      $(this).addClass('on');
-    });
-    let swiper = new Swiper('.swiper-container', {
-      // Optional parameters
-      direction: 'vertical',
-      loop: true,
-      // If we need pagination
-      pagination: '.swiper-pagination',
-      // Navigation arrows
-      nextButton: '.swiper-button-next',
-      prevButton: '.swiper-button-prev',
-      // And if we need scrollbar
-      scrollbar: '.swiper-scrollbar',
-      autoplay: 6000,
-      speed: 2000,
-      onSlideChangeStart: function () {
-        $(swiper.container).find('.titles-bgs,a').removeClass(cssClassNames).addClass('fadeOut');
-      },
-      onSlideChangeEnd: function () {
-        var elements = $(swiper.container).find('.swiper-slide-active .titles-bgs,.swiper-slide-active a').toArray();
-        $(swiper.container).find('.titles-bgs,a').removeClass('fadeOut');
-        (function doAnmiate() {
-          var ele = elements.pop();
-          if (ele) {
-            $(ele).addClass(cssClassNames).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
-              doAnmiate();
-            });
-          }
-        })();
-      }
-    });
-  })
-
+  $.fn.raty.defaults.path = 'img/img';
+  $('.default-demo').each(function (){
+    $('.default-demo').raty();
+  });
 </script>
+<style>
+  .default-demo{
+    margin-left: 5px;
+  }
+  .default-demo img{
+    width: 15px;
+    height: 15px;
+    background-size: contain;
+  }
+</style>
 </body>
 </html>

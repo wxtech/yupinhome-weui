@@ -171,7 +171,14 @@
 
 <script src="lib/jquery/dist/jquery.min.js"></script>
 <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+<script>
+  var li =$('.total-ul a');
+  li.click(function (){
+    li.find('.icon').removeClass('active');
+    $(this).find('.icon').addClass('active');
 
+  })
+</script>
 
 </body>
 </html>

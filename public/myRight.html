@@ -35,74 +35,57 @@
       <a href="###" class="button">立刻使用</a>
     </li>
   </ul>
+
   <div class="right-bot bg">
-    <ul class="right-list-1">
-      <li>待使用 <b class="col-1">1</b></li>
-      <li>已过期 0</li>
-      <li>已过期 0</li>
-    </ul>
-    <ul class="box right-list-2">
-      <li>
-        <a href="###"><img src="img/right-1.png"></a>
+    <ul class="right-list-1" role="tablist">
+      <li class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">待使用</a><b class="col-1">1</b>
       </li>
-      <li>
-        <div class="col title">50元优惠券</div>
-        <p>您在本站购买了超过1000元的商品即可使用此优惠券抵扣50元</p>
-        <div class="col">优惠券使用截至日期</div>
-        <div class="col-1">2016-11-12</div>
-        <div class="box-btn"><a href="###" class="button-1">立刻使用 </a></div>
-      </li>
+      <li><a href="#home2" aria-controls="home2" role="tab" data-toggle="tab">已过期</a> <b class="col-1">0</b></li>
+      <li><a href="#home3" aria-controls="home3" role="tab" data-toggle="tab">已过期</a> <b class="col-1">0</b></li>
     </ul>
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="home">
+        <ul class="box right-list-2">
+          <li>
+            <a href="###"><img src="img/right-1.png"></a>
+          </li>
+          <li>
+            <div class="col title">50元优惠券</div>
+            <p>您在本站购买了超过1000元的商品即可使用此优惠券抵扣50元</p>
+            <div class="col">优惠券使用截至日期</div>
+            <div class="col-1">2016-11-12</div>
+            <div class="box-btn"><a href="###" class="button-1">立刻使用 </a></div>
+          </li>
+        </ul>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="home2">
+        bbb
+      </div>
+      <div role="tabpanel" class="tab-pane" id="home3">
+        ccc
+      </div>
+    </div>
   </div>
   <div class="noMore">没有更多的收藏</div>
   <div class="mar-btn get"><a href="###" class="button">去领优惠券</a></div>
 </div>
+<style>
+  .right-list-1 li .col-1, .right-list-1 li a {
+    color: #888;
+    font-weight: normal;
+  }
 
+  .right-list-1 li.active a {
+    color: #275bab;
+  }
+
+  .right-list-1 li.active .col-1 {
+    font-weight: bold;
+    color: #e82424;
+  }
+</style>
 <script src="lib/jquery/dist/jquery.min.js"></script>
-<script src="lib/swiper/dist/idangerous.swiper.min.js"></script>
+<script src="lib/bootstrap/dist/js/bootstrap.js"></script>
 
-<script>
-  $(function () {
-    let cssClassNames = 'fadeInDown fadeIn';
-    $('.mytabs a').off('click').click(function () {
-      $('.mytabs a').removeClass('active');
-      $(this).addClass('active');
-    });
-    $('.weui_tabbar_item').click(function () {
-      $('.weui_tabbar_item').removeClass('on');
-      $(this).addClass('on');
-    });
-    let swiper = new Swiper('.swiper-container', {
-      // Optional parameters
-      direction: 'vertical',
-      loop: true,
-      // If we need pagination
-      pagination: '.swiper-pagination',
-      // Navigation arrows
-      nextButton: '.swiper-button-next',
-      prevButton: '.swiper-button-prev',
-      // And if we need scrollbar
-      scrollbar: '.swiper-scrollbar',
-      autoplay: 6000,
-      speed: 2000,
-      onSlideChangeStart: function () {
-        $(swiper.container).find('.titles-bgs,a').removeClass(cssClassNames).addClass('fadeOut');
-      },
-      onSlideChangeEnd: function () {
-        var elements = $(swiper.container).find('.swiper-slide-active .titles-bgs,.swiper-slide-active a').toArray();
-        $(swiper.container).find('.titles-bgs,a').removeClass('fadeOut');
-        (function doAnmiate() {
-          var ele = elements.pop();
-          if (ele) {
-            $(ele).addClass(cssClassNames).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
-              doAnmiate();
-            });
-          }
-        })();
-      }
-    });
-  })
-
-</script>
 </body>
 </html>
