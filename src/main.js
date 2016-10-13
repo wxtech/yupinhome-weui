@@ -140,7 +140,7 @@ router.map({
   '/contactcustomer': {
     component: contactcustomer
   },
-  //评价商品
+  //评论商品
   '/ugc': {
     component: ugc
   },
