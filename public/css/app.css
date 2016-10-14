@@ -13575,6 +13575,38 @@ section {
 .j-category-tab li:nth-child(8):active .icon {
   background-position: 3px -565px
 }
+.j-category-tab li:nth-child(1).active .icon {
+  background-position: 8px -35px
+}
+
+.j-category-tab li:nth-child(2).active .icon {
+  background-position: 8px -99px
+}
+
+.j-category-tab li:nth-child(3).active .icon {
+  background-position: 8px -170px
+}
+
+.j-category-tab li:nth-child(4).active .icon {
+  background-position: 8px -254px
+}
+
+.j-category-tab li:nth-child(5).active .icon {
+  background-position: 3px -332px
+}
+
+.j-category-tab li:nth-child(6).active .icon {
+  background-position: 3px -407px
+}
+
+.j-category-tab li:nth-child(7).active .icon {
+  background-position: 3px -482px
+}
+
+.j-category-tab li:nth-child(8).active .icon {
+  background-position: 3px -565px
+}
+
 
 .j-category-div {
   margin: 10px 0 0
