@@ -197,7 +197,7 @@ router.map({
     component: messagemanager
   },
   // H5申请预约.psd
-  '/applyreservation': {
+  '/appointment': {
     component: applyreservation
   }
 

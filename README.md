@@ -119,8 +119,8 @@ router.map({
     component: numbershipcenter
   },
   // H5配送方式
-  '/deliverMethodslist': {
-    component: deliverMethodslist
+  '/methodslist': {
+    component: methodslist
   },
   // h5用户注册
   '/userregister': {
@@ -202,7 +202,7 @@ router.map({
   '/contactcustomer': {
     component: contactcustomer
   },
-  //评价商品
+  //评论商品
   '/ugc': {
     component: ugc
   },
@@ -259,7 +259,7 @@ router.map({
     component: messagemanager
   },
   // H5申请预约.psd
-  '/applyreservation': {
+  '/appointment': {
     component: applyreservation
   }
 
